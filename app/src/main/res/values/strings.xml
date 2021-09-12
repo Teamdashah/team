@@ -6,8 +6,20 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    //main.xml
     <string name="main_login">登入</string>
     <string name="main_Rigester">註冊</string>
+
+    //login.xml
+    <string name="login_account">帳號</string>
+
+    //forget_pwd.xml
+    <string name="input_num">請輸入驗證碼</string>
+    <string name="redesign_num">輸入您重設後的密碼</string>
+    <string name="submit">確認</string>
+    <string name="resend">重新發送</string>
+
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
