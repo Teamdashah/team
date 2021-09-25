@@ -8,17 +8,27 @@
     <string name="previous">Previous</string>
 
     //main.xml
-    <string name="main_login">登入</string>
-    <string name="main_Rigester">註冊</string>
+    <string name="main_login">Login</string>
+    <string name="main_Rigester">Register</string>
 
     //login.xml
-    <string name="login_account">帳號</string>
+<!--    <string name="login_account">帳號</string>-->
+<!--    <string name="login_pwd">密碼</string>-->
+    <string name="login_input_account">Account</string>
+    <string name="login_input_pwd">Password</string>
+    <string name="login_login">Login</string>
+    <string name="login_forget_pwd">Forgot Password ?</string>
 
     //forget_pwd.xml
     <string name="input_num">請輸入驗證碼</string>
     <string name="redesign_num">輸入您重設後的密碼</string>
     <string name="submit">確認</string>
     <string name="resend">重新發送</string>
+
+    //register
+    <string name="register_email">Email</string>
+    <string name="register_pwd">Password</string>
+    <string name="register_submit">Submit</string>
 
 
     <string name="hello_first_fragment">Hello first fragment</string>

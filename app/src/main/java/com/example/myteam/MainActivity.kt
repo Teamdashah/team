@@ -11,12 +11,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //initialize
-        val mButton = findViewById<Button>(R.id.button)
+        val mButton = findViewById<Button>(R.id.login_btn)
         //handle onClick
         mButton.setOnClickListener {
             //intent to start NewActivity
             startActivity(Intent(this@MainActivity, login::class.java))
         }
+        val rButton = findViewById<Button>(R.id.register_btn)
+        //handle onClick
+        rButton.setOnClickListener {
+            //intent to start NewActivity
+            startActivity(Intent(this@MainActivity, register::class.java))
+        }
+
     }
+
 
 }
