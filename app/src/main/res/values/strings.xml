@@ -6,14 +6,15 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="default_web_client_id">1042227340080-us1f7bla68b85bl6m081098jcs7j4n51.apps.googleusercontent.com</string>
 
     //main.xml
     <string name="main_login">Login</string>
     <string name="main_Rigester">Register</string>
 
     //login.xml
-<!--    <string name="login_account">帳號</string>-->
-<!--    <string name="login_pwd">密碼</string>-->
+    <!--    <string name="login_account">帳號</string>-->
+    <!--    <string name="login_pwd">密碼</string>-->
     <string name="login_input_account">Account</string>
     <string name="login_input_pwd">Password</string>
     <string name="login_login">Login</string>
