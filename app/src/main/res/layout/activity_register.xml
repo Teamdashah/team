@@ -43,6 +43,7 @@
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_email"
         android:hint="@string/register_email"
+        android:singleLine="true"
         android:drawablePadding="10dp"
         android:ems="10"
         android:inputType="textEmailAddress"

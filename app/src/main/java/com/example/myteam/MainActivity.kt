@@ -16,15 +16,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-        //initialize
-        val mButton = findViewById<Button>(R.id.login_btn)
+        val lButton = findViewById<Button>(R.id.login_btn)
         //handle onClick
-        mButton.setOnClickListener {
+        lButton.setOnClickListener {
             //intent to start NewActivity
             startActivity(Intent(this@MainActivity, login::class.java))
-         }
+        }
+
         val rButton = findViewById<Button>(R.id.register_btn)
         //handle onClick
         rButton.setOnClickListener {
@@ -32,21 +30,21 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, register::class.java))
         }
 
-        mAuth = FirebaseAuth.getInstance()
-        val user = mAuth.currentUser
 
-        if(user != null)
-        {
-            val inputIntent = Intent(this, input::class.java)
-            startActivity(inputIntent)
-        }
-        else
-        {
-            val signInIntent = Intent(this, googleSignIn::class.java)
-            startActivity(signInIntent)
-        }
-
-
+//        mAuth = FirebaseAuth.getInstance()
+//        val user = mAuth.currentUser
+//        if(user != null)
+//        {
+//            val inputIntent = Intent(this, input::class.java)
+//            startActivity(inputIntent)
+//        }
+//        else
+//        {
+//            val signInIntent = Intent(this, googleSignIn::class.java)
+//            startActivity(signInIntent)
+//        }
+//
+//
     }
 
 
