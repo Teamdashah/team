@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         //initialize
         val mButton = findViewById<Button>(R.id.login_btn)
         //handle onClick

@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myteam">
+        <activity android:name=".input_schedule"></activity>
         <activity
             android:name=".googleSignIn"
             android:exported="true" />
