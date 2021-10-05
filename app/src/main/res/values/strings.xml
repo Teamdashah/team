@@ -41,4 +41,14 @@
         <item>台中</item>
         <item>高雄</item>
     </string-array>
+
+    <string-array name="Spinner_item02">
+        <item>1位</item>
+        <item>2位</item>
+        <item>3位</item>
+        <item>4位</item>
+        <item>5位</item>
+        <item>6位</item>
+        <item>7位</item>
+    </string-array>
 </resources>
