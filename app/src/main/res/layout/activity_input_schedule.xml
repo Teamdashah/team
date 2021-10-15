@@ -64,7 +64,7 @@
         android:id="@+id/pickBeginDateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pick Begin Date"
+        android:text="選擇出發日期"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
@@ -76,7 +76,7 @@
         android:id="@+id/showBeginDate"
         android:layout_width="117dp"
         android:layout_height="41dp"
-        android:text="Show begin date"
+        android:text="旅遊出發日期"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.7"
@@ -88,7 +88,7 @@
         android:id="@+id/pickEndDateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pick End Date"
+        android:text="選擇結束日期"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.188"
@@ -100,13 +100,37 @@
         android:id="@+id/showEndDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show end date"
+        android:text="旅遊結束日期"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.782" />
+
+    <Button
+        android:id="@+id/checkmytrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看我的行程"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <Button
+        android:id="@+id/submitmytrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="建立行程"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
