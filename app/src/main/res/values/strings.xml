@@ -18,7 +18,7 @@
     <string name="login_input_account">Account</string>
     <string name="login_input_pwd">Password</string>
     <string name="login_login">Login</string>
-    <string name="login_forget_pwd">Forgot Password ?</string>
+    <string name="login_forget_pwd">忘記密碼?</string>
 
     <!--    //forget_pwd.xml-->
     <string name="input_num">請輸入驗證碼</string>

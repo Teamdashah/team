@@ -17,7 +17,14 @@ class login : AppCompatActivity() {
             //intent to start NewActivity
             startActivity(Intent(this@login, input_schedule::class.java))
         }
+        val FButton = findViewById<Button>(R.id.forget_pwd_btn)
+        //handle onClick
+        FButton.setOnClickListener {
+            //intent to start NewActivity
+            startActivity(Intent(this@login, forget_pwd::class.java))
+        }
     }
+//    forget_pwd
 //class login : AppCompatActivity() {
 //
 //
