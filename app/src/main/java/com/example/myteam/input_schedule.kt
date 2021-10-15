@@ -23,11 +23,21 @@ class input_schedule : AppCompatActivity() {
         val month =c.get(Calendar.MONTH)
         val day =c.get(Calendar.DAY_OF_MONTH)
 
-        val Pick_Button = findViewById<Button>(R.id.pickDateBtn)
+        val Pickbegin_Button = findViewById<Button>(R.id.pickBeginDateBtn)
         //handle onClick
-        Pick_Button.setOnClickListener {
+        Pickbegin_Button.setOnClickListener {
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, mYear: Int, mMonth: Int, mDay: Int ->
-                val textView = findViewById<TextView>(R.id.showdate)
+                val textView = findViewById<TextView>(R.id.showBeginDate)
+                textView.setText("" + mDay + "/" + mMonth + "/" + mYear)
+            },year,month,day)
+
+            dpd.show()
+        }
+
+        val Pickend_Button = findViewById<Button>(R.id.pickEndDateBtn)
+        Pickend_Button.setOnClickListener {
+            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, mYear: Int, mMonth: Int, mDay: Int ->
+                val textView = findViewById<TextView>(R.id.showEndDate)
                 textView.setText("" + mDay + "/" + mMonth + "/" + mYear)
             },year,month,day)
 
