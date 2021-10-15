@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/themes_textView"
+        android:id="@+id/themes_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="關鍵字篩選"
@@ -59,4 +59,64 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.296" />
 
+    <TextView
+        android:id="@+id/money_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="預算篩選"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541" />
+
+    <CheckBox
+        android:id="@+id/onethousand_twothousand"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="1000~2000元"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.611" />
+
+    <CheckBox
+        android:id="@+id/twothousand_threethousand"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="2000~3000元"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.701" />
+
+    <CheckBox
+        android:id="@+id/threethousand_fourthousand"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="3000~4000元"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79" />
+
+    <CheckBox
+        android:id="@+id/fourthousand_fivethousand"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="4000~5000元"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.878" />
 </androidx.constraintlayout.widget.ConstraintLayout>
