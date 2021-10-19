@@ -6,6 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".hotel_list">
 
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="首頁"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="篩選"
+            android:icon="@drawable/ic_padlock"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的最愛"
+            android:icon="@drawable/favorite_border_24"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
 
     <TextView
         android:id="@+id/themes_select"
@@ -15,10 +41,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.157" />
 
     <CheckBox
         android:id="@+id/checkbox01"
@@ -31,7 +57,7 @@
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.242" />
 
     <CheckBox
         android:id="@+id/checkbox02"
@@ -44,7 +70,7 @@
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.352" />
 
     <CheckBox
         android:id="@+id/checkbox03"
@@ -57,7 +83,7 @@
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.444" />
 
     <TextView
         android:id="@+id/money_select"
@@ -108,6 +134,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.79" />
 
+
     <CheckBox
         android:id="@+id/fourthousand_fivethousand"
         android:layout_width="125dp"
@@ -119,4 +146,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.878" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
