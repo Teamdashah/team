@@ -24,9 +24,7 @@
 <!--        app:layout_constraintTop_toTopOf="parent"-->
 <!--        app:layout_constraintVertical_bias="0.465" />-->
 
-    <!--帳戶-->
 
-    <!--  密碼-->
 
     <!--    <EditText-->
 <!--        android:id="@+id/editTextTextPassword"-->
@@ -65,7 +63,6 @@
         android:id="@+id/textAccount"
         android:layout_width="300dp"
         android:layout_height="75dp"
-        android:background="@drawable/textview_line"
         android:hint="@string/login_input_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

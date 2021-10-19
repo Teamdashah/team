@@ -2,6 +2,7 @@ package com.example.myteam
 
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
@@ -43,6 +44,11 @@ class input_schedule : AppCompatActivity() {
 
             dpd.show()
         }
-
+        val SButton = findViewById<Button>(R.id.submitmytrip)
+        //handle onClick
+        SButton.setOnClickListener {
+            //intent to start NewActivity
+            startActivity(Intent(this@input_schedule, hotel_list::class.java))
+        }
     }
 }
