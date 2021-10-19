@@ -8,6 +8,7 @@
     android:layout_gravity="center"
     tools:context=".input_schedule">
 
+    <!--目的地-->
     <Spinner
         android:id="@+id/aSpinner"
         android:layout_width="307dp"
@@ -22,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.267" />
 
-
+    <!--人數-->
     <Spinner
         android:id="@+id/bSpinner"
         android:layout_width="307dp"
@@ -62,6 +63,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.394" />
 
+    <!--出發日期-->
     <Button
         android:id="@+id/pickBeginDateBtn"
         android:layout_width="130dp"
@@ -75,6 +77,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.609" />
 
+    <!--出發日期-->
     <TextView
         android:id="@+id/showBeginDate"
         android:layout_width="140dp"
@@ -90,6 +93,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.614" />
 
+    <!--結束日期-->
     <Button
         android:id="@+id/pickEndDateBtn"
         android:layout_width="130dp"
@@ -103,6 +107,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.731" />
 
+    <!--結束日期-->
     <TextView
         android:id="@+id/showEndDate"
         android:layout_width="140dp"
@@ -118,6 +123,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.733" />
 
+    <!--查看我的行程-->
     <Button
         android:id="@+id/checkmytrip"
         android:layout_width="wrap_content"
@@ -131,6 +137,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.009" />
 
+    <!--建立行程-->
     <Button
         android:id="@+id/submitmytrip"
         android:layout_width="165dp"
