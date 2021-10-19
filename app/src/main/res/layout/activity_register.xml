@@ -42,12 +42,15 @@
 <!--        app:layout_constraintTop_toTopOf="parent"-->
 <!--        app:layout_constraintVertical_bias="0.556" />-->
 
-<!--mail-->
+    <!--mail-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_email"
         android:layout_width="300dp"
         android:layout_height="88dp"
         android:hint="@string/register_email"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
@@ -62,20 +65,23 @@
             android:inputType="textEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
-<!--輸入密碼-->
+
+    <!--輸入密碼-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_pwd"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="@string/register_pwd"
+        app:boxBackgroundMode="outline"
         app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62"
+        app:layout_constraintVertical_bias="0.566"
         app:startIconDrawable="@drawable/ic_padlock">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -95,10 +101,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.823"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
+        app:layout_constraintVertical_bias="0.693" />
 
     <ImageView
         android:id="@+id/imageView6"

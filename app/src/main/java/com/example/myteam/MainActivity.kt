@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
 
-        //Google SignIn Button, Click to begin Google SignIn
+        Google SignIn Button, Click to begin Google SignIn
         val gButton = findViewById<Button>(R.id.googleSignInBtn)
         gButton.setOnClickListener{
             Log.d(TAG,"onCreate: begin Google SignIn")

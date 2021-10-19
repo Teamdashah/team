@@ -98,12 +98,15 @@
 <!--        app:layout_constraintTop_toTopOf="parent"-->
 <!--        app:layout_constraintVertical_bias="0.526" />-->
 
-<!--    輸入驗證碼-->
+    <!--輸入驗證碼-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_num"
         android:layout_width="307dp"
         android:layout_height="88dp"
         android:hint="@string/input_num"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,39 +120,43 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--入新密碼-->
+    <!--輸入新密碼-->
+
+    <!--再輸一次密碼-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textNew_pwd"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="307dp"
         android:layout_height="88dp"
         android:hint="@string/redesign_num"
+        app:boxBackgroundMode="outline"
         app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
+        app:layout_constraintVertical_bias="0.46"
         app:startIconDrawable="@drawable/ic_padlock">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:inputType="textPassword" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--再輸一次密碼-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textAgain_pwd"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="307dp"
         android:layout_height="88dp"
         android:hint="@string/redesign_num"
+        app:boxBackgroundMode="outline"
         app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695"
+        app:layout_constraintVertical_bias="0.612"
         app:startIconDrawable="@drawable/ic_padlock">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -170,7 +177,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintVertical_bias="0.751" />
 
     <ImageView
         android:id="@+id/imageView5"
