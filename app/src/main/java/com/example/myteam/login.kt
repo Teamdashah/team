@@ -5,9 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.google.firebase.auth.FirebaseAuth
+
 class login : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        lateinit var auth: FirebaseAuth
+
         setContentView(R.layout.activity_login)
 
         //login按鈕進入行程介面

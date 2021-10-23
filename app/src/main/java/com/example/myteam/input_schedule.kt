@@ -10,15 +10,26 @@ import android.widget.DatePicker
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
 class input_schedule : AppCompatActivity() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_schedule)
 
+        //init firebase auth
+        firebaseAuth = FirebaseAuth.getInstance()
+        checkUser()
+
+        //handle click, logout user
+
+
+        //input month and day
         val c =Calendar.getInstance()
         val year =c.get(Calendar.YEAR)
         val month =c.get(Calendar.MONTH)
@@ -50,5 +61,23 @@ class input_schedule : AppCompatActivity() {
             //intent to start NewActivity
             startActivity(Intent(this@input_schedule, hotel_list::class.java))
         }
+    }
+
+    private fun checkUser()
+    {
+        //get current user
+        val firebaseUser = firebaseAuth.currentUser
+        if(firebaseUser == null){
+            //user not logged in
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+        else{
+            //user logged in
+            //get user info
+            val email = firebaseUser.email
+
+        }
+
     }
 }
