@@ -36,7 +36,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         //configure the Google SignIn
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         //Google SignIn Button, Click to begin Google SignIn
         binding.googleSignInBtn.setOnClickListener{
             Log.d(TAG,"onCreate: begin Google SignIn")
-            val intern = googleSignInClient.signInIntent
+            val intent = googleSignInClient.signInIntent
             startActivityForResult(intent, RC_SIGN_IN)
         }
 
