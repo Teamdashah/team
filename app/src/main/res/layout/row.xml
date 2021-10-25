@@ -16,19 +16,19 @@
         <ImageView
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:id="@+id/image01"
+            android:id="@+id/imageIv"
             android:src="@drawable/main_foot"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/title01"
+            android:id="@+id/titleTv"
             android:text="Title"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_toRightOf="@+id/image01"
-            android:layout_toEndOf="@+id/image01"
+            android:layout_toRightOf="@+id/imageIv"
+            android:layout_toEndOf="@+id/imageIv"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             />
@@ -36,15 +36,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/description01"
+            android:id="@+id/descriptionTv"
             android:text="Description"
             android:textSize="18sp"
             android:textColor="@color/lightGrayColor"
-            android:layout_toRightOf="@+id/image01"
-            android:layout_toEndOf="@+id/image01"
+            android:layout_toRightOf="@+id/imageIv"
+            android:layout_toEndOf="@+id/imageIv"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_below="@+id/title01"
+            android:layout_below="@+id/titleTv"
 
             />
     </RelativeLayout>
