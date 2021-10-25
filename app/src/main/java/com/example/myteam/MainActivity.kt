@@ -1,5 +1,6 @@
 package com.example.myteam
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //configure the Google SignIn
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
@@ -94,10 +95,14 @@ class MainActivity : AppCompatActivity() {
         {
             Log.d(TAG,"onActivityResult: Google SignIn intent result")
             val accountTask = GoogleSignIn.getSignedInAccountFromIntent(data)
+            Log.d(TAG,"checkpoint: test1")
             try{
                 //Google SignIn success, now auth with firebase
-                val account = accountTask.getResult(ApiException::class.java)
+                Log.d(TAG,"checkpoint: test2")
+                val account = accountTask.getResult(ApiException::class.java)!!
+                Log.d(TAG,"checkpoint: test3")
                 firebaseAuthWithGoogleAccount(account)
+                Log.d(TAG,"checkpoint: test4")
             }
             catch (e: Exception){
                 //failed Google SignIn
@@ -145,7 +150,7 @@ class MainActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 //login failed
                 Log.d(TAG, "firebaseAuthWithGoogleAccount: Login Failed due to ${e.message}")
-                Toast.makeText(this@MainActivity, "Loggin Failed due to ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Login Failed due to ${e.message}", Toast.LENGTH_SHORT).show()
 
             }
     }
