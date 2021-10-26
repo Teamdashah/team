@@ -10,11 +10,17 @@ import android.widget.DatePicker
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class input_schedule : AppCompatActivity() {
 
+    private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var firebaseAuth: FirebaseAuth
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -24,10 +30,22 @@ class input_schedule : AppCompatActivity() {
 
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
-        checkUser()
 
-        //handle click, logout user
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
 
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+
+        //handle click, logout user, go back to login page
+        val logoutButton = findViewById<Button>(R.id.logoutBtn)
+        logoutButton.setOnClickListener{
+            firebaseAuth.signOut()
+            googleSignInClient.signOut()
+            startActivity(Intent(this@input_schedule, MainActivity::class.java))
+        }
 
         //input month and day
         val c =Calendar.getInstance()
@@ -63,21 +81,5 @@ class input_schedule : AppCompatActivity() {
         }
     }
 
-    private fun checkUser()
-    {
-        //get current user
-        val firebaseUser = firebaseAuth.currentUser
-        if(firebaseUser == null){
-            //user not logged in
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }
-        else{
-            //user logged in
-            //get user info
-            val email = firebaseUser.email
 
-        }
-
-    }
 }
