@@ -3,6 +3,7 @@
     package="com.example.myteam">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -20,7 +21,7 @@
         <activity
             android:name=".googleSignIn"
             android:exported="true" />
-        <activity android:name=".input_target" />
+        <!--<activity android:name=".input_schedule" />-->
         <activity android:name=".forget_pwd" />
         <activity android:name=".register" />
         <activity android:name=".login" />
