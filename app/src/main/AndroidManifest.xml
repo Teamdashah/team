@@ -16,7 +16,7 @@
             android:parentActivityName=".restaurant_list"></activity>
         <activity android:name=".attractions_list" />
         <activity android:name=".restaurant_list" />
-        <activity android:name=".hotel_list" />
+        <activity android:name=".hotel_list" android:parentActivityName=".input_schedule"/>
         <activity android:name=".input_schedule" />
         <activity
             android:name=".googleSignIn"

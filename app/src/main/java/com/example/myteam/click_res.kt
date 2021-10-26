@@ -23,5 +23,9 @@ class click_res : AppCompatActivity() {
 //        a_description.text = aDescription
 //        imageView.setImageResource(aImageView)
 
+        //返回到restaurant_list
+        supportActionBar!!.title="BehKhiSng"
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
     }
 }

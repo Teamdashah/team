@@ -8,6 +8,10 @@ class hotel_list : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotel_list)
 
+        //返回到input_schedule
+        supportActionBar!!.title="BehKhiSng"
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
     }
 
 
