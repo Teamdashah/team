@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -15,37 +16,48 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_input_schedule.*
 import java.util.*
 
 class input_schedule : AppCompatActivity() {
 
-    private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
+
+    val database = Firebase.database
+
+    private lateinit var begin_date: String
+    private lateinit var end_date:String
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_schedule)
 
+
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
+        checkUser()
 
+        //handle click, logout user
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
-
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-
-        //handle click, logout user, go back to login page
-        val logoutButton = findViewById<Button>(R.id.logoutBtn)
-        logoutButton.setOnClickListener{
-            firebaseAuth.signOut()
+        logoutBtn.setOnClickListener{
+            Firebase.auth.signOut()
             googleSignInClient.signOut()
             startActivity(Intent(this@input_schedule, MainActivity::class.java))
         }
+
+        //get destination and number of people
+        var destination = aSpinner.selectedItem.toString()
+        var number_of_people = bSpinner.selectedItem.toString()
+
 
         //input month and day
         val c =Calendar.getInstance()
@@ -59,6 +71,7 @@ class input_schedule : AppCompatActivity() {
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, mYear: Int, mMonth: Int, mDay: Int ->
                 val textView = findViewById<TextView>(R.id.showBeginDate)
                 textView.setText("" + mDay + "/" + mMonth + "/" + mYear)
+                begin_date = mYear.toString() +","+ mMonth.toString() +","+ mDay.toString()
             },year,month,day)
 
             dpd.show()
@@ -69,6 +82,7 @@ class input_schedule : AppCompatActivity() {
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, mYear: Int, mMonth: Int, mDay: Int ->
                 val textView = findViewById<TextView>(R.id.showEndDate)
                 textView.setText("" + mDay + "/" + mMonth + "/" + mYear)
+                end_date = mYear.toString() +","+ mMonth.toString() +","+ mDay.toString()
             },year,month,day)
 
             dpd.show()
@@ -76,10 +90,42 @@ class input_schedule : AppCompatActivity() {
         val SButton = findViewById<Button>(R.id.submitmytrip)
         //handle onClick
         SButton.setOnClickListener {
+
+            //在資料庫建立行程
+            write_into_firebase(destination, number_of_people, begin_date ,end_date)
+
             //intent to start NewActivity
             startActivity(Intent(this@input_schedule, hotel_list::class.java))
         }
     }
 
+    private fun checkUser()
+    {
+        //get current user
+        val firebaseUser = firebaseAuth.currentUser
+        if(firebaseUser == null){
+            //user not logged in
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+        else{
+            //user logged in
+            //get user info
+            val email = firebaseUser.email
+
+        }
+
+    }
+
+    private fun write_into_firebase(desti:String, people:String, begin_date:String, end_date:String)
+    {
+        val journey = mutableMapOf("destination" to desti, "number of people" to people, "begin_date" to begin_date, "end_date" to end_date)
+        val title = begin_date + desti
+        database.getReference("journey").child(title).setValue(journey).addOnSuccessListener {
+            Toast.makeText(this, "Sucessfully saved",Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener{
+            Toast.makeText(this, "Failed",Toast.LENGTH_SHORT).show()
+        }
+    }
 
 }
