@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         //handle onClick
         lButton.setOnClickListener {
             //intent to start NewActivity
-            startActivity(Intent(this@MainActivity, login::class.java))
+            startActivity(Intent(this@MainActivity, hotel_main::class.java))
         }
 
         val rButton = findViewById<Button>(R.id.register_btn)
