@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Myteam</string>
+    <string name="app_name">BehKhiSng</string>
     <string name="title_activity_forget_pwd">forget_pwd</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -51,4 +51,6 @@
         <item>6位</item>
         <item>7位</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
