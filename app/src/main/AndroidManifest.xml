@@ -15,6 +15,8 @@
         android:theme="@style/Theme.Myteam">
         <activity android:name=".click_res"
             android:parentActivityName=".restaurant_list"></activity>
+        <activity android:name=".click_main_hotel"
+            android:parentActivityName=".hotel_main"></activity>
         <activity android:name=".attractions_list" />
         <activity android:name=".restaurant_list" />
         <activity android:name=".hotel_list" android:parentActivityName=".input_schedule"/>
