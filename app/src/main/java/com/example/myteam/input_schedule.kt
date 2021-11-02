@@ -5,10 +5,8 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -28,8 +26,11 @@ class input_schedule : AppCompatActivity() {
 
     val database = Firebase.database
 
+    private lateinit var destination: String
+    private lateinit var number_of_people: String
+
     private lateinit var begin_date: String
-    private lateinit var end_date:String
+    private lateinit var end_date: String
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,8 +56,32 @@ class input_schedule : AppCompatActivity() {
         }
 
         //get destination and number of people
-        var destination = aSpinner.selectedItem.toString()
-        var number_of_people = bSpinner.selectedItem.toString()
+        aSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                //Do nothing
+            }
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                destination = parent?.selectedItem.toString()
+            }
+        }
+        bSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                //Do nothing
+            }
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                number_of_people = parent?.selectedItem.toString()
+            }
+        }
 
 
         //input month and day
@@ -95,7 +120,7 @@ class input_schedule : AppCompatActivity() {
             write_into_firebase(destination, number_of_people, begin_date ,end_date)
 
             //intent to start NewActivity
-            startActivity(Intent(this@input_schedule, hotel_list::class.java))
+            startActivity(Intent(this@input_schedule, hotel_main::class.java))
         }
     }
 
@@ -112,9 +137,7 @@ class input_schedule : AppCompatActivity() {
             //user logged in
             //get user info
             val email = firebaseUser.email
-
         }
-
     }
 
     private fun write_into_firebase(desti:String, people:String, begin_date:String, end_date:String)
