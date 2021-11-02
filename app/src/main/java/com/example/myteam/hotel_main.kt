@@ -24,6 +24,7 @@ class hotel_main : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(setOf(R.id.fragment_hotel, R.id.fragment_choose, R.id.fragment_mylove))
 
         bottomNav.setupWithNavController(navController)
+
     }
 
 

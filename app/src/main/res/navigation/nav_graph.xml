@@ -5,40 +5,20 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/fragment_hotel">
 
-<!--    <fragment-->
-<!--        android:id="@+id/FirstFragment"-->
-<!--        android:name="com.example.myteam.FirstFragment"-->
-<!--        android:label="@string/first_fragment_label"-->
-<!--        tools:layout="@layout/fragment_first">-->
-
-<!--        <action-->
-<!--            android:id="@+id/action_FirstFragment_to_SecondFragment"-->
-<!--            app:destination="@id/SecondFragment" />-->
-<!--    </fragment>-->
-<!--    <fragment-->
-<!--        android:id="@+id/SecondFragment"-->
-<!--        android:name="com.example.myteam.SecondFragment"-->
-<!--        android:label="@string/second_fragment_label"-->
-<!--        tools:layout="@layout/fragment_second">-->
-
-<!--        <action-->
-<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
-<!--            app:destination="@id/FirstFragment" />-->
-<!--    </fragment>-->
     <fragment
         android:id="@+id/fragment_choose"
-        android:name="com.example.myteam.Fragment.Fragment_choose"
+        android:name="com.example.myteam.Fragment_choose"
         android:label="fragment_choose"
         tools:layout="@layout/fragment_choose" />
 
     <fragment
         android:id="@+id/fragment_mylove"
-        android:name="com.example.myteam.Fragment.Fragment_mylove"
+        android:name="com.example.myteam.Fragment_mylove"
         android:label="fragment_mylove"
         tools:layout="@layout/fragment_mylove" />
     <fragment
         android:id="@+id/fragment_hotel"
-        android:name="com.example.myteam.Fragment.Fragment_hotel"
+        android:name="com.example.myteam.Fragment_hotel"
         android:label="fragment_hotel"
         tools:layout="@layout/fragment_hotel" />
 </navigation>
