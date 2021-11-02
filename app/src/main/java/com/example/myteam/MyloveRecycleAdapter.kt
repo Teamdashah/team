@@ -1,0 +1,60 @@
+package com.example.myteam
+
+import android.content.Intent
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.mylove_cardview.view.*
+
+
+class MyloveRecycleAdapter(val arrayList: ArrayList<Model_mylove>, val context: Fragment_mylove) :
+    RecyclerView.Adapter<MyloveRecycleAdapter.ViewHolder>() {
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        fun bindItems(model: Model_mylove) {
+            itemView.title_mylove.text = model.title
+            itemView.description_mylove.text = model.descriptor
+            itemView.image_mylove.setImageResource(model.imageDrawable)
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.mylove_cardview, parent, false)
+
+        return ViewHolder(v)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bindItems(arrayList[position])
+        holder.itemView.setOnClickListener {
+//
+//            val Model_hotel = arrayList.get(position)
+//            var gTitle : String = Model_hotel.title
+//            var gDescription :String = Model_hotel.descriptor
+//            var gImageView : Int = Model_hotel.imageDrawable
+//            val intent = Intent(context,click_main_hotel::class.java)
+//            intent.putExtra("iTitle")
+//            intent.putExtra("iDescription")
+//            intent.putExtra("iImageView")
+//            context.startActivity(intent)
+        }
+
+    }
+
+//    private fun Intent(context: Fragment_hotel, java: Class<click_main_hotel>): Intent? {
+//        return Intent(context, click_main_hotel::class.java)
+//    }
+
+
+    override fun getItemCount(): Int {
+        return arrayList.size
+    }
+
+}
+
+//private fun Intent?.putExtra(name: String) {
+//
+//}
