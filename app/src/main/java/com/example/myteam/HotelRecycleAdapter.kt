@@ -29,27 +29,32 @@ class HotelRecycleAdapter(val arrayList: ArrayList<Model_hotel>, val context: Fr
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(arrayList[position])
+        holder.itemView.setOnClickListener {
 
-//跳到另一個葉面還在努力
-//        holder.itemView.setOnClickListener {
-//
-//            val Model_hotel = arrayList.get(position)
-//            var gTitle : String = Model_hotel.title
-//            var gDescription :String = Model_hotel.descriptor
-//            var gImageView : Int = Model_hotel.imageDrawable
-//            val intent = Intent(context,click_main_hotel::class.java)
-//            intent.putExtra("iTitle")
-//            intent.putExtra("iDescription")
-//            intent.putExtra("iImageView")
-//            context.startActivity(intent)
-//        }
+            val Model_hotel = arrayList.get(position)
+            var gTitle : String = Model_hotel.title
+            var gDescription :String = Model_hotel.descriptor
+            var gImageView : Int = Model_hotel.imageDrawable
+            val intent = Intent(context,click_main_hotel::class.java)
+            intent.putExtra("iTitle")
+            intent.putExtra("iDescription")
+            intent.putExtra("iImageView")
+            context.startActivity(intent)
+        }
 
     }
 
+    private fun Intent(context: Fragment_hotel, java: Class<click_main_hotel>): Intent? {
+        return Intent(context, click_main_hotel::class.java)
+    }
 
 
     override fun getItemCount(): Int {
         return arrayList.size
     }
+
+}
+
+private fun Intent?.putExtra(name: String) {
 
 }

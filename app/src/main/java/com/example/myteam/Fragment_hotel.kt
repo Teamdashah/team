@@ -17,11 +17,17 @@ class Fragment_hotel() : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_hotel, container, false)
+//        val view2 =goToAttract(click_main_hotel::class.java)
         view.recyclerview_hotel.layoutManager = LinearLayoutManager(activity)
         view.recyclerview_hotel.adapter = HotelRecycleAdapter(arr(),this)
         return view
 
     }
+
+//    fun goToAttract(v: Class<click_main_hotel>) {
+//        val intent = Intent(requireActivity().application, click_main_hotel::class.java)
+//        startActivity(intent)
+//    }
 
 
     private fun arr(): ArrayList<Model_hotel> {
