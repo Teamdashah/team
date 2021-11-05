@@ -4,7 +4,7 @@
     package="com.example.myteam">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -13,22 +13,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myteam">
-        <activity android:name=".click_res"
-            android:parentActivityName=".restaurant_list"></activity>
-        <activity android:name=".click_main_hotel"
-            android:parentActivityName=".hotel_main"></activity>
+        <activity
+            android:name=".click_attractions"
+            android:parentActivityName=".attractions_list"></activity>
+        <activity
+            android:name=".click_res"
+            android:parentActivityName=".restaurant_list" />
+        <activity
+            android:name=".click_main_hotel"
+            android:parentActivityName=".hotel_main" />
         <activity android:name=".attractions_list" />
         <activity android:name=".restaurant_list" />
-        <activity android:name=".hotel_list" android:parentActivityName=".input_schedule"/>
+        <activity
+            android:name=".hotel_list"
+            android:parentActivityName=".input_schedule" />
         <activity android:name=".input_schedule" />
         <activity
             android:name=".googleSignIn"
-            android:exported="true" />
-        <!--<activity android:name=".input_schedule" />-->
+            android:exported="true" /> <!-- <activity android:name=".input_schedule" /> -->
         <activity android:name=".forget_pwd" />
         <activity android:name=".register" />
         <activity android:name=".login" />
-        <activity android:name=".hotel_main"/>
+        <activity android:name=".hotel_main" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

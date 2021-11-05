@@ -22,9 +22,9 @@ class click_res : AppCompatActivity() {
 
 
         actionBar.setTitle(aTitle)
-        a_title.text = aTitle
-        a_description.text = aDescription
-        imageView.setImageResource(aImageView)
+        restaurant_title.text = aTitle
+        restaurant_description.text = aDescription
+        restaurant_imageView.setImageResource(aImageView)
 
         //返回到restaurant_list
         //supportActionBar!!.title="BehKhiSng"

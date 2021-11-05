@@ -5,22 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-
-    tools:context=".click_res">
+    tools:context=".click_attractions">
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="250dp"
-        android:id="@+id/restaurant_imageView"
+        android:id="@+id/attractions_imageView"
         android:src="@drawable/main_foot"
         android:layout_centerHorizontal="true"
         />
 
     <TextView
-        android:id="@+id/restaurant_title"
+        android:id="@+id/attractions_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/restaurant_imageView"
+        android:layout_below="@+id/attractions_imageView"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Title"
@@ -29,15 +28,14 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/restaurant_description"
+        android:id="@+id/attractions_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/restaurant_title"
+        android:layout_below="@+id/attractions_title"
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Description"
         android:textColor="@color/lightGrayColor"
         android:textSize="18sp" />
-
 
 </RelativeLayout>
