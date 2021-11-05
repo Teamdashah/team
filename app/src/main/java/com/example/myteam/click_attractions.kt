@@ -20,8 +20,8 @@ class click_attractions : AppCompatActivity() {
         val bImageView = intent.getIntExtra("iImageView",0)
 
         actionBar.setTitle(bTitle)
-        attractions_title.text = bTitle
-        attractions_description.text = bDescription
-        attractions_imageView.setImageResource(bImageView)
+        click_attractions_title.text = bTitle
+        click_attractions_description.text = bDescription
+        click_attractions_imageView.setImageResource(bImageView)
     }
 }

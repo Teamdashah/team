@@ -26,7 +26,7 @@ class restaurant_list : AppCompatActivity() {
 
         val myAdapter = MyAdapter(arrayList, this)
 
-        recyclerview.layoutManager = LinearLayoutManager(this)
-        recyclerview.adapter = myAdapter
+        restaurant_recyclerview.layoutManager = LinearLayoutManager(this)
+        restaurant_recyclerview.adapter = myAdapter
     }
 }

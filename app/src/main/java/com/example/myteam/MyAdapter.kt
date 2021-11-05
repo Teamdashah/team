@@ -14,9 +14,9 @@ class MyAdapter(val arrayList: ArrayList<Model>, val context: Context) :
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindItems(model: Model) {
-            itemView.titleTv.text = model.title
-            itemView.descriptionTv.text = model.descriptor
-            itemView.imageIv.setImageResource(model.imageDrawable)
+            itemView.title_restaurant.text = model.title
+            itemView.description_restaurant.text = model.descriptor
+            itemView.image_restaurant.setImageResource(model.imageDrawable)
         }
     }
 
