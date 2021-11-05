@@ -42,6 +42,11 @@ class input_schedule : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
 
+        //check my trip button
+        checkmytrip.setOnClickListener{
+
+        }
+
         //handle click, logout user
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -119,8 +124,13 @@ class input_schedule : AppCompatActivity() {
             //在資料庫建立行程
             write_into_firebase(destination, number_of_people, begin_date ,end_date)
 
+            //在 activities 間傳輸資料
+            val intent = Intent(this@input_schedule,hotel_main::class.java)
+            val temp = begin_date + destination
+            intent.putExtra("day_and_place",temp)
+
             //intent to start NewActivity
-            startActivity(Intent(this@input_schedule, hotel_main::class.java))
+            startActivity(intent)
         }
     }
 

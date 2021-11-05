@@ -1,7 +1,9 @@
 package com.example.myteam
 
 import android.content.res.Configuration
+import android.nfc.Tag
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -24,6 +26,7 @@ class hotel_main : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(setOf(R.id.fragment_hotel, R.id.fragment_choose, R.id.fragment_mylove))
 
         bottomNav.setupWithNavController(navController)
+
 
     }
 

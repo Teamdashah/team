@@ -16,7 +16,7 @@ class restaurant_list : AppCompatActivity() {
         arrayList.add(Model("2", "222", R.drawable.main_foot))
         arrayList.add(Model("3", "33", R.drawable.main_foot))
         arrayList.add(Model("4", "44", R.drawable.main_foot))
-        arrayList.add(Model("5", "serfs", R.drawable.main_foot))
+        arrayList.add(Model("5", "se rfs", R.drawable.main_foot))
         arrayList.add(Model("6", "vgyrc", R.drawable.main_foot))
         arrayList.add(Model("7", "mkifv", R.drawable.main_foot))
         arrayList.add(Model("8", "wdfth", R.drawable.main_foot))
