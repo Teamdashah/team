@@ -12,7 +12,7 @@ class attractions_list : AppCompatActivity() {
 
         val arrayList = ArrayList<Model_attractions>()
 
-        arrayList.add(Model_attractions("1", "11", R.drawable.main_foot))
+        arrayList.add(Model_attractions("1", "attraction_list", R.drawable.main_foot))
         arrayList.add(Model_attractions("2", "222", R.drawable.main_foot))
         arrayList.add(Model_attractions("3", "33", R.drawable.main_foot))
         arrayList.add(Model_attractions("4", "44", R.drawable.main_foot))
@@ -24,9 +24,9 @@ class attractions_list : AppCompatActivity() {
         arrayList.add(Model_attractions("10", "njuy", R.drawable.main_foot))
         arrayList.add(Model_attractions("11", "xsrfv", R.drawable.main_foot))
 
-        val attractionsrecycleAdapter = AttractionsRecycleAdapter(arrayList, this)
+        val myAdapter = AttractionsRecycleAdapter(arrayList, this)
 
         attractions_recyclerview.layoutManager = LinearLayoutManager(this)
-        attractions_recyclerview.adapter = attractionsrecycleAdapter
+        attractions_recyclerview.adapter = myAdapter
     }
 }

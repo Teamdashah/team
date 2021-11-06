@@ -124,20 +124,22 @@
         app:layout_constraintVertical_bias="0.733" />
 
     <!--查看我的行程-->
+
+    <!--建立行程-->
+
     <Button
         android:id="@+id/checkmytrip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="查看我的行程"
         android:backgroundTint="@color/teal_200"
+        android:text="查看我的行程"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.009" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!--建立行程-->
     <Button
         android:id="@+id/submitmytrip"
         android:layout_width="165dp"
@@ -160,7 +162,7 @@
         android:text="登出"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />

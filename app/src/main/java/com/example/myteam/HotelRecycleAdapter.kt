@@ -23,30 +23,31 @@ class HotelRecycleAdapter(val arrayList: ArrayList<Model_hotel>, val context: Fr
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.hotel_cardview, parent, false)
-
         return ViewHolder(v)
+
+
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(arrayList[position])
         holder.itemView.setOnClickListener {
 
-            val Model_hotel = arrayList.get(position)
-            var gTitle : String = Model_hotel.title
-            var gDescription :String = Model_hotel.descriptor
-            var gImageView : Int = Model_hotel.imageDrawable
-            val intent = Intent(context,click_main_hotel::class.java)
-            intent.putExtra("iTitle")
-            intent.putExtra("iDescription")
-            intent.putExtra("iImageView")
-            context.startActivity(intent)
+//            val Model_hotel = arrayList.get(position)
+//            var gTitle : String = Model_hotel.title
+//            var gDescription :String = Model_hotel.descriptor
+//            var gImageView : Int = Model_hotel.imageDrawable
+//            val intent = Intent(context,click_main_hotel::class.java)
+//            intent.putExtra("iTitle")
+//            intent.putExtra("iDescription")
+//            intent.putExtra("iImageView")
+//            context.startActivity(intent)
         }
 
     }
 
-    private fun Intent(context: Fragment_hotel, java: Class<click_main_hotel>): Intent? {
-        return Intent(context, click_main_hotel::class.java)
-    }
+//    private fun Intent(context: Fragment_hotel, java: Class<click_main_hotel>): Intent? {
+//        return Intent(context, click_main_hotel::class.java)
+//    }
 
 
     override fun getItemCount(): Int {
@@ -55,6 +56,6 @@ class HotelRecycleAdapter(val arrayList: ArrayList<Model_hotel>, val context: Fr
 
 }
 
-private fun Intent?.putExtra(name: String) {
-
-}
+//private fun Intent?.putExtra(name: String) {
+//
+//}

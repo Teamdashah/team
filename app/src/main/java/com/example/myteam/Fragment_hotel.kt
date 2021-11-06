@@ -24,6 +24,7 @@ class Fragment_hotel() : Fragment() {
 
     }
 
+
 //    fun goToAttract(v: Class<click_main_hotel>) {
 //        val intent = Intent(requireActivity().application, click_main_hotel::class.java)
 //        startActivity(intent)

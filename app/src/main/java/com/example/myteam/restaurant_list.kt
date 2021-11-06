@@ -12,7 +12,7 @@ class restaurant_list : AppCompatActivity() {
 
         val arrayList = ArrayList<Model>()
 
-        arrayList.add(Model("1", "11", R.drawable.main_foot))
+        arrayList.add(Model("1", "restaurant_list", R.drawable.main_foot))
         arrayList.add(Model("2", "222", R.drawable.main_foot))
         arrayList.add(Model("3", "33", R.drawable.main_foot))
         arrayList.add(Model("4", "44", R.drawable.main_foot))

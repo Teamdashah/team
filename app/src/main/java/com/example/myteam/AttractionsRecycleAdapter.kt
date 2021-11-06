@@ -25,24 +25,26 @@ class AttractionsRecycleAdapter (val arrayList: ArrayList<Model_attractions>, va
         return AttractionsRecycleAdapter.ViewHolder(k)
     }
 
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bindItems(arrayList[position])
+        holder.itemView.setOnClickListener {
+            val modelAttractions = arrayList.get(position)
+            val attTitle : String = modelAttractions.title
+            val attDescription: String = modelAttractions.descriptor
+            var attImageView : Int = modelAttractions.imageDrawable
+
+            val intent = Intent(context,click_attractions::class.java)
+            intent.putExtra("iTitle",attTitle)
+            intent.putExtra("iDescription", attDescription)
+            intent.putExtra("iImageView", attImageView)
+            context.startActivity(intent)
+
+        }
+
+    }
+
     override fun getItemCount(): Int {
         return arrayList.size
     }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItems(arrayList[position])
-
-        val modelAttractions = arrayList.get(position)
-        var attractionsTitle : String = modelAttractions.title
-        var attractionsDescription : String = modelAttractions.descriptor
-        var attractionsImageView : Int = modelAttractions.imageDrawable
-
-        val intent = Intent(context, click_attractions::class.java)
-
-        intent.putExtra("iTitle", attractionsTitle)
-        intent.putExtra("iDescription", attractionsDescription)
-        intent.putExtra("iImageView", attractionsImageView)
-
-        context.startActivity(intent)
-    }
 }
+

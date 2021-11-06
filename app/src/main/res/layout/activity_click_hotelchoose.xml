@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".click_attractions"
+    tools:context=".click_hotelchoose"
     android:padding="16dp">
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="250dp"
-        android:id="@+id/attrctions_imageView"
+        android:id="@+id/hotelchoose_imageView"
         android:src="@drawable/main_foot"
         android:layout_centerHorizontal="true"
         />
 
     <TextView
-        android:id="@+id/attrctions_title"
+        android:id="@+id/hotelchoose_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/attrctions_imageView"
+        android:layout_below="@+id/hotelchoose_imageView"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Title"
@@ -28,16 +28,31 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/attrctions_description"
+        android:id="@+id/hotelchoose_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/attrctions_title"
+        android:layout_below="@+id/hotelchoose_title"
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Description"
         android:textColor="@color/lightGrayColor"
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/to_res_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hotelchoose_description"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:text="附近餐廳" />
 
-
+    <Button
+        android:id="@+id/to_attractions_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hotelchoose_description"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="30dp"
+        android:text="附近景點" />
 </RelativeLayout>
