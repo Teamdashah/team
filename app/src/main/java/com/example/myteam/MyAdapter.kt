@@ -5,52 +5,47 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myteam.model.restaurantData
 import kotlinx.android.synthetic.main.row.view.*
 
-class MyAdapter(val arrayList: ArrayList<Model>, val context: Context) :
-    RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class MyAdapter(val restaurantList: ArrayList<restaurantData>) :
+    RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        fun bindItems(model: Model) {
-            itemView.titleTv.text = model.title
-            itemView.descriptionTv.text = model.descriptor
-            itemView.imageIv.setImageResource(model.imageDrawable)
-        }
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.row, parent, false)
+
+        return MyViewHolder(itemView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.row, parent, false)
+        val currentitem = restaurantList[position]
 
-        return ViewHolder(v)
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItems(arrayList[position])
+        holder.coverUrl.text = currentitem.coverUrl
+        holder.name.text = currentitem.name
+        holder.avgPrice.text = currentitem.avgPrice
+        holder.phone.text = currentitem.phone
+        holder.address.text = currentitem.address
 
         holder.itemView.setOnClickListener {
-
-            val model = arrayList.get(position)
-            var gTitle : String = model.title
-            var gDescription :String = model.descriptor
-            var gImageView : Int = model.imageDrawable
-
-            val intent = Intent(context, click_res::class.java)
-
-            intent.putExtra("iTitle", gTitle)
-            intent.putExtra("iDescription", gDescription)
-            intent.putExtra("iImageView", gImageView)
-
-            context.startActivity(intent)
+            //點入餐廳，顯示詳細資訊
         }
     }
 
-
-
     override fun getItemCount(): Int {
-        return arrayList.size
+        return restaurantList.size
+    }
+
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    {
+        val coverUrl : TextView = itemView.findViewById()
+        val name : TextView = itemView.findViewById()
+        val avgPrice : TextView = itemView.findViewById()
+        val phone : TextView = itemView.findViewById()
+        val address : TextView = itemView.findViewById()
     }
 
 }

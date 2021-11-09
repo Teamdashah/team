@@ -3,30 +3,48 @@ package com.example.myteam
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myteam.model.restaurantData
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_restaurant_list.*
 
 class restaurant_list : AppCompatActivity() {
+
+    private lateinit var dbref : DatabaseReference
+    private lateinit var userRecyclerView: RecyclerView
+    private lateinit var restaurantList: ArrayList<restaurantData>
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant_list)
 
-        val arrayList = ArrayList<Model>()
+        userRecyclerView = findViewById(R.id.recyclerview)
+        userRecyclerView.layoutManager = LinearLayoutManager(this)
+        userRecyclerView.setHasFixedSize(true)
 
-        arrayList.add(Model("1", "11", R.drawable.main_foot))
-        arrayList.add(Model("2", "222", R.drawable.main_foot))
-        arrayList.add(Model("3", "33", R.drawable.main_foot))
-        arrayList.add(Model("4", "44", R.drawable.main_foot))
-        arrayList.add(Model("5", "se rfs", R.drawable.main_foot))
-        arrayList.add(Model("6", "vgyrc", R.drawable.main_foot))
-        arrayList.add(Model("7", "mkifv", R.drawable.main_foot))
-        arrayList.add(Model("8", "wdfth", R.drawable.main_foot))
-        arrayList.add(Model("9", "bte", R.drawable.main_foot))
-        arrayList.add(Model("10", "njuy", R.drawable.main_foot))
-        arrayList.add(Model("11", "xsrfv", R.drawable.main_foot))
+        restaurantList = arrayListOf<restaurantData>()
+        getRestaurantData()
+    }
 
-        val myAdapter = MyAdapter(arrayList, this)
+    private fun getRestaurantData(){
+        dbref = FirebaseDatabase.getInstance().getReference("food").child("Taipei CIty")
 
-        recyclerview.layoutManager = LinearLayoutManager(this)
-        recyclerview.adapter = myAdapter
+        dbref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot)
+            {
+                if(snapshot.exists()) {
+                    for (userSnapshot in snapshot.children) {
+                        val user = userSnapshot.getValue(restaurantData::class.java)
+                        restaurantList.add(user!!)
+                    }
+
+                    userRecyclerView.adapter = MyAdapter(restaurantList)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError)
+            {}
+        })
     }
 }
