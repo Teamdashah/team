@@ -26,7 +26,7 @@ class Fragment_choose : Fragment() {
         super.onActivityCreated(savedInstanceState)
         val sweepButton: Button = requireActivity().findViewById<View>(R.id.hotel_result_btn) as Button
         sweepButton.setOnClickListener(View.OnClickListener {
-            Toast.makeText(activity, "您的篩選結果", Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, "您的篩選結果", Toast.LENGTH_SHORT).show()
             //從fragment跳轉到activity中
             startActivity(Intent(activity, Hotelchoose_list::class.java))
         })

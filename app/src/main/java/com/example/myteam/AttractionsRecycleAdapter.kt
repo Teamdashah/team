@@ -1,5 +1,6 @@
 package com.example.myteam
 
+import android.R.attr
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,6 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.attractions_cardview.view.*
+import android.R.attr.data
+
+import android.telecom.Call.Details
+
+
+
 
 class AttractionsRecycleAdapter (val arrayList: ArrayList<Model_attractions>, val context: Context):
     RecyclerView.Adapter<AttractionsRecycleAdapter.ViewHolder>() {
@@ -38,6 +45,7 @@ class AttractionsRecycleAdapter (val arrayList: ArrayList<Model_attractions>, va
             intent.putExtra("iDescription", attDescription)
             intent.putExtra("iImageView", attImageView)
             context.startActivity(intent)
+
 
         }
 
