@@ -24,7 +24,7 @@ class HotelRecycleAdapter(val arrayList: ArrayList<Model_hotel>, val context: Co
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.hotel_cardview, parent, false)
-        return ViewHolder(v)
+        return HotelRecycleAdapter.ViewHolder(v)
 
 
     }
