@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="8dp"
     app:cardElevation="3dp"
-    app:cardUseCompatPadding="true"
-    android:id="@+id/hotel_row_item">
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,37 +15,37 @@
         <ImageView
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:id="@+id/image_hotel"
+            android:id="@+id/image_attractions"
             android:src="@drawable/main_foot"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_attractions"
+            android:text="Title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/image_attractions"
+            android:layout_toEndOf="@+id/image_attractions"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             />
 
         <TextView
-            android:id="@+id/title_hotel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_toEndOf="@+id/image_hotel"
-            android:layout_toRightOf="@+id/image_hotel"
-            android:text="Title"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/description_hotel"
+            android:id="@+id/description_attractions"
             android:text="Description"
             android:textSize="18sp"
             android:textColor="@color/lightGrayColor"
-            android:layout_toRightOf="@+id/image_hotel"
-            android:layout_toEndOf="@+id/image_hotel"
+            android:layout_toRightOf="@+id/image_attractions"
+            android:layout_toEndOf="@+id/image_attractions"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_below="@+id/title_hotel"
-            />
+            android:layout_below="@+id/title_attractions"
 
+            />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
