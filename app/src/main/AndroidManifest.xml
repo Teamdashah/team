@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Myteam">
         <activity
             android:name=".click_main_hotel"
-            android:exported="false" />
+            android:parentActivityName=".hotel_main" />
         <activity
             android:name=".click_attractions"
             android:parentActivityName=".attractions_list" />

@@ -31,4 +31,5 @@ class Fragment_choose : Fragment() {
             startActivity(Intent(activity, Hotelchoose_list::class.java))
         })
     }
+
 }

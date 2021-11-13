@@ -3,6 +3,7 @@ package com.example.myteam
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,7 +29,7 @@ class HotelRecycleAdapter(val arrayList: ArrayList<Model_hotel>, val context: Co
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.hotel_cardview, parent, false)
-        return ViewHolder(v)
+        return HotelRecycleAdapter.ViewHolder(v)
 
 
     }
@@ -37,59 +38,49 @@ class HotelRecycleAdapter(val arrayList: ArrayList<Model_hotel>, val context: Co
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(arrayList[position])
         holder.itemView.setOnClickListener {
-//            if (position==0){
-//                Toast.makeText(
-//                    context,
-//                    "You click",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            }
-//            if (position==2){
-//                Toast.makeText(
-//                    context,
-//                    "You click2",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            }
+            /*if (position==0){
+                Toast.makeText(
+                    context,
+                    "You click",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            if (position==2){
+                Toast.makeText(
+                    context,
+                    "You click2",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }*/
+
+
+           //get position of slect item//
             val model = arrayList.get(position)
+           //get title and discription of selected item with intent//
             var mhTitle : String = model.title
             var mhDescription : String = model.descriptor
             var mhImageView : Int = model.imageDrawable
-            val intent = Intent(context, click_main_hotel::class.java)
+           //creat intent in kotlin//
+            val intent = Intent(getActivity(context), click_main_hotel::class.java)
+           //pull all this item with putExtra item//
+            val bundle = Bundle()
+            bundle.putString("iTitle",mhTitle)
+            bundle.putString("iDescription",mhDescription)
+            bundle.putInt("iImageView", mhImageView)
+            intent.putExtras(bundle)
+
+          /*方法2
             intent.putExtra("iTitle",mhTitle)
             intent.putExtra("iDescription", mhDescription)
             intent.putExtra("iImageView", mhImageView)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);*/
+
+            //start activity
             context.startActivity(intent)
 
         }
 
     }
-
-//    private fun Intent(context: Fragment_hotel, java: Class<click_main_hotel>): Intent? {
-//        return Intent(
-//            context,
-//            click_main_hotel::class.java
-//        )
-//
-//    }
-
-//    open fun onClick(v: View) {
-//    when (v.id) {
-//        R.id.my_button ->
-//
-//            requireActivity().supportFragmentManager
-//                .beginTransaction()
-//                .replace(R.id.fragment_container, Fragment_hotel(), null)
-//                .addToBackStack(null)
-//                .commit()
-//        R.id.my_return -> requireActivity().supportFragmentManager.popBackStack()
-//        R.id.my_other -> {
-//            val intent = Intent(activity, click_main_hotel::class.java)
-//            startActivity(intent)
-//        }
-//    }
-//}
 
     override fun getItemCount(): Int {
         return arrayList.size

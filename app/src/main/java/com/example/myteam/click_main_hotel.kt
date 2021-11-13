@@ -11,22 +11,20 @@ class click_main_hotel : AppCompatActivity() {
         setContentView(R.layout.activity_click_main_hotel)
         super.onCreate(savedInstanceState)
 
-
-
-
         val actionBar : ActionBar? = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
         actionBar!!.setDisplayShowHomeEnabled(true)
-        val intent: Intent = getIntent()
-//        val  intent = intent
+        val intent: Intent = intent
         val main_hotelTitle = intent.getStringExtra("iTitle")
         val main_hotelDescription = intent.getStringExtra("iDescription")
         val main_hotelImageView = intent.getIntExtra("iImageView",0)
 
+        //標題傳過去//
         actionBar.setTitle(main_hotelTitle)
         hotel_title.text = main_hotelTitle
         hotel_description.text = main_hotelDescription
         hotel_imageView.setImageResource(main_hotelImageView)
+
 
 
     }
