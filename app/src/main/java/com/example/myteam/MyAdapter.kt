@@ -15,7 +15,9 @@ class MyAdapter(val arrayList: ArrayList<Model>, val context: Context) :
 
         fun bindItems(model: Model) {
             itemView.title_restaurant.text = model.title
-            itemView.description_restaurant.text = model.descriptor
+            itemView.description_restaurant01.text = model.des01
+            itemView.description_restaurant02.text = model.des02
+            itemView.description_restaurant03.text = model.des03
             itemView.image_restaurant.setImageResource(model.imageDrawable)
         }
     }
@@ -34,13 +36,17 @@ class MyAdapter(val arrayList: ArrayList<Model>, val context: Context) :
 
             val model = arrayList.get(position)
             var gTitle : String = model.title
-            var gDescription :String = model.descriptor
+            var gDescription01 :String = model.des01
+            var gDescription02 :String = model.des02
+            var gDescription03 :String = model.des03
             var gImageView : Int = model.imageDrawable
 
             val intent = Intent(context, click_res::class.java)
 
             intent.putExtra("iTitle", gTitle)
-            intent.putExtra("iDescription", gDescription)
+            intent.putExtra("iDescription01", gDescription01)
+            intent.putExtra("iDescription02", gDescription02)
+            intent.putExtra("iDescription03", gDescription03)
             intent.putExtra("iImageView", gImageView)
 
             context.startActivity(intent)

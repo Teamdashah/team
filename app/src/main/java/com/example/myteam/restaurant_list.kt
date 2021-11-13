@@ -12,17 +12,16 @@ class restaurant_list : AppCompatActivity() {
 
         val arrayList = ArrayList<Model>()
 
-        arrayList.add(Model("1", "restaurant_list", R.drawable.main_foot))
-        arrayList.add(Model("2", "222", R.drawable.main_foot))
-        arrayList.add(Model("3", "33", R.drawable.main_foot))
-        arrayList.add(Model("4", "44", R.drawable.main_foot))
-        arrayList.add(Model("5", "se rfs", R.drawable.main_foot))
-        arrayList.add(Model("6", "vgyrc", R.drawable.main_foot))
-        arrayList.add(Model("7", "mkifv", R.drawable.main_foot))
-        arrayList.add(Model("8", "wdfth", R.drawable.main_foot))
-        arrayList.add(Model("9", "bte", R.drawable.main_foot))
-        arrayList.add(Model("10", "njuy", R.drawable.main_foot))
-        arrayList.add(Model("11", "xsrfv", R.drawable.main_foot))
+        arrayList.add(Model("測試早午餐", "平均價格 : 101111","電話 : 07-123456799","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
+        arrayList.add(Model("小蘇早午餐", "平均價格 : 300","電話 : 07-1234567","地址 : 我家" , R.drawable.main_foot))
+        arrayList.add(Model("4", "平均價格 : 100","電話 : 07-1234567","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
+        arrayList.add(Model("5", "平均價格 : 100","電話 : 07-1234567","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
+        arrayList.add(Model("6", "平均價格 : 100","電話 : 07-1234567","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
+        arrayList.add(Model("7", "平均價格 : 100","電話 : 07-1234567","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
+        arrayList.add(Model("8", "平均價格 : 100","電話 : 07-1234567","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
+        arrayList.add(Model("9", "平均價格 : 100","電話 : 07-1234567","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
+        arrayList.add(Model("10", "平均價格 : 100","電話 : 07-1234567","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
+        arrayList.add(Model("11", "平均價格 : 100","電話 : 07-1234567","地址 : 高雄市楠梓區高雄大學路700號" , R.drawable.main_foot))
 
         val myAdapter = MyAdapter(arrayList, this)
 

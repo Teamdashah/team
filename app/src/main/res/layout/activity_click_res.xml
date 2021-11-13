@@ -16,6 +16,7 @@
         android:layout_centerHorizontal="true"
         />
 
+    <!--title-->
     <TextView
         android:id="@+id/restaurant_title"
         android:layout_width="match_parent"
@@ -29,10 +30,32 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/restaurant_description"
+        android:id="@+id/restaurant_description01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/restaurant_title"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Description"
+        android:textColor="@color/lightGrayColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/restaurant_description02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restaurant_description01"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Description"
+        android:textColor="@color/lightGrayColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/restaurant_description03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restaurant_description02"
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Description"

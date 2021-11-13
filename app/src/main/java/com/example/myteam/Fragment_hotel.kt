@@ -82,7 +82,7 @@ class Fragment_hotel() : Fragment() {
         val arrayList = ArrayList<Model_hotel>()
 
         arrayList.add(Model_hotel("1", "mainhotel", R.drawable.main_foot))
-        arrayList.add(Model_hotel("2", "222", R.drawable.main_foot))
+        arrayList.add(Model_hotel("黑", "測試一下", R.drawable.main_foot))
         arrayList.add(Model_hotel("3", "33", R.drawable.main_foot))
         arrayList.add(Model_hotel("4", "44", R.drawable.main_foot))
         arrayList.add(Model_hotel("5", "serfs", R.drawable.main_foot))

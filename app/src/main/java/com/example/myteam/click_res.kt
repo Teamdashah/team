@@ -18,14 +18,18 @@ class click_res : AppCompatActivity() {
 
         var intent = intent
         val aTitle = intent.getStringExtra("iTitle")
-        val aDescription = intent.getStringExtra("iDescription")
+        val rDescription01 = intent.getStringExtra("iDescription01")
+        val rDescription02 = intent.getStringExtra("iDescription02")
+        val rDescription03 = intent.getStringExtra("iDescription03")
         val aImageView = intent.getIntExtra("iImageView",0)
 
 
 
         actionBar.setTitle(aTitle)
         restaurant_title.text = aTitle
-        restaurant_description.text = aDescription
+        restaurant_description01.text = rDescription01
+        restaurant_description02.text = rDescription02
+        restaurant_description03.text = rDescription03
         restaurant_imageView.setImageResource(aImageView)
 
 
