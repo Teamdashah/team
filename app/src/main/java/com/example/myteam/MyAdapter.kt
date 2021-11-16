@@ -26,10 +26,10 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>) :
         val currentitem = restaurantList[position]
 
         //holder.coverUrl.text = currentitem.coverUrl
-        /*holder.name.text = currentitem.name
-        holder.avgPrice.text = currentitem.avgPrice
+        holder.name.text = currentitem.name
+        holder.avgPrice.text = currentitem.avgPrice.toString()
         holder.phone.text = currentitem.phone
-        holder.address.text = currentitem.address*/
+        holder.address.text = currentitem.address
 
         holder.itemView.setOnClickListener {
 

@@ -3,77 +3,119 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="15dp"
-    app:cardElevation="3dp"
-    app:cardUseCompatPadding="true">
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="16dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        >
-        <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:id="@+id/image_restaurant"
-            android:src="@drawable/main_foot"
-            />
+        android:layout_marginStart="16dp"
+        android:layout_marginVertical="6dp"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/title_restaurant"
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_toEndOf="@+id/image_restaurant"
-            android:layout_toRightOf="@+id/image_restaurant"
-            android:text="小蘇素人早午餐"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="店名:"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/title_restaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Arye"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/description_restaurant01"
-            android:text="平均價格 : 100"
-            android:textSize="18sp"
-            android:textColor="@color/lightGrayColor"
-            android:layout_toRightOf="@+id/image_restaurant"
-            android:layout_toEndOf="@+id/image_restaurant"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_below="@+id/title_restaurant"
-            />
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/description_restaurant02"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="平均價格:"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/description_restaurant01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="100"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/title_restaurant"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="29dp"
-            android:layout_toEndOf="@+id/image_restaurant"
-            android:layout_toRightOf="@+id/image_restaurant"
-            android:text="電話 : 07-1234567"
-            android:textColor="@color/lightGrayColor"
-            android:textSize="18sp" />
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/description_restaurant03"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址:"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/description_restaurant02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="早午餐"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/description_restaurant02"
-            android:layout_toEndOf="@+id/image_restaurant"
-            android:layout_toRightOf="@+id/image_restaurant"
-            android:text="地址 : 高雄市楠梓區高雄大學路700號"
-            android:textColor="@color/lightGrayColor"
-            android:textSize="18sp" />
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="電話:"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/description_restaurant03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="0989533708"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

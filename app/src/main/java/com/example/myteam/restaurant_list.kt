@@ -1,18 +1,24 @@
 package com.example.myteam
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.restaurantData
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_restaurant_list.*
+
+private const val TAG = "restaurant_list"
 
 class restaurant_list : AppCompatActivity() {
 
     private lateinit var dbref : DatabaseReference
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var restaurantList: ArrayList<restaurantData>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +28,7 @@ class restaurant_list : AppCompatActivity() {
         userRecyclerView.layoutManager = LinearLayoutManager(this)
         userRecyclerView.setHasFixedSize(true)
 
+
         restaurantList = arrayListOf<restaurantData>()
         getRestaurantData()
 
@@ -29,7 +36,8 @@ class restaurant_list : AppCompatActivity() {
 
     private fun getRestaurantData()
     {
-        dbref = FirebaseDatabase.getInstance().getReference("food").child("Taipei City")
+        dbref = FirebaseDatabase.getInstance().getReference("food/Taipei City")
+
 
         dbref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -39,6 +47,8 @@ class restaurant_list : AppCompatActivity() {
                     {
                         val restaurant = userSnapshot.getValue(restaurantData::class.java)
                         restaurantList.add(restaurant!!)
+
+                        Log.d(TAG,"test*****************")
                     }
 
                     userRecyclerView.adapter = MyAdapter(restaurantList)
