@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         //configure the Google SignIn
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -95,14 +96,11 @@ class MainActivity : AppCompatActivity() {
         {
             Log.d(TAG,"onActivityResult: Google SignIn intent result")
             val accountTask = GoogleSignIn.getSignedInAccountFromIntent(data)
-            Log.d(TAG,"checkpoint: test1")
+
             try{
                 //Google SignIn success, now auth with firebase
-                Log.d(TAG,"checkpoint: test2")
                 val account = accountTask.getResult(ApiException::class.java)!!
-                Log.d(TAG,"checkpoint: test3")
                 firebaseAuthWithGoogleAccount(account)
-                Log.d(TAG,"checkpoint: test4")
             }
             catch (e: Exception){
                 //failed Google SignIn
