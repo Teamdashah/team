@@ -60,7 +60,7 @@ class attractions_list : AppCompatActivity() {
                         Log.d(TAG,"test*****************")
                     }
 
-                    attRecyclerView.adapter = AttractionsRecycleAdapter(attractionList)
+                    attRecyclerView.adapter = AttractionsRecycleAdapter(attractionList,this@attractions_list)
 
                 }
 

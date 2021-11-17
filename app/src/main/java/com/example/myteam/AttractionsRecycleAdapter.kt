@@ -1,6 +1,7 @@
 package com.example.myteam
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import com.example.myteam.model.attractionData
 import kotlinx.android.synthetic.main.attractions_cardview.view.*
 
 
-class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>):
+class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,val context:Context):
     RecyclerView.Adapter<AttractionsRecycleAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -34,6 +35,18 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>):
         holder.phone.text = currentAttitem.phone
         holder.introduction.text = currentAttitem.introduction
         holder.itemView.setOnClickListener {
+            val pushitem = attractionList.get(position)
+            val attName : String? = pushitem.name
+            val attAddress : String? = pushitem.address
+            val attPhone : String? = pushitem.phone
+            val attIntroduction : String? = pushitem.introduction
+            val intent = Intent(context,click_attractions::class.java)
+            intent.putExtra("name",attName)
+            intent.putExtra("address",attAddress)
+            intent.putExtra("phone",attPhone)
+            intent.putExtra("introduction",attIntroduction)
+            context.startActivity(intent)
+
 //            val modelAttractions = arrayList.get(position)
 //            val attTitle : String = modelAttractions.name
 //            val attDescription: String = modelAttractions.address

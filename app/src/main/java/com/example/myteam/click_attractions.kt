@@ -18,14 +18,18 @@ class click_attractions : AppCompatActivity() {
         actionBar!!.setDisplayShowHomeEnabled(true)
 
         val intent =intent
-        val att_Title = intent.getStringExtra("iTitle")
-        val att_Description = intent.getStringExtra("iDescription")
-        val att_ImageView = intent.getIntExtra("iImageView",0)
+        val att_Name = intent.getStringExtra("name")
+        val att_Address = intent.getStringExtra("address")
+        val att_Phone = intent.getStringExtra("phone")
+        val att_Introduction = intent.getStringExtra("introduction")
+//        val att_ImageView = intent.getIntExtra("iImageView",0)
 
-        actionBar.setTitle(att_Title)
-        attrctions_title.text = att_Title
-        attrctions_description.text = att_Description
-        attrctions_imageView.setImageResource(att_ImageView)
+//        actionBar.setTitle(att_Title)
+        attrction_detail_name.text = att_Name
+        attrction_detail_address.text = att_Address
+        attrction_detail_phone.text = att_Phone
+        attrction_detail_introducton.text= att_Introduction
+//        attrctions_imageView.setImageResource(att_ImageView)
     }
 }
 

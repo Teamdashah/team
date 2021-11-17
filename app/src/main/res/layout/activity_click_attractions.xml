@@ -16,25 +16,46 @@
         />
 
     <TextView
-        android:id="@+id/attrctions_title"
+        android:id="@+id/attrction_detail_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/attrctions_imageView"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Title"
+        android:text="景點"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/attrctions_description"
+        android:id="@+id/attrction_detail_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/attrctions_title"
-        android:layout_marginTop="30dp"
+        android:layout_below="@+id/attrction_detail_name"
+        android:layout_marginTop="15dp"
         android:gravity="center"
-        android:text="Description"
+        android:text="地址"
+        android:textColor="@color/lightGrayColor"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/attrction_detail_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attrction_detail_address"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="電話"
+        android:textColor="@color/lightGrayColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/attrction_detail_introducton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attrction_detail_phone"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="介紹"
         android:textColor="@color/lightGrayColor"
         android:textSize="18sp" />
 
@@ -42,9 +63,9 @@
         android:id="@+id/att_location_btn"
         android:layout_width="69dp"
         android:layout_height="70dp"
-        android:layout_below="@id/attrctions_description"
+        android:layout_below="@id/attrction_detail_address"
         android:layout_marginLeft="300dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="-154dp"
         android:background="@drawable/ic_location" />
 
 
