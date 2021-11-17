@@ -8,12 +8,11 @@
     android:padding="16dp">
 
     <ImageView
+        android:id="@+id/hotelchoose_imageView"
         android:layout_width="300dp"
         android:layout_height="250dp"
-        android:id="@+id/hotelchoose_imageView"
-        android:src="@drawable/main_foot"
         android:layout_centerHorizontal="true"
-        />
+        android:src="@drawable/main_foot" />
 
     <TextView
         android:id="@+id/hotelchoose_title"
