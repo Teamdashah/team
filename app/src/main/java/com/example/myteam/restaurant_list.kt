@@ -45,7 +45,6 @@ class restaurant_list : AppCompatActivity() {
                         val restaurant = userSnapshot.getValue(restaurantData::class.java)
                         restaurantList.add(restaurant!!)
 
-                        Log.d(TAG,"test*****************")
                     }
 
                     userRecyclerView.adapter = MyAdapter(restaurantList)
