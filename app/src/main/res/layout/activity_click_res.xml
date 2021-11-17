@@ -39,6 +39,11 @@
         android:textColor="@color/lightGrayColor"
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/favBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_favorite_shadow_24xml"/>
 <!--    <Button-->
 <!--        android:id="@+id/to_res_btn"-->
 <!--        android:layout_width="wrap_content"-->

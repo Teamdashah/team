@@ -30,3 +30,4 @@ class attractions_list : AppCompatActivity() {
         attractions_recyclerview.adapter = attractionsrecycleAdapter
     }
 }
+
