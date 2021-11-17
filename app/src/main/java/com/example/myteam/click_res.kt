@@ -17,11 +17,11 @@ class click_res : AppCompatActivity() {
         actionBar!!.setDisplayShowHomeEnabled(true)
 
         var intent = intent
-        val aTitle = intent.getStringExtra("iTitle")
-        val rDescription01 = intent.getStringExtra("iDescription01")
-        val rDescription02 = intent.getStringExtra("iDescription02")
-        val rDescription03 = intent.getStringExtra("iDescription03")
-        val aImageView = intent.getIntExtra("iImageView",0)
+        val aTitle = intent.getStringExtra("resName")
+        val rDescription01 = intent.getStringExtra("resPrice")
+        val rDescription02 = intent.getStringExtra("resAddress")
+        val rDescription03 = intent.getStringExtra("resPhone")
+//        val aImageView = intent.getIntExtra("iImageView",0)
 
 
 
@@ -30,7 +30,7 @@ class click_res : AppCompatActivity() {
         restaurant_description01.text = rDescription01
         restaurant_description02.text = rDescription02
         restaurant_description03.text = rDescription03
-        restaurant_imageView.setImageResource(aImageView)
+//        restaurant_imageView.setImageResource(aImageView)
 
 
     }

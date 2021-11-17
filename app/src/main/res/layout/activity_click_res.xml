@@ -62,7 +62,15 @@
         android:textColor="@color/lightGrayColor"
         android:textSize="18sp" />
 
-<!--    <Button-->
+    <Button
+        android:id="@+id/res_location_btn"
+        android:layout_width="69dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/restaurant_description03"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="-267dp"
+        android:background="@drawable/ic_location" />
+    <!--    <Button-->
 <!--        android:id="@+id/to_res_btn"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
