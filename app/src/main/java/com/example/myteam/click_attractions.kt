@@ -3,10 +3,10 @@ package com.example.myteam
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.ActionBar
 import kotlinx.android.synthetic.main.activity_click_attractions.*
-import kotlinx.android.synthetic.main.activity_click_hotelchoose.*
+
+
 
 class click_attractions : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,14 +22,13 @@ class click_attractions : AppCompatActivity() {
         val att_Address = intent.getStringExtra("address")
         val att_Phone = intent.getStringExtra("phone")
         val att_Introduction = intent.getStringExtra("introduction")
-//        val att_ImageView = intent.getIntExtra("iImageView",0)
+
 
 //        actionBar.setTitle(att_Title)
         attrction_detail_name.text = att_Name
         attrction_detail_address.text = att_Address
         attrction_detail_phone.text = att_Phone
         attrction_detail_introducton.text= att_Introduction
-//        attrctions_imageView.setImageResource(att_ImageView)
     }
 }
 

@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_login.view.*
 import kotlinx.android.synthetic.main.row.view.*
 import java.security.AccessController.getContext
 
-class MyAdapter(val restaurantList: ArrayList<restaurantData>) :
+class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Context) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -41,8 +41,21 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>) :
         holder.address.text = currentitem.address
 
         holder.itemView.setOnClickListener {
-
             //點開餐廳，看詳細資訊
+            val pushresitem = restaurantList.get(position)
+            val resName : String? = pushresitem.name
+            val resavgPrice : String? = pushresitem.avgPrice.toString()
+            val resAddress : String? = pushresitem.address
+            val resPhone : String? = pushresitem.phone
+            var rescoverUrl : String? = pushresitem.coverUrl
+            val intent = Intent(context,click_res::class.java)
+            intent.putExtra("name",resName)
+            intent.putExtra("avgPrice",resavgPrice)
+            intent.putExtra("address",resAddress)
+            intent.putExtra("phone",resPhone)
+            intent.putExtra("coverUrl",rescoverUrl)
+            context.startActivity(intent)
+
         }
     }
 

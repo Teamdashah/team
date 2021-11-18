@@ -9,12 +9,11 @@
     tools:context=".click_res">
 
     <ImageView
+        android:id="@+id/restaurant_imageView"
         android:layout_width="300dp"
         android:layout_height="250dp"
-        android:id="@+id/restaurant_imageView"
-        android:src="@drawable/main_foot"
         android:layout_centerHorizontal="true"
-        />
+        android:src="@drawable/main_foot" />
 
     <!--title-->
     <TextView
@@ -68,16 +67,8 @@
         android:layout_height="70dp"
         android:layout_below="@id/restaurant_description03"
         android:layout_marginLeft="300dp"
-        android:layout_marginTop="-267dp"
+        android:layout_marginTop="-218dp"
         android:background="@drawable/ic_location" />
-    <!--    <Button-->
-<!--        android:id="@+id/to_res_btn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/restaurant_description"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:layout_marginLeft="50dp"-->
-<!--        android:text="Button" />-->
 
 
 </RelativeLayout>

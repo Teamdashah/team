@@ -35,6 +35,8 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
         holder.phone.text = currentAttitem.phone
         holder.introduction.text = currentAttitem.introduction
         holder.itemView.setOnClickListener {
+            //點開景點看詳細資訊
+
             val pushitem = attractionList.get(position)
             val attName : String? = pushitem.name
             val attAddress : String? = pushitem.address
@@ -46,18 +48,6 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
             intent.putExtra("phone",attPhone)
             intent.putExtra("introduction",attIntroduction)
             context.startActivity(intent)
-
-//            val modelAttractions = arrayList.get(position)
-//            val attTitle : String = modelAttractions.name
-//            val attDescription: String = modelAttractions.address
-//           /* var attImageView : Int = modelAttractions.imageDrawable*/
-//
-//            val intent = Intent(context,click_attractions::class.java)
-//            intent.putExtra("iTitle",attTitle)
-//            intent.putExtra("iDescription", attDescription)
-//            /*intent.putExtra("iImageView", attImageView)*/
-//            context.startActivity(intent)
-
 
         }
 

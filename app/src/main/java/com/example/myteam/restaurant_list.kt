@@ -47,7 +47,7 @@ class restaurant_list : AppCompatActivity() {
 
                     }
 
-                    userRecyclerView.adapter = MyAdapter(restaurantList)
+                    userRecyclerView.adapter = MyAdapter(restaurantList,this@restaurant_list)
 
                 }
             }

@@ -87,7 +87,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="地址:"
+                    android:text="電話:"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"/>
@@ -112,7 +112,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="電話:"
+                    android:text="地址:"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"/>
