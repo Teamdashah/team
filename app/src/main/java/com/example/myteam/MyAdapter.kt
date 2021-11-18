@@ -2,20 +2,14 @@ package com.example.myteam
 
 import android.content.Context
 import android.content.Intent
-import android.icu.number.NumberFormatter.with
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.GenericTransitionOptions.with
-import com.bumptech.glide.Glide.with
 import com.example.myteam.model.restaurantData
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_login.view.*
-import kotlinx.android.synthetic.main.row.view.*
-import java.security.AccessController.getContext
 
 class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Context) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {

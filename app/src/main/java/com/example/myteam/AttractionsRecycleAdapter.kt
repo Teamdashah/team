@@ -33,7 +33,9 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
         holder.name.text = currentAttitem.name
         holder.address.text = currentAttitem.address
         holder.phone.text = currentAttitem.phone
-        holder.introduction.text = currentAttitem.introduction
+//        下面那行馬掉後，在attraction_list中不顯示簡介
+//        holder.introduction.text = currentAttitem.introduction
+
         holder.itemView.setOnClickListener {
             //點開景點看詳細資訊
 
