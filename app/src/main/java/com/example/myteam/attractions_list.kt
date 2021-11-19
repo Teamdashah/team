@@ -27,26 +27,10 @@ class attractions_list : AppCompatActivity() {
         getAttractionData()
 
 
-
-        /* val arrayList = ArrayList<Model_attractions>()
-         arrayList.add(Model_attractions("1", "11", R.drawable.main_foot))
-         arrayList.add(Model_attractions("2", "222", R.drawable.main_foot))
-         arrayList.add(Model_attractions("3", "33", R.drawable.main_foot))
-         arrayList.add(Model_attractions("4", "44", R.drawable.main_foot))
-         arrayList.add(Model_attractions("5", "serfs", R.drawable.main_foot))
-         arrayList.add(Model_attractions("6", "vgyrc", R.drawable.main_foot))
-         arrayList.add(Model_attractions("7", "mkifv", R.drawable.main_foot))
-         arrayList.add(Model_attractions("8", "wdfth", R.drawable.main_foot))
-         arrayList.add(Model_attractions("9", "bte", R.drawable.main_foot))
-         arrayList.add(Model_attractions("10", "njuy", R.drawable.main_foot))
-         arrayList.add(Model_attractions("11", "xsrfv", R.drawable.main_foot))
-         val attractionsrecycleAdapter = AttractionsRecycleAdapter(arrayList, this)
-         attraction_recyclerview.layoutManager = LinearLayoutManager(this)
-         attraction_recyclerview.adapter = attractionsrecycleAdapter*/
     }
     private fun getAttractionData()
     {
-        dbref = FirebaseDatabase.getInstance().getReference("attractions/Central")
+        dbref = FirebaseDatabase.getInstance().getReference("attractions_new/Central")
 
         dbref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {

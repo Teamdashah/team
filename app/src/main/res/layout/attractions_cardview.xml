@@ -117,25 +117,24 @@
 <!--        </LinearLayout>-->
 
 <!--    </LinearLayout>-->
-    /*<RelativeLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
         >
+
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
             android:id="@+id/image_attraction"
-            android:src="@drawable/main_foot"
-            />
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/main_foot" />
 
         <!--景點名-->
         <TextView
             android:id="@+id/attraction_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/image_attraction"
             android:layout_toRightOf="@+id/image_attraction"
             android:text="Title"
@@ -144,64 +143,60 @@
             android:textStyle="bold" />
 
         <!--地址-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attraction_title"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/image_attraction"
+            android:layout_toRightOf="@+id/image_attraction"
+            android:text="地址:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/attraction_title"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="7dp"
-        android:layout_toEndOf="@+id/image_attraction"
-        android:layout_toRightOf="@+id/image_attraction"
-        android:text="地址:"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/attraction_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/attraction_title"
-        android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="7dp"
-        android:layout_toEndOf="@+id/image_attraction"
-        android:layout_toRightOf="@+id/image_attraction"
-        android:text="Description"
-        android:textColor="@color/lightGrayColor"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/attraction_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attraction_title"
+            android:layout_marginStart="74dp"
+            android:layout_marginLeft="74dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/image_attraction"
+            android:layout_toRightOf="@+id/image_attraction"
+            android:text="Description"
+            android:textColor="@color/lightGrayColor"
+            android:textSize="20sp" />
 
         <!--電話-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attraction_address"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/image_attraction"
+            android:layout_toRightOf="@+id/image_attraction"
+            android:text="電話:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/attraction_address"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginTop="7dp"
-        android:layout_toEndOf="@+id/image_attraction"
-        android:layout_toRightOf="@+id/image_attraction"
-        android:text="電話:"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/attraction_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/attraction_address"
-        android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="7dp"
-        android:layout_toEndOf="@+id/image_attraction"
-        android:layout_toRightOf="@+id/image_attraction"
-        android:text="Description"
-        android:textColor="@color/lightGrayColor"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/attraction_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attraction_address"
+            android:layout_marginStart="74dp"
+            android:layout_marginLeft="74dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/image_attraction"
+            android:layout_toRightOf="@+id/image_attraction"
+            android:text="Description"
+            android:textColor="@color/lightGrayColor"
+            android:textSize="20sp" />
 
         <!--介紹-->
 <!--    <TextView-->
