@@ -117,8 +117,8 @@ class input_schedule : AppCompatActivity() {
 
             dpd.show()
         }
+
         val SButton = findViewById<Button>(R.id.submitmytrip)
-        //handle onClick
         SButton.setOnClickListener {
 
             //在資料庫建立行程
@@ -131,6 +131,12 @@ class input_schedule : AppCompatActivity() {
 
             //intent to start NewActivity
             startActivity(intent)
+        }
+
+        val checkButton = findViewById<Button>(R.id.checkmytrip)
+        checkButton.setOnClickListener {
+
+            startActivity(Intent(this@input_schedule, GoogleMapsActivity::class.java))
         }
     }
 
