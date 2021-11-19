@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myteam">
+        <activity android:name=".click_mylove"></activity>
         <activity
             android:name=".click_main_hotel"
             android:parentActivityName=".hotel_main" />
