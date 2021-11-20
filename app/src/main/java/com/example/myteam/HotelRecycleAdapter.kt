@@ -47,9 +47,12 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
             val pushitem = hotelFirstList.get(position)
             val hotelName : String? = pushitem.room_name
             val hotelAddress : String? = pushitem.room_address
+            var hotelPictureUrl : String? = pushitem.room_photo
             val intent = Intent(getActivity(context), click_main_hotel::class.java)
             intent.putExtra("room_name",hotelName)
             intent.putExtra("room_address",hotelAddress)
+            intent.putExtra("room_photo",hotelPictureUrl)
+
             context.startActivity(intent)
 
 
