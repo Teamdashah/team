@@ -6,46 +6,166 @@
     app:cardCornerRadius="8dp"
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true">
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        >
+        android:layout_marginStart="16dp"
+        android:layout_marginVertical="6dp"
+        android:orientation="horizontal">
+
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:id="@+id/image_hotel"
-            android:src="@drawable/main_foot"
-            />
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:id="@+id/hotel_Image">
+        </ImageView>
 
-        <TextView
-            android:id="@+id/title_hotel"
+        <!--右邊垂直部分-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_toEndOf="@+id/image_hotel"
-            android:layout_toRightOf="@+id/image_hotel"
-            android:text="Title"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/description_hotel"
-            android:text="Description"
-            android:textSize="18sp"
-            android:textColor="@color/lightGrayColor"
-            android:layout_toRightOf="@+id/image_hotel"
-            android:layout_toEndOf="@+id/image_hotel"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_below="@+id/title_hotel"
-            />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="飯店:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/hotel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Arye"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="平均價格:"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/description_restaurant01"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:text="100"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15sp"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="電話:"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/description_restaurant02"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:text="早午餐"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15sp"/>-->
+
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="地址:"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold"/>-->
+
+                <TextView
+                    android:id="@+id/hotel_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0989533708"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="16dp"-->
+<!--        >-->
+<!--        <ImageView-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:id="@+id/image_hotel"-->
+<!--            android:src="@drawable/main_foot"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/title_hotel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toEndOf="@+id/image_hotel"-->
+<!--            android:layout_toRightOf="@+id/image_hotel"-->
+<!--            android:text="Title"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="22sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/description_hotel"-->
+<!--            android:text="Description"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="@color/lightGrayColor"-->
+<!--            android:layout_toRightOf="@+id/image_hotel"-->
+<!--            android:layout_toEndOf="@+id/image_hotel"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_below="@+id/title_hotel"-->
+<!--            />-->
+
+<!--    </RelativeLayout>-->
 
 </androidx.cardview.widget.CardView>

@@ -32,6 +32,7 @@ class input_schedule : AppCompatActivity() {
     private lateinit var begin_date: String
     private lateinit var end_date: String
 
+
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

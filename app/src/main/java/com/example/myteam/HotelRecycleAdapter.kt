@@ -3,87 +3,61 @@ package com.example.myteam
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myteam.model.hotelFirstData
 import com.google.android.material.internal.ContextUtils.getActivity
-import kotlinx.android.synthetic.main.hotel_cardview.view.*
+import com.squareup.picasso.Picasso
 
 
-
-class HotelRecycleAdapter(val arrayList: ArrayList<Model_hotel>, val context: Context) :
+class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val context: Context) :
     RecyclerView.Adapter<HotelRecycleAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        fun bindItems(model: Model_hotel) {
-            itemView.title_hotel.text = model.title
-            itemView.description_hotel.text = model.descriptor
-            itemView.image_hotel.setImageResource(model.imageDrawable)
-        }
+        val room_name : TextView = itemView.findViewById(R.id.hotel_name)
+        val room_address : TextView = itemView.findViewById(R.id.hotel_address)
+        val room_photo : ImageView = itemView.findViewById(R.id.hotel_Image)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.hotel_cardview, parent, false)
-        return HotelRecycleAdapter.ViewHolder(v)
+        return ViewHolder(v)
 
 
     }
 
     @SuppressLint("RestrictedApi")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItems(arrayList[position])
+
+        val currentitem = hotelFirstList[position]
+        val pictureurl = currentitem.room_photo
+
+        Picasso.get().load(pictureurl).into(holder.room_photo)
+        holder.room_name.text = currentitem.room_name
+        holder.room_address.text = currentitem.room_address
+
+
         holder.itemView.setOnClickListener {
-            /*if (position==0){
-                Toast.makeText(
-                    context,
-                    "You click",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-            if (position==2){
-                Toast.makeText(
-                    context,
-                    "You click2",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }*/
 
-
-           //get position of slect item//
-            val model = arrayList.get(position)
-           //get title and discription of selected item with intent//
-            var mhTitle : String = model.title
-            var mhDescription : String = model.descriptor
-            var mhImageView : Int = model.imageDrawable
-           //creat intent in kotlin//
+            val pushitem = hotelFirstList.get(position)
+            val hotelName : String? = pushitem.room_name
+            val hotelAddress : String? = pushitem.room_address
             val intent = Intent(getActivity(context), click_main_hotel::class.java)
-           //pull all this item with putExtra item//
-            val bundle = Bundle()
-            bundle.putString("iTitle",mhTitle)
-            bundle.putString("iDescription",mhDescription)
-            bundle.putInt("iImageView", mhImageView)
-            intent.putExtras(bundle)
-
-          /*方法2
-            intent.putExtra("iTitle",mhTitle)
-            intent.putExtra("iDescription", mhDescription)
-            intent.putExtra("iImageView", mhImageView)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);*/
-
-            //start activity
+            intent.putExtra("room_name",hotelName)
+            intent.putExtra("room_address",hotelAddress)
             context.startActivity(intent)
+
 
         }
 
     }
 
     override fun getItemCount(): Int {
-        return arrayList.size
+        return hotelFirstList.size
     }
 
 }
