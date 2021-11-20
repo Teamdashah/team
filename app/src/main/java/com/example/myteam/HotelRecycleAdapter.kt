@@ -35,8 +35,9 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
 
         val currentitem = hotelFirstList[position]
         val pictureurl = currentitem.room_photo
+        val pictureurl_new = pictureurl?.replaceFirst("/","https:/")
 
-        Picasso.get().load(pictureurl).into(holder.room_photo)
+        Picasso.get().load(pictureurl_new).into(holder.room_photo)
         holder.room_name.text = currentitem.room_name
         holder.room_address.text = currentitem.room_address
 
