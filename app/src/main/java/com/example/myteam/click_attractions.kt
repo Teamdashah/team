@@ -4,8 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_click_attractions.*
-
+import kotlinx.android.synthetic.main.activity_click_res.*
 
 
 class click_attractions : AppCompatActivity() {
@@ -22,6 +23,8 @@ class click_attractions : AppCompatActivity() {
         val att_Address = intent.getStringExtra("address")
         val att_Phone = intent.getStringExtra("phone")
         val att_Introduction = intent.getStringExtra("introduction")
+        val getattImage = intent.getStringExtra("pictureUrl")
+
 
 
 //        actionBar.setTitle(att_Title)
@@ -29,6 +32,7 @@ class click_attractions : AppCompatActivity() {
         attrction_detail_address.text = att_Address
         attrction_detail_phone.text = att_Phone
         attrction_detail_introducton.text= att_Introduction
+        Picasso.get().load(getattImage).into(attrction_imageView)
     }
 }
 

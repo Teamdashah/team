@@ -7,14 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.firebase.ui.auth.AuthUI.getApplicationContext
 import kotlinx.android.synthetic.main.fragment_hotel.view.*
-import android.content.Intent
-import android.os.Parcelable
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myteam.model.hotelFirstData
+import com.example.myteam.model.restaurantData
+import com.google.firebase.database.*
 
 
 class Fragment_hotel() : Fragment() {
+
+    private lateinit var dbref : DatabaseReference
+    private lateinit var hotelFirstList: ArrayList<hotelFirstData>
 
 
     @SuppressLint("UseRequireInsteadOfGet", "RestrictedApi")
@@ -23,11 +26,12 @@ class Fragment_hotel() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
         val view = inflater.inflate(R.layout.fragment_hotel, container, false)
-
         view.recyclerview_hotel.layoutManager = LinearLayoutManager(activity)
-        view.recyclerview_hotel.adapter = HotelRecycleAdapter(arr(), activity!!)
+        view.setHasFixedSize(true)
+        getFitstHotelData()
+        hotelFirstList = arrayListOf<hotelFirstData>()
+//        view.recyclerview_hotel.adapter = HotelRecycleAdapter(getFitstHotelData(), activity!!)
         return view
 
 
@@ -77,23 +81,35 @@ class Fragment_hotel() : Fragment() {
 //            }
 //        })
 //    }
+    private fun getFitstHotelData(){
+    dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
 
-    private fun arr(): ArrayList<Model_hotel> {
-        val arrayList = ArrayList<Model_hotel>()
+    dbref.addValueEventListener(object : ValueEventListener {
+        override fun onDataChange(snapshot: DataSnapshot) {
+            if(snapshot.exists())
+            {
+                for (userSnapshot in snapshot.children)
+                {
+                    val hotelFirst = userSnapshot.getValue(hotelFirstData::class.java)
+                    hotelFirstList.add(hotelFirst!!)
 
-        arrayList.add(Model_hotel("1", "mainhotel", R.drawable.main_foot))
-        arrayList.add(Model_hotel("黑", "測試一下", R.drawable.main_foot))
-        arrayList.add(Model_hotel("3", "33", R.drawable.main_foot))
-        arrayList.add(Model_hotel("4", "44", R.drawable.main_foot))
-        arrayList.add(Model_hotel("5", "serfs", R.drawable.main_foot))
-        arrayList.add(Model_hotel("6", "vgyrc", R.drawable.main_foot))
-        arrayList.add(Model_hotel("7", "mkifv", R.drawable.main_foot))
-        arrayList.add(Model_hotel("8", "wdfth", R.drawable.main_foot))
-        arrayList.add(Model_hotel("9", "bte", R.drawable.main_foot))
-        arrayList.add(Model_hotel("10", "njuy", R.drawable.main_foot))
-        arrayList.add(Model_hotel("11", "xsrfv", R.drawable.main_foot))
-        return arrayList
+                }
+
+                    view?.recyclerview_hotel?.adapter = HotelRecycleAdapter(hotelFirstList,activity!!)
+
+            }
+        }
+
+        override fun onCancelled(error: DatabaseError) {
+
+        }
+    })
+
     }
+
+}
+
+private fun View.setHasFixedSize(b: Boolean) {
 
 }
 
