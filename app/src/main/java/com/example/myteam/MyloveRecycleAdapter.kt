@@ -14,7 +14,7 @@ class MyloveRecycleAdapter(val journeyarrayList: ArrayList<journeyData>, val con
     RecyclerView.Adapter<MyloveRecycleAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val myjourney : TextView = itemView.findViewById(R.id.title_mylove)
+        val destination : TextView = itemView.findViewById(R.id.title_mylove)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,7 +26,7 @@ class MyloveRecycleAdapter(val journeyarrayList: ArrayList<journeyData>, val con
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val pushitem = journeyarrayList[position]
-        holder.myjourney.text = pushitem.journey
+        holder.destination.text = pushitem.destination
 
         holder.itemView.setOnClickListener {
 

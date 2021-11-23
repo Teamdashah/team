@@ -35,15 +35,14 @@
                 android:id="@+id/description_mylove"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
-                android:textSize="18sp"
-                android:textColor="@color/lightGrayColor"
-                android:layout_toRightOf="@+id/image_mylove"
-                android:layout_toEndOf="@+id/image_mylove"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
                 android:layout_below="@+id/title_mylove"
-                />
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/image_mylove"
+                android:layout_toRightOf="@+id/image_mylove"
+                android:text="Description"
+                android:textColor="@color/lightGrayColor"
+                android:textSize="18sp" />
 
             <ImageButton
                 android:id="@+id/delete_mylove"
