@@ -39,7 +39,7 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
 
         Picasso.get().load(pictureurl_new).into(holder.room_photo)
         holder.room_name.text = currentitem.room_name
-        holder.room_address.text = currentitem.room_address
+        holder.room_address.text = currentitem.room_address?.replace("住址：","")
 
 
         holder.itemView.setOnClickListener {

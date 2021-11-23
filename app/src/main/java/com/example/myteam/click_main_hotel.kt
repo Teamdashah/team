@@ -22,19 +22,15 @@ class click_main_hotel : AppCompatActivity() {
         actionBar!!.setDisplayShowHomeEnabled(true)
         val intent: Intent = intent
         val main_hotelName = intent.getStringExtra("room_name")
-        val main_hotelAddress = intent.getStringExtra("room_address")
+        val main_hotelAddress = intent.getStringExtra("room_address")?.replace("住址：","")
         val gethotelurl = intent.getStringExtra("room_photo")
         val gethotelurl_new = gethotelurl?.replaceFirst("/","https:/")
-//        val main_hotelImageView = intent.getIntExtra("iImageView",0)
 
         //標題傳過去//
 //        actionBar.setTitle(main_hotelTitle)
         hotel_title.text = main_hotelName
         hotel_address.text = main_hotelAddress
         Picasso.get().load(gethotelurl_new).into(hotel_Images)
-//        hotel_imageView.setImageResource(main_hotelImageView)
-
-
 
     }
 

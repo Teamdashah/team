@@ -82,7 +82,7 @@ class Fragment_hotel() : Fragment() {
 //        })
 //    }
     private fun getFitstHotelData(){
-    dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
+    dbref = FirebaseDatabase.getInstance().getReference("room/Kaohsiung")
 
     dbref.addValueEventListener(object : ValueEventListener {
         override fun onDataChange(snapshot: DataSnapshot) {

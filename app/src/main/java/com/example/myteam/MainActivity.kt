@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         //handle onClick
         lButton.setOnClickListener {
             //intent to start NewActivity
-            startActivity(Intent(this@MainActivity, hotel_main::class.java))
+            startActivity(Intent(this@MainActivity,hotel_main::class.java))
         }
 
         val rButton = findViewById<Button>(R.id.register_btn)
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun checkUser(){
+   private fun checkUser(){
         //check if user is logged in or not
         val firebaseUser = firebaseAuth.currentUser
         if(firebaseUser != null)
