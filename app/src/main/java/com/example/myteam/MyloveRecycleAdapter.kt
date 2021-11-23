@@ -1,50 +1,43 @@
 package com.example.myteam
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.journeyData
-import com.example.myteam.model.restaurantData
-import com.squareup.picasso.Picasso
 
-class MyloveRecycleAdapter(val journeyList: ArrayList<journeyData>, val context:Context) :
-    RecyclerView.Adapter<MyloveRecycleAdapter.MyViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+class MyloveRecycleAdapter(val journeyarrayList: ArrayList<journeyData>, val context: Context) :
+    RecyclerView.Adapter<MyloveRecycleAdapter.ViewHolder>() {
 
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.row, parent, false)
-
-        return MyViewHolder(itemView)
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val destination : TextView = itemView.findViewById(R.id.title_mylove)
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val currentitem = journeyList[position]
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.mylove_cardview, parent, false)
 
-        holder.begin_date.text = currentitem.begin_date
-        holder.end_date.text = currentitem.end_date
-        holder.destination.text = currentitem.destiantion
+        return ViewHolder(v)
+    }
 
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val pushitem = journeyarrayList[position]
+        holder.destination.text = pushitem.destination
 
         holder.itemView.setOnClickListener {
-            //點開行程，看詳細資訊
 
         }
+
     }
+
 
     override fun getItemCount(): Int {
-        return journeyList.size
+        return journeyarrayList.size
     }
 
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-    {
-        val begin_date : TextView = itemView.findViewById(R.id.journey_go)
-        val end_date : TextView = itemView.findViewById(R.id.journey_end)
-        val destination : TextView = itemView.findViewById(R.id.journey_place)
-    }
 }
+

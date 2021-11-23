@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/hotel_Images"
         android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/main_foot" />
 
@@ -18,7 +18,7 @@
         android:id="@+id/hotel_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hotel_Images"
+        android:layout_below="@+id/mhotel_googlemap_btn"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Title"
@@ -31,23 +31,49 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/hotel_title"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Description"
+        android:textColor="@color/lightGrayColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/hotel_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hotel_address"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Description"
         android:textColor="@color/lightGrayColor"
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/mhotel_location_btn"
+        android:id="@+id/mhotel_googlemap_btn"
         android:layout_width="69dp"
         android:layout_height="70dp"
-        android:layout_below="@id/hotel_address"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="14dp"
+        android:layout_below="@id/hotel_Images"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/ic_location" />
 
+    <Button
+        android:id="@+id/goto_res_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hotel_Images"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="14dp"
+        android:text="附近餐廳" />
 
-
+    <Button
+        android:id="@+id/goto_att_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/hotel_Images"
+        android:text="附近景點" />
 
 
 </RelativeLayout>

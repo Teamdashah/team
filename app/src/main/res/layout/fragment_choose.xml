@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <CheckBox
-            android:id="@+id/checkbox3"
+            android:id="@+id/four_star"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:text="四星級"
@@ -24,7 +24,7 @@
             app:layout_constraintVertical_bias="0.157" />
 
         <CheckBox
-            android:id="@+id/checkbox4"
+            android:id="@+id/traffic"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:text="交通便利"
@@ -37,7 +37,7 @@
             app:layout_constraintVertical_bias="0.349" />
 
         <CheckBox
-            android:id="@+id/checkbox5"
+            android:id="@+id/five_star"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:text="五星級"
@@ -63,7 +63,7 @@
             app:layout_constraintVertical_bias="0.012" />
 
         <CheckBox
-            android:id="@+id/checkbox01"
+            android:id="@+id/hotspring"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:text="溫泉"
@@ -76,7 +76,7 @@
             app:layout_constraintVertical_bias="0.249" />
 
         <CheckBox
-            android:id="@+id/checkbox02"
+            android:id="@+id/child"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:text="親子"
@@ -90,7 +90,7 @@
 
 
         <CheckBox
-            android:id="@+id/checkbox03"
+            android:id="@+id/sky"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:text="天文"
@@ -103,7 +103,7 @@
             app:layout_constraintVertical_bias="0.35" />
 
         <CheckBox
-            android:id="@+id/checkbox04"
+            android:id="@+id/smart"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:text="智能"
@@ -116,7 +116,7 @@
             app:layout_constraintVertical_bias="0.063" />
 
         <CheckBox
-            android:id="@+id/checkbox05"
+            android:id="@+id/environment"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:text="環保"
@@ -129,7 +129,7 @@
             app:layout_constraintVertical_bias="0.061" />
 
         <CheckBox
-            android:id="@+id/checkbox06"
+            android:id="@+id/bussiness"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:text="商務"
@@ -142,7 +142,7 @@
             app:layout_constraintVertical_bias="0.157" />
 
         <CheckBox
-            android:id="@+id/checkbox07"
+            android:id="@+id/camp"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:text="露營"
@@ -155,7 +155,7 @@
             app:layout_constraintVertical_bias="0.247" />
 
         <CheckBox
-            android:id="@+id/checkbox08"
+            android:id="@+id/three_star"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:text="三星級"
@@ -168,7 +168,7 @@
             app:layout_constraintVertical_bias="0.061" />
 
         <CheckBox
-            android:id="@+id/checkbox09"
+            android:id="@+id/young_people"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:text="青旅"
@@ -258,7 +258,7 @@
             app:layout_constraintHorizontal_bias="0.971"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.987" />
+            app:layout_constraintVertical_bias="0.97" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
