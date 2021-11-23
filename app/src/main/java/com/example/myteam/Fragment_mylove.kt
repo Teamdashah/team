@@ -6,13 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myteam.R
+import com.example.myteam.model.journeyData
+import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.fragment_hotel.view.*
 import kotlinx.android.synthetic.main.fragment_mylove.view.*
 
 
 
 class Fragment_mylove : Fragment() {
 
+    private lateinit var dbref : DatabaseReference
+    private lateinit var journeyList: ArrayList<journeyData>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,25 +25,35 @@ class Fragment_mylove : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_mylove, container, false)
         view.recyclerview_mylove.layoutManager = LinearLayoutManager(activity)
-        view.recyclerview_mylove.adapter = MyloveRecycleAdapter(arr(),this)
+        view.setHasFixedSize(true)
+        getjourneyData()
+        journeyList = arrayListOf()
         return view
     }
+    private fun getjourneyData(){
+        dbref = FirebaseDatabase.getInstance().getReference("journey")
+        dbref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if(snapshot.exists())
+                {
+                    for (userSnapshot in snapshot.children)
+                    {
+                        val journey = userSnapshot.getValue(journeyData::class.java)
+                        journeyList.add(journey!!)
 
-    private fun arr(): ArrayList<Model_mylove> {
-        val arrayList = ArrayList<Model_mylove>()
+                    }
 
-        arrayList.add(Model_mylove("1", "11", R.drawable.main_foot))
-        arrayList.add(Model_mylove("2", "222", R.drawable.main_foot))
-        arrayList.add(Model_mylove("3", "33", R.drawable.main_foot))
-        arrayList.add(Model_mylove("4", "44", R.drawable.main_foot))
-        arrayList.add(Model_mylove("5", "serfs", R.drawable.main_foot))
-        arrayList.add(Model_mylove("6", "vgyrc", R.drawable.main_foot))
-        arrayList.add(Model_mylove("7", "mkifv", R.drawable.main_foot))
-        arrayList.add(Model_mylove("8", "wdfth", R.drawable.main_foot))
-        arrayList.add(Model_mylove("9", "bte", R.drawable.main_foot))
-        arrayList.add(Model_mylove("10", "njuy", R.drawable.main_foot))
-        arrayList.add(Model_mylove("11", "xsrfv", R.drawable.main_foot))
-        return arrayList
+                    view?.recyclerview_mylove?.adapter = MyloveRecycleAdapter(journeyList,activity!!)
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+        })
     }
+
+
 
 }
