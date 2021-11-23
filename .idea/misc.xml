@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_click_mylove.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_google_maps.xml" value="0.12335359675785208" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_input_schedule.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_restaurant_list.xml" value="0.2" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/mylove_cardview.xml" value="0.4" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/row.xml" value="0.2" />
         <entry key="..\:/Users/AMY/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_target.xml" value="0.1" />
         <entry key="..\:/Users/AMY/AndroidStudioProjects/team/app/src/main/res/layout/activity_login.xml" value="0.1515625" />

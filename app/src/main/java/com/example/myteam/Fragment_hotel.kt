@@ -39,48 +39,6 @@ class Fragment_hotel() : Fragment() {
     }
 
 
-
-
-
-//    fun onListItemClick(list: ListView, v: View?, position: Int, id: Long) {
-//        val mediaStreamIntent = Intent(activity, MediaStreamPlayer::class.java)
-//        mediaStreamIntent.putExtra("sermon_details", list.getItemAtPosition(position) as Parcelable)
-//        startActivity(mediaStreamIntent)
-//    }
-//open fun onClick(v: View) {
-//    when (v.id) {
-//        R.id.my_button ->
-//
-//            requireActivity().supportFragmentManager
-//                .beginTransaction()
-//                .replace(R.id.fragment_container, Fragment_hotel(), null)
-//                .addToBackStack(null)
-//                .commit()
-//        R.id.my_return -> requireActivity().supportFragmentManager.popBackStack()
-//        R.id.my_other -> {
-//            val intent = Intent(activity, click_main_hotel::class.java)
-//            startActivity(intent)
-//        }
-//    }
-//}
-
-//    view.recyclerview_hotel.adapter = HotelRecycleAdapter(arr(),context)
-//    fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-//        super.onViewCreated(requireView(), savedInstanceState)
-//        recyclerview_hotel.setAdapter(HotelRecycleAdapter)
-//        recyclerview_hotel.setHasFixedSize(true)
-//        recyclerview_hotel.setLayoutManager(LinearLayoutManager(activity))
-//        recyclerview_hotel.setItemAnimator(DefaultItemAnimator())
-//
-//        //Cannot resolve method
-//        HotelRecycleAdapter.SetItemClickListener(object : OnItemClickListener() {
-//            fun onItemClick(v: View, position: Int) {
-//                val detailIntent = Intent(v.context, DetailActivity::class.java)
-//                //Cannot resolve method
-//                StartActivity(detailIntent)
-//            }
-//        })
-//    }
     private fun getFitstHotelData(){
     dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
 
@@ -109,7 +67,7 @@ class Fragment_hotel() : Fragment() {
 
 }
 
-private fun View.setHasFixedSize(b: Boolean) {
+fun View.setHasFixedSize(b: Boolean) {
 
 }
 

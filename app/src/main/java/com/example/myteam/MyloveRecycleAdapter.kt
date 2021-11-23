@@ -1,60 +1,50 @@
 package com.example.myteam
 
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.mylove_cardview.view.*
+import com.example.myteam.model.journeyData
+import com.example.myteam.model.restaurantData
+import com.squareup.picasso.Picasso
 
+class MyloveRecycleAdapter(val journeyList: ArrayList<journeyData>, val context:Context) :
+    RecyclerView.Adapter<MyloveRecycleAdapter.MyViewHolder>() {
 
-class MyloveRecycleAdapter(val arrayList: ArrayList<Model_mylove>, val context: Fragment_mylove) :
-    RecyclerView.Adapter<MyloveRecycleAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.row, parent, false)
 
-        fun bindItems(model: Model_mylove) {
-            itemView.title_mylove.text = model.title
-            itemView.description_mylove.text = model.descriptor
-            itemView.image_mylove.setImageResource(model.imageDrawable)
-        }
+        return MyViewHolder(itemView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.mylove_cardview, parent, false)
+        val currentitem = journeyList[position]
 
-        return ViewHolder(v)
-    }
+        holder.begin_date.text = currentitem.begin_date
+        holder.end_date.text = currentitem.end_date
+        holder.destination.text = currentitem.destiantion
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItems(arrayList[position])
+
         holder.itemView.setOnClickListener {
-//
-//            val Model_hotel = arrayList.get(position)
-//            var gTitle : String = Model_hotel.title
-//            var gDescription :String = Model_hotel.descriptor
-//            var gImageView : Int = Model_hotel.imageDrawable
-//            val intent = Intent(context,click_main_hotel::class.java)
-//            intent.putExtra("iTitle")
-//            intent.putExtra("iDescription")
-//            intent.putExtra("iImageView")
-//            context.startActivity(intent)
+            //點開行程，看詳細資訊
+
         }
-
     }
-
-//    private fun Intent(context: Fragment_hotel, java: Class<click_main_hotel>): Intent? {
-//        return Intent(context, click_main_hotel::class.java)
-//    }
-
 
     override fun getItemCount(): Int {
-        return arrayList.size
+        return journeyList.size
     }
 
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    {
+        val begin_date : TextView = itemView.findViewById(R.id.journey_go)
+        val end_date : TextView = itemView.findViewById(R.id.journey_end)
+        val destination : TextView = itemView.findViewById(R.id.journey_place)
+    }
 }
-
-//private fun Intent?.putExtra(name: String) {
-//
-//}
