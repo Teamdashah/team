@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/restaurant_description01"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Description"
         android:textColor="@color/lightGrayColor"
@@ -67,7 +67,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/restaurant_description02"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Description"
+        android:textColor="@color/lightGrayColor"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/restaurant_opentime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restaurant_description03"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Description"
         android:textColor="@color/lightGrayColor"
@@ -79,7 +89,7 @@
         android:layout_height="70dp"
         android:layout_below="@id/restaurant_description03"
         android:layout_marginLeft="280dp"
-        android:layout_marginTop="-128dp"
+        android:layout_marginTop="-106dp"
         android:background="@drawable/ic_location" />
 
 

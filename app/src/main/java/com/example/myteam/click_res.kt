@@ -24,6 +24,7 @@ class click_res : AppCompatActivity() {
         val rDescription02 = intent.getStringExtra("phone")
         val rDescription03 = intent.getStringExtra("address")
         val getresImgurl = intent.getStringExtra("coverUrl")
+        val res_opentime = intent.getStringArrayListExtra("openingHoursList")
 
 
 //        actionBar.setTitle(aTitle)
@@ -31,6 +32,7 @@ class click_res : AppCompatActivity() {
         restaurant_description01.text = rDescription01
         restaurant_description02.text = rDescription02
         restaurant_description03.text = rDescription03
+        restaurant_opentime.text = res_opentime.toString()
         Picasso.get().load(getresImgurl).into(restaurant_imageView)
 
 

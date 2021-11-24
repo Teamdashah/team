@@ -23,7 +23,7 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_attractions_list.xml" value="0.10371376811594203" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_choose_hotel_result.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_choose_hotel_result_list.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_attractions.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_attractions.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_choosehotelresult.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_hotelchoose.xml" value="0.1953125" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_main_hotel.xml" value="0.1" />
@@ -36,6 +36,7 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_hotelchoose_list.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_schedule.xml" value="0.1" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_schedule_new.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_target.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />

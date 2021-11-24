@@ -23,6 +23,7 @@ class click_main_hotel : AppCompatActivity() {
         val intent: Intent = intent
         val main_hotelName = intent.getStringExtra("room_name")
         val main_hotelAddress = intent.getStringExtra("room_address")?.replace("住址：","")
+        val main_hoteldetail = intent.getStringExtra("room_detail")
         val gethotelurl = intent.getStringExtra("room_photo")
         val gethotelurl_new = gethotelurl?.replaceFirst("/","https:/")
 
@@ -30,6 +31,7 @@ class click_main_hotel : AppCompatActivity() {
 //        actionBar.setTitle(main_hotelTitle)
         hotel_title.text = main_hotelName
         hotel_address.text = main_hotelAddress
+        hotel_introduction.text = main_hoteldetail
         Picasso.get().load(gethotelurl_new).into(hotel_Images)
 
     }

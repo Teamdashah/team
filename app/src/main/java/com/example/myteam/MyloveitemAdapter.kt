@@ -23,7 +23,7 @@ class MyloveitemAdapter(val arrayList: ArrayList<Model_myloveitem>, val context:
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val w = LayoutInflater.from(parent.context).inflate(R.layout.myloveitem_caedview, parent, false)
 
-        return MyloveitemAdapter.ViewHolder(w)
+        return ViewHolder(w)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

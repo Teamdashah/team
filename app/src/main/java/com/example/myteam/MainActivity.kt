@@ -1,6 +1,7 @@
 package com.example.myteam
 
 import android.app.Activity
+import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -84,7 +85,7 @@ class MainActivity : AppCompatActivity() {
         {
             //user is already logged in
             //start profile activity
-            startActivity(Intent(this@MainActivity, input_schedule::class.java))
+            startActivity(Intent(this@MainActivity,input_schedule::class.java))
             finish()
         }
     }

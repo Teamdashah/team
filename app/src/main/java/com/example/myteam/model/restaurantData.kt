@@ -6,6 +6,7 @@ class restaurantData  {
     var phone : String? = null
     var avgPrice : Long? = null
     var coverUrl : String? = null
+    var openingHoursList : ArrayList<String>? = null
     constructor(){}
 
     constructor(
@@ -13,12 +14,14 @@ class restaurantData  {
         address:String?,
         phone:String?,
         avgPrice:Long?,
-        coverUrl:String?
+        coverUrl:String?,
+        openingHoursList :ArrayList<String>?
     ){
         this.name = name
         this.address = address
         this.phone = phone
         this.avgPrice = avgPrice
         this.coverUrl = coverUrl
+        this.openingHoursList = openingHoursList
     }
 }

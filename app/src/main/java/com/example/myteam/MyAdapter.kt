@@ -42,12 +42,14 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Conte
             val resAddress : String? = pushresitem.address
             val resPhone : String? = pushresitem.phone
             var rescoverUrl : String? = pushresitem.coverUrl
+            val resopeningHoursList :ArrayList<String>? = pushresitem.openingHoursList
             val intent = Intent(context,click_res::class.java)
             intent.putExtra("name",resName)
             intent.putExtra("avgPrice",resavgPrice)
             intent.putExtra("address",resAddress)
             intent.putExtra("phone",resPhone)
             intent.putExtra("coverUrl",rescoverUrl)
+            intent.putExtra("openingHoursList",resopeningHoursList)
             context.startActivity(intent)
 
         }

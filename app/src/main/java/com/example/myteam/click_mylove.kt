@@ -26,7 +26,7 @@ class click_mylove : AppCompatActivity() {
 
         val myloveitemAdapter = MyloveitemAdapter(arrayList, this)
 
-        /*mylove_recyclerview.layoutManager = LinearLayoutManager(this)
-        mylove_recyclerview.adapter = myloveitemAdapter*/
+        journeyRecyclerview.layoutManager = LinearLayoutManager(this)
+        journeyRecyclerview.adapter = myloveitemAdapter
     }
 }
