@@ -8,89 +8,102 @@
 
     tools:context=".click_res">
 
-    <ImageView
-        android:id="@+id/restaurant_imageView"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/main_foot" />
-
-    <!--title-->
-    <TextView
-        android:id="@+id/restaurant_title"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/restaurant_imageView"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Title"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:padding="3dp">
 
-    <TextView
-        android:id="@+id/restaurant_description01"
-        android:layout_width="64dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/restaurant_title"
-        android:layout_marginLeft="210dp"
-        android:layout_marginTop="15dp"
-        android:gravity="left"
-        android:text="錢"
-        android:textColor="@color/lightGrayColor"
-        android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/restaurant_title"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:text="平均價格 :"
-        android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/restaurant_imageView"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/main_foot" />
 
-    <TextView
-        android:id="@+id/restaurant_description02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/restaurant_description01"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Description"
-        android:textColor="@color/lightGrayColor"
-        android:textSize="18sp" />
+            <!--title-->
+            <TextView
+                android:id="@+id/restaurant_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurant_imageView"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/restaurant_description03"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/restaurant_description02"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Description"
-        android:textColor="@color/lightGrayColor"
-        android:textSize="18sp" />
-    <TextView
-        android:id="@+id/restaurant_opentime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/restaurant_description03"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Description"
-        android:textColor="@color/lightGrayColor"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/restaurant_description01"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurant_title"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="錢"
+                android:textColor="@color/lightGrayColor"
+                android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/res_location_btn"
-        android:layout_width="69dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/restaurant_description03"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="-106dp"
-        android:background="@drawable/ic_location" />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurant_title"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="104dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="平均價格 :"
+                android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/restaurant_description02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurant_description01"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Description"
+                android:textColor="@color/lightGrayColor"
+                android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/restaurant_description03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurant_description02"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Description"
+                android:textColor="@color/lightGrayColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/restaurant_opentime"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurant_description03"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="營業時間"
+                android:textColor="@color/lightGrayColor"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/res_location_btn"
+                android:layout_width="69dp"
+                android:layout_height="70dp"
+                android:layout_below="@id/restaurant_description03"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="-106dp"
+                android:background="@drawable/ic_location" />
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
