@@ -28,6 +28,7 @@ class attractions_list : AppCompatActivity() {
 
 
     }
+    //拿資料庫資料
     private fun getAttractionData()
     {
         dbref = FirebaseDatabase.getInstance().getReference("attractions_new/Central")
