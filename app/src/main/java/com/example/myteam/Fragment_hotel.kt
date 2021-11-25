@@ -1,6 +1,5 @@
 package com.example.myteam
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,9 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_hotel.view.*
-import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.hotelFirstData
-import com.example.myteam.model.restaurantData
 import com.google.firebase.database.*
 
 
@@ -19,11 +16,10 @@ class Fragment_hotel() : Fragment() {
     private lateinit var dbref : DatabaseReference
     private lateinit var hotelFirstList: ArrayList<hotelFirstData>
 
-
-    @SuppressLint("UseRequireInsteadOfGet", "RestrictedApi")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_hotel, container, false)
@@ -64,6 +60,32 @@ class Fragment_hotel() : Fragment() {
     })
 
     }
+
+
+//    private fun getbegindate(){
+//        dbref = FirebaseDatabase.getInstance().getReference("journey")
+//
+//        dbref.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                if(snapshot.exists())
+//                {
+//                    for (userSnapshot in snapshot.children)
+//                    {
+//                        val tripList = userSnapshot.getValue(getscheduleData::class.java)
+//                        tripDetailList.add(tripList!!)
+//
+//                    }
+//
+//
+//                }
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//
+//            }
+//        })
+//
+//    }
 
 }
 

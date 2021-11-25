@@ -1,5 +1,6 @@
 package com.example.myteam
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.nfc.Tag
 import android.os.Bundle
