@@ -26,23 +26,20 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_attractions.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_choosehotelresult.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_hotelchoose.xml" value="0.1953125" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_main_hotel.xml" value="0.1" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_mylove.xml" value="0.17135416666666667" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_res.xml" value="0.22053231939163498" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_main_hotel.xml" value="0.1953125" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_res.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_forget_pwd.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_google_maps.xml" value="0.17604166666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_google_sign_in.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_hotel_list.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_hotelchoose_list.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input.xml" value="0.1" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_schedule.xml" value="0.1" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_schedule_new.xml" value="0.1" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_schedule.xml" value="0.22" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_target.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_restaurant_list.xml" value="0.17753623188405798" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/attractions_cardview.xml" value="0.2805194805194805" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/attractions_cardview.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/choose.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/choose_hotel_result_cardview.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/choose_moner_and_word.xml" value="0.1" />
@@ -52,13 +49,11 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/fragment_choose.xml" value="0.24526315789473685" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/fragment_hotel.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/fragment_mylove.xml" value="0.1" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotel_cardview.xml" value="0.3253968253968254" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotel_cardview.xml" value="0.22" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotel_fra_row.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotel_main.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotelchoose_cardview.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/input.xml" value="0.1" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/mylove_cardview.xml" value="0.1" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/myloveitem_caedview.xml" value="0.17135416666666667" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/row.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.109375" />
@@ -70,6 +65,25 @@
         <entry key="..\:/Users/amyyy/AndroidStudioProjects/team/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/amyyy/AndroidStudioProjects/team/app/src/main/res/layout/activity_register.xml" value="0.12604166666666666" />
         <entry key="..\:/Users/amyyy/AndroidStudioProjects/team/app/src/main/res/layout/test.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_attractions.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_hotelchoose.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_main_hotel.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_mylove.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_res.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_forget_pwd.xml" value="0.19067028985507245" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_google_maps.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_hotel_list.xml" value="0.16822916666666668" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_schedule.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_login.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/activity_main.xml" value="0.19067028985507245" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/fragment_choose.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/fragment_hotel.xml" value="0.19067028985507245" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/fragment_mylove.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/hotel_cardview.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/hotel_main.xml" value="0.19067028985507245" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/hotelchoose_cardview.xml" value="0.19067028985507245" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/mylove_cardview.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/hunghung/AndroidStudioProjects/team/app/src/main/res/layout/myloveitem_caedview.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/tingxuan/AndroidStudioProjects/team/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.109375" />
         <entry key="..\:/Users/tingxuan/AndroidStudioProjects/team/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.109375" />
         <entry key="..\:/Users/tingxuan/AndroidStudioProjects/team/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.109375" />

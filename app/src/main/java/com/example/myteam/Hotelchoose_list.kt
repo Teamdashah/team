@@ -11,8 +11,11 @@ class Hotelchoose_list : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotelchoose_list)
 
+
+        var getstring = intent.getBundleExtra("bundle")?.getString("four_star")
+
         val arrayList = ArrayList<Model_Hotelchoose>()
-        arrayList.add(Model_Hotelchoose("1", "hotelchoose_list", R.drawable.main_foot))
+        arrayList.add(Model_Hotelchoose("1"+getstring, "hotelchoose_list", R.drawable.main_foot))
         arrayList.add(Model_Hotelchoose("2", "222", R.drawable.main_foot))
         arrayList.add(Model_Hotelchoose("3", "33", R.drawable.main_foot))
         arrayList.add(Model_Hotelchoose("4", "44", R.drawable.main_foot))

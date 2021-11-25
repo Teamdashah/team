@@ -93,7 +93,7 @@
             android:id="@+id/sky"
             android:layout_width="75dp"
             android:layout_height="50dp"
-            android:text="天文"
+            android:text="星空"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
