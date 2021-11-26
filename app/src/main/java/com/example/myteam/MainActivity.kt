@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         //handle onClick
         rButton.setOnClickListener {
             //intent to start NewActivity
-            startActivity(Intent(this@MainActivity,mySchedule::class.java))
+            startActivity(Intent(this@MainActivity,restaurant_list::class.java))
         }
 
     }
