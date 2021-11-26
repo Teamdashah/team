@@ -125,8 +125,6 @@
                     android:textSize="21.5sp"
                     android:textStyle="bold"/>
 
-
-
             </LinearLayout>
             <TextView
                 android:id="@+id/hotelchoose_address"
