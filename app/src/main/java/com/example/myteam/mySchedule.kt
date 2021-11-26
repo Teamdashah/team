@@ -1,18 +1,14 @@
 package com.example.myteam
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toolbar
-import androidx.core.view.size
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myteam.model.attractionData
 import com.example.myteam.model.myscheduleData
-import com.getbase.floatingactionbutton.FloatingActionButton
 import com.google.firebase.database.*
-import android.content.Intent
-import android.view.View
 
 
 class mySchedule : AppCompatActivity() {
@@ -37,29 +33,9 @@ class mySchedule : AppCompatActivity() {
         floatingbtn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 //here
-                startActivity(Intent(this@mySchedule, input_schedule::class.java))
+                startActivity(Intent(this@mySchedule, restaurant_list::class.java))
             }
         })
-        ///隱藏floating_btn
-        /*myRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-
-                // if the recycler view is scrolled
-                // above hide the FAB
-                if (dy > myRecyclerView.size && floatingbtn.isShown) {
-                    floatingbtn.hide()
-                }
-
-                // if the recycler view is
-                // scrolled above show the FAB
-                if (dy < myRecyclerView.size && !floatingbtn.isShown) {
-                    floatingbtn.show()
-                }
-
-            }
-        })*/
-        ///
     }
 
 
