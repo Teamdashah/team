@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="3dp"
-        app:cardCornerRadius="8dp"
+        android:cardCornerRadius="8dp"
         android:orientation="horizontal"
         android:background="@color/test">
 
@@ -41,9 +41,10 @@
                     android:layout_height="29dp"
                     android:drawableLeft="@drawable/ic_home"
                     android:text="飯店 ："
+                    android:drawablePadding="5dp"
                     android:textColor="@color/white"
                     android:textSize="21.5sp"
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginBottom="4dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -51,8 +52,8 @@
                 android:id="@+id/hotel_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="4dp"
                 android:text="Arye"
                 android:textColor="@color/white"
                 android:textSize="22sp"
@@ -118,22 +119,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="地址 :"
+                    android:drawablePadding="5dp"
                     android:drawableLeft="@drawable/ic_map"
-                    android:layout_marginBottom="2dp"
                     android:textColor="@color/white"
                     android:textSize="21.5sp"
                     android:textStyle="bold" />
-
-
 
             </LinearLayout>
             <TextView
                 android:id="@+id/hotel_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="28dp"
                 android:text="我家"
-                android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
