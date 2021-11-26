@@ -43,7 +43,7 @@
                     android:text="飯店 ："
                     android:textColor="@color/white"
                     android:textSize="21.5sp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginBottom="2dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -51,8 +51,8 @@
                 android:id="@+id/hotel_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="Arye"
                 android:textColor="@color/white"
                 android:textSize="22sp"
@@ -119,6 +119,7 @@
                     android:layout_height="wrap_content"
                     android:text="地址 :"
                     android:drawableLeft="@drawable/ic_map"
+                    android:layout_marginBottom="2dp"
                     android:textColor="@color/white"
                     android:textSize="21.5sp"
                     android:textStyle="bold" />
@@ -130,8 +131,9 @@
                 android:id="@+id/hotel_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="20dp"
                 android:text="我家"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
