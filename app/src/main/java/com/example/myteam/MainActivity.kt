@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
         {
             //user is already logged in
             //start profile activity
-            startActivity(Intent(this@MainActivity,input_schedule::class.java))
+            startActivity(Intent(this@MainActivity,mySchedule::class.java))
             finish()
         }
     }
@@ -143,7 +143,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //start profile activity
-                startActivity(Intent(this@MainActivity, input_schedule::class.java))
+                startActivity(Intent(this@MainActivity, mySchedule::class.java))
                 finish()
             }
             .addOnFailureListener { e ->

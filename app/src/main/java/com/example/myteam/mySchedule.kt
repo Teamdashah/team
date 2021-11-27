@@ -33,7 +33,7 @@ class mySchedule : AppCompatActivity() {
         floatingbtn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 //here
-                startActivity(Intent(this@mySchedule, restaurant_list::class.java))
+                startActivity(Intent(this@mySchedule, input_schedule::class.java))
             }
         })
     }

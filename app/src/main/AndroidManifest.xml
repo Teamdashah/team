@@ -53,7 +53,8 @@
         <activity android:name=".register" />
         <activity android:name=".login" />
         <activity android:name=".hotel_main" />
-        <activity android:name=".GoogleMapsActivity" />
+        <activity android:name=".mySchedule" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
