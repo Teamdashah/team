@@ -42,6 +42,7 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
 
         holder.itemView.setOnClickListener {
             val pushitem = myscheduleList.get(position)
+            val begin_date : String? = pushitem.destination
             val intent = Intent(context,hotel_main::class.java)
             context.startActivity(intent)
         }
@@ -62,10 +63,10 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
         //dbref = FirebaseDatabase.getInstance().getReference("journey").child(leaf)
         //dbref.removeValue()
 
-
         myscheduleList.removeAt(index)
 
         notifyDataSetChanged()
     }
+
 }
 
