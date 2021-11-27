@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_input_schedule.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/drawable/angle.xml" value="0.24351851851851852" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/drawable/ic_padlock.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/drawable/shadow.xml" value="0.2282051282051282" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/drawable/spinner_background.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_click_res.xml" value="0.264" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_google_maps.xml" value="0.13905775075987842" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_hotelchoose_list.xml" value="0.2171875" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_input_schedule.xml" value="0.264" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/activity_restaurant_list.xml" value="0.2" />
+        <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/myloveitem_caedview.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/88698/AndroidStudioProjects/abc/app/src/main/res/layout/row.xml" value="0.2" />
         <entry key="..\:/Users/AMY/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_target.xml" value="0.1" />
         <entry key="..\:/Users/AMY/AndroidStudioProjects/team/app/src/main/res/layout/activity_login.xml" value="0.1515625" />
@@ -23,12 +31,12 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_attractions_list.xml" value="0.10371376811594203" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_choose_hotel_result.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_choose_hotel_result_list.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_attractions.xml" value="0.1" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_attractions.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_choosehotelresult.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_hotelchoose.xml" value="0.1" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_hotelchoose.xml" value="0.1953125" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_main_hotel.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_mylove.xml" value="0.17135416666666667" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_res.xml" value="0.22053231939163498" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_click_res.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_forget_pwd.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_google_maps.xml" value="0.17604166666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_google_sign_in.xml" value="0.1" />
@@ -36,11 +44,9 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_hotelchoose_list.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_schedule.xml" value="0.1" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_schedule_new.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_input_target.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_my_schedule.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/activity_restaurant_list.xml" value="0.17753623188405798" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/attractions_cardview.xml" value="0.2805194805194805" />
@@ -53,14 +59,13 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/fragment_choose.xml" value="0.24526315789473685" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/fragment_hotel.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/fragment_mylove.xml" value="0.1" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotel_cardview.xml" value="0.1" />
+        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotel_cardview.xml" value="0.3253968253968254" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotel_fra_row.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotel_main.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/hotelchoose_cardview.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/input.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/mylove_cardview.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/myloveitem_caedview.xml" value="0.17135416666666667" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/myschedule_cardview.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/layout/row.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/team/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.109375" />
