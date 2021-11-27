@@ -27,10 +27,11 @@ class Hotelchoose_list : AppCompatActivity() {
 
 
         hotelchoose_list = arrayListOf<hotelchooseData>()
-        getchooseData()
+        val getfour_star = intent.getBundleExtra("bundle")?.getString("four_star").toString()
+        getchooseData(getfour_star)
 
 
-        var getstring = intent.getBundleExtra("bundle")?.getString("four_star")
+
 //
 //        val arrayList = ArrayList<Model_Hotelchoose>()
 //        arrayList.add(Model_Hotelchoose("1"+getstring, "hotelchoose_list", R.drawable.main_foot))
@@ -50,9 +51,13 @@ class Hotelchoose_list : AppCompatActivity() {
 //        hotelchoose_recycleview.adapter = hotelchooseadapter
     }
 
-    private fun getchooseData()
+    private fun getchooseData(getfour_star:String)
     {
-        dbref = FirebaseDatabase.getInstance().getReference("room/Kaohsiung")
+        if(getfour_star == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("room/Taipei")
+        }
+        else
+            dbref = FirebaseDatabase.getInstance().getReference("room/Kaohsiung")
 
         dbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

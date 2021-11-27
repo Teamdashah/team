@@ -28,9 +28,9 @@ class Fragment_choose : Fragment() {
         val sweepButton: Button = requireActivity().findViewById<View>(R.id.hotel_result_btn) as Button
         sweepButton.setOnClickListener(View.OnClickListener {
             var bundle = Bundle()
-            if(four_star.isChecked)
-                bundle.putString("four_star","four_star")
             val  four_star = four_star.isChecked
+            if(four_star)
+                bundle.putString("four_star",""+four_star)
             val  traffic = traffic.isChecked
             val  five_star = five_star.isChecked
             val  hotspring = hotspring.isChecked

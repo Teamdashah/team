@@ -5,28 +5,20 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.myscheduleData
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import okhttp3.internal.notify
-import okhttp3.internal.notifyAll
 
 
 class myscheduleAdapter(val myscheduleList: ArrayList<myscheduleData>, val context: Context) :
 RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
-
-    private lateinit var dbref : DatabaseReference
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val destination : TextView = itemView.findViewById(R.id.tripname)
         val begin_date : TextView = itemView.findViewById(R.id.my_begindate)
         val end_date : TextView = itemView.findViewById(R.id.my_enddate)
 
-        val trashCan : ImageButton = itemView.findViewById(R.id.delete_mylove)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -42,31 +34,32 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
 
         holder.itemView.setOnClickListener {
             val pushitem = myscheduleList.get(position)
-            val begin_date : String? = pushitem.destination
+            val destination : String? = pushitem.destination
+            val begin_date : String? = pushitem.begin_date
+            val end_date : String? = pushitem.end_date
             val intent = Intent(context,hotel_main::class.java)
+            intent.putExtra("destination",destination)
+            intent.putExtra("begin_date",begin_date)
+            intent.putExtra("end_date",end_date)
             context.startActivity(intent)
+
+
         }
 
-        holder.trashCan.setOnClickListener{
-            deleteItem(position)
-        }
     }
 
     override fun getItemCount(): Int {
         return myscheduleList.size
     }
 
-    fun deleteItem(index: Int){
 
 
-        //val leaf:String= myscheduleList[index].begin_date.toString()+myscheduleList[index].destination
-        //dbref = FirebaseDatabase.getInstance().getReference("journey").child(leaf)
-        //dbref.removeValue()
-
-        myscheduleList.removeAt(index)
-
-        notifyDataSetChanged()
-    }
+        fun deleteItem (index: Int) {
+            myscheduleList.removeAt(index)
+            notifyDataSetChanged()
+        }
 
 }
+
+
 
