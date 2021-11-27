@@ -62,6 +62,7 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
         //dbref = FirebaseDatabase.getInstance().getReference("journey").child(leaf)
         //dbref.removeValue()
 
+
         myscheduleList.removeAt(index)
 
         notifyDataSetChanged()
