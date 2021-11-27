@@ -5,6 +5,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.myscheduleData
@@ -13,12 +15,13 @@ import com.example.myteam.model.myscheduleData
 class myscheduleAdapter(val myscheduleList: ArrayList<myscheduleData>, val context: Context) :
 RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
 
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val destination : TextView = itemView.findViewById(R.id.tripname)
         val begin_date : TextView = itemView.findViewById(R.id.my_begindate)
         val end_date : TextView = itemView.findViewById(R.id.my_enddate)
 
-
+        val trashCan : ImageButton = itemView.findViewById(R.id.delete_mylove)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,17 +39,21 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
             val pushitem = myscheduleList.get(position)
             val intent = Intent(context,hotel_main::class.java)
             context.startActivity(intent)
-
         }
 
+
+        holder.trashCan.setOnClickListener{
+            deleteItem(position)
+        }
     }
 
     override fun getItemCount(): Int {
         return myscheduleList.size
     }
 
-
-
-
+    fun deleteItem(index: Int){
+        myscheduleList.removeAt(index)
+        notifyDataSetChanged()
+    }
 }
 
