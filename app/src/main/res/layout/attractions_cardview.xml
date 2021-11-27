@@ -3,201 +3,114 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="20dp"
     app:cardElevation="3dp"
-    app:cardUseCompatPadding="true">
-<!--    <LinearLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginVertical="6dp"-->
-<!--        android:padding="4dp"-->
-<!--        android:orientation="vertical">-->
+    app:cardUseCompatPadding="true"
+    android:padding="3dp"
+    android:layout_margin="2dp"
+    app:cardBackgroundColor="@color/resbgc">
 
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="景點:"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="26sp"-->
-<!--                android:textStyle="bold"/>-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/attraction_title"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="8dp"-->
-<!--                android:text="Arye"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="20sp"/>-->
-
-<!--        </LinearLayout>-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="地址:"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="26sp"-->
-<!--                android:textStyle="bold"/>-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/attraction_address"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="8dp"-->
-<!--                android:text="100"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="20sp"/>-->
-
-<!--        </LinearLayout>-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="電話:"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="26sp"-->
-<!--                android:textStyle="bold"/>-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/attraction_phone"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="8dp"-->
-<!--                android:text="早午餐"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="20sp"/>-->
-
-<!--        </LinearLayout>-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="介紹:"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="26sp"-->
-<!--                android:textStyle="bold"/>-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/attraction_introduction"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="8dp"-->
-<!--                android:text="0989533708"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="20sp"/>-->
-
-
-<!--        </LinearLayout>-->
-
-<!--    </LinearLayout>-->
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        >
+        android:layout_marginVertical="0dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/image_attraction"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:src="@drawable/main_foot" />
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_foot">
+        </ImageView>
 
-        <!--景點名-->
-        <TextView
-            android:id="@+id/attraction_title"
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@+id/image_attraction"
-            android:layout_toRightOf="@+id/image_attraction"
-            android:text="Title"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="景點："-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold"/>-->
+        <!--景點名-->
+                <TextView
+                    android:id="@+id/attraction_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="景點的名字"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
 
         <!--地址-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/attraction_title"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="7dp"
-            android:layout_toEndOf="@+id/image_attraction"
-            android:layout_toRightOf="@+id/image_attraction"
-            android:text="地址:"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:drawableRight="@drawable/ic_map"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/attraction_address"
+            <TextView
+                android:id="@+id/attraction_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/attraction_title"
-            android:layout_marginStart="74dp"
-            android:layout_marginLeft="74dp"
-            android:layout_marginTop="7dp"
-            android:layout_toEndOf="@+id/image_attraction"
-            android:layout_toRightOf="@+id/image_attraction"
-            android:text="Description"
-            android:textColor="@color/lightGrayColor"
-            android:textSize="20sp" />
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
 
         <!--電話-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/attraction_address"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="7dp"
-            android:layout_toEndOf="@+id/image_attraction"
-            android:layout_toRightOf="@+id/image_attraction"
-            android:text="電話:"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:drawableRight="@drawable/ic_telephone"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/attraction_phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/attraction_address"
-            android:layout_marginStart="74dp"
-            android:layout_marginLeft="74dp"
-            android:layout_marginTop="7dp"
-            android:layout_toEndOf="@+id/image_attraction"
-            android:layout_toRightOf="@+id/image_attraction"
-            android:text="Description"
-            android:textColor="@color/lightGrayColor"
-            android:textSize="20sp" />
-
+            <TextView
+                android:id="@+id/attraction_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
         <!--介紹-->
 <!--    <TextView-->
 <!--        android:layout_width="wrap_content"-->
@@ -225,7 +138,10 @@
             android:layout_toRightOf="@+id/image_attraction"
             android:text=""
             android:textColor="@color/lightGrayColor"
-            android:textSize="20sp" />
-    </RelativeLayout>
+            android:textSize="20sp"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

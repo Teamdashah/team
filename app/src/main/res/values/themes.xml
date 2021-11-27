@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Myteam" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+<!--    <style name="Theme.Myteam" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">-->
 
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
