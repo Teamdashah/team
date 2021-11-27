@@ -38,7 +38,7 @@
         android:pathData="M227,330L227,331L258,331L227,330z" android:strokeColor="#00000000"/>
     <path android:fillColor="#FDFEFE"
         android:pathData="M256,362L256,331C246.214,331 229.595,327.824 221.004,333.009C210.365,339.43 210.762,356.575 223,361.258C232.001,364.702 246.401,362 256,362z" android:strokeColor="#00000000"/>
-    <path android:fillColor="##ffc107"
+    <path android:fillColor="#ffc107"
         android:pathData="M264.667,361.333L265.333,361.667L264.667,361.333z" android:strokeColor="#00000000"/>
     <path android:fillColor="#FDFEFE"
         android:pathData="M226,362L226,363L262,363C252.44,358.989 236.387,362 226,362z" android:strokeColor="#00000000"/>
