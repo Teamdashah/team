@@ -54,6 +54,7 @@ class Fragment_mylove : Fragment() {
         })
     }
 
-
+}
+public fun View.setHasFixedSize(b: Boolean) {
 
 }

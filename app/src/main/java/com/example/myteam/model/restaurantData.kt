@@ -7,7 +7,6 @@ class restaurantData  {
     var avgPrice : Long? = null
     var coverUrl : String? = null
     var openingHoursList : ArrayList<String>? = null
-
     constructor(){}
 
     constructor(

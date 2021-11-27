@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,13 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myteam">
-        <activity
-            android:name=".mySchedule"
-            android:exported="false" />
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_GEO_API" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_GEO_API"/>
 
         <activity
             android:name=".click_main_hotel"
@@ -51,14 +48,12 @@
         <activity
             android:name=".googleSignIn"
             android:exported="true" />
-        <activity
-            android:name=".click_mylove"
-            android:exported="true" />
         <activity android:name=".GoogleMapsActivity" />
         <activity android:name=".forget_pwd" />
         <activity android:name=".register" />
         <activity android:name=".login" />
         <activity android:name=".hotel_main" />
+        <activity android:name=".GoogleMapsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

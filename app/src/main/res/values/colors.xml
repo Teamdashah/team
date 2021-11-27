@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightGrayColor">#a9a9a9</color>
     <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="soil">#D18800</color>
+    <color name="gray">#E8E8E8</color>
+    <color name="blue">#e0ebf0</color>
 </resources>

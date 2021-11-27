@@ -36,9 +36,9 @@ class Fragment_hotel() : Fragment() {
 
 
     private fun getFitstHotelData(){
-    dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
+        dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
 
-    dbref.addValueEventListener(object : ValueEventListener {
+        dbref.addValueEventListener(object : ValueEventListener {
         override fun onDataChange(snapshot: DataSnapshot) {
             if(snapshot.exists())
             {
@@ -89,9 +89,6 @@ class Fragment_hotel() : Fragment() {
 
 }
 
-fun View.setHasFixedSize(b: Boolean) {
-
-}
 
 
 

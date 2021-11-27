@@ -32,9 +32,28 @@
 
     <!--input_schedule-->
     <string-array name="Spinner_item">
-        <item>台北</item>
-        <item>台中</item>
-        <item>高雄</item>
+        <item>台北市</item>
+        <item>新北市</item>
+        <item>基隆市</item>
+        <item>宜蘭市</item>
+        <item>桃園市</item>
+        <item>新竹縣</item>
+        <item>新竹市</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>彰化縣</item>
+        <item>南投縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東市</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣(馬祖)</item>
     </string-array>
 
     <string-array name="Spinner_item02">
@@ -45,6 +64,7 @@
         <item>5位</item>
         <item>6位</item>
         <item>7位</item>
+        <item>8位</item>
     </string-array>
     <string name="title_activity_google_maps">GoogleMapsActivity</string>
 
