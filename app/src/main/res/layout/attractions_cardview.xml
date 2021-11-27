@@ -37,22 +37,23 @@
                 android:layout_gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="景點："
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="景點："-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold"/>-->
         <!--景點名-->
                 <TextView
                     android:id="@+id/attraction_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:text="景點的名字"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -67,9 +68,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="地址："
+                android:text=""
+                android:drawableRight="@drawable/ic_map"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -79,7 +81,7 @@
                 android:layout_marginStart="8dp"
                 android:text="Description"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -94,9 +96,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="電話："
+                android:text=""
+                android:drawableRight="@drawable/ic_telephone"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -106,7 +109,7 @@
                 android:layout_marginStart="8dp"
                 android:text="Description"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
         </LinearLayout>
         <!--介紹-->
 <!--    <TextView-->
