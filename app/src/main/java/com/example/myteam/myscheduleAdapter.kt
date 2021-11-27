@@ -10,11 +10,16 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.myscheduleData
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import okhttp3.internal.notify
+import okhttp3.internal.notifyAll
 
 
 class myscheduleAdapter(val myscheduleList: ArrayList<myscheduleData>, val context: Context) :
 RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
 
+    private lateinit var dbref : DatabaseReference
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val destination : TextView = itemView.findViewById(R.id.tripname)
@@ -41,7 +46,6 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
             context.startActivity(intent)
         }
 
-
         holder.trashCan.setOnClickListener{
             deleteItem(position)
         }
@@ -52,7 +56,14 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
     }
 
     fun deleteItem(index: Int){
+
+
+        //val leaf:String= myscheduleList[index].begin_date.toString()+myscheduleList[index].destination
+        //dbref = FirebaseDatabase.getInstance().getReference("journey").child(leaf)
+        //dbref.removeValue()
+
         myscheduleList.removeAt(index)
+
         notifyDataSetChanged()
     }
 }
