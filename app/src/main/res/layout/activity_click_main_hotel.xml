@@ -68,7 +68,7 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/hotel_Images"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginLeft="170dp"
                 android:background="@drawable/ic_location" />
 
             <Button

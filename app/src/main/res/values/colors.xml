@@ -11,7 +11,7 @@
     <color name="ic_launcher_background">#FFFFFF</color>
     <color name="darkgray">#8E8E8E</color>
     <color name="hotelbgc">#E7DFD5</color>
-    <color name="resbgc">#D8C292</color>
+    <color name="resbgc">#E7DFD5</color>
     <color name="attbgc">#FBD46D</color>
 <!--    #3F718C-->
     #87AAAA
@@ -20,5 +20,8 @@
     ACBA9D
 
     D9E4DD
-
+    D8C292
+    E6DDC4
+    E7E0C9
+    E6DDC4
 </resources>
