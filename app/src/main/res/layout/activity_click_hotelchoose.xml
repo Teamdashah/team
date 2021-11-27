@@ -55,8 +55,9 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/choose_address"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="Description"
                 android:textColor="@color/black"
@@ -81,7 +82,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:textStyle="bold"
-                android:text="附近餐廳" />
+                android:text="附近餐廳"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:background="@color/btn"/>
 
             <Button
                 android:id="@+id/to_attractions_btn"
@@ -90,9 +94,12 @@
                 android:layout_below="@+id/choose_introduction"
                 android:layout_marginLeft="220dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="13dp"
                 android:textStyle="bold"
-                android:text="附近景點" />
+                android:text="附近景點"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:background="@color/btn"/>
 
         </RelativeLayout>
     </ScrollView>

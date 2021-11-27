@@ -78,9 +78,12 @@
                 android:layout_below="@+id/hotel_introduction"
                 android:layout_marginLeft="66dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="附近餐廳"
                 android:textStyle="bold"
-                android:layout_marginBottom="10dp"/>
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:background="@color/btn" />
 
             <Button
                 android:id="@+id/goto_att_btn"
@@ -89,9 +92,12 @@
                 android:layout_below="@+id/hotel_introduction"
                 android:layout_marginLeft="220dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="附近景點"
                 android:textStyle="bold"
-                android:layout_marginBottom="10dp"/>
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:background="@color/btn" />
 
         </RelativeLayout>
     </ScrollView>
