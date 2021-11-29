@@ -19,7 +19,7 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
         val name : TextView = itemView.findViewById(R.id.attraction_title)
         val address : TextView = itemView.findViewById(R.id.attraction_address)
         val phone : TextView = itemView.findViewById(R.id.attraction_phone)
-        val introduction : TextView = itemView.findViewById(R.id.attraction_introduction)
+//        val introduction : TextView = itemView.findViewById(R.id.attraction_introduction)
         val imageView : ImageView = itemView.findViewById(R.id.image_attraction)
 
     }

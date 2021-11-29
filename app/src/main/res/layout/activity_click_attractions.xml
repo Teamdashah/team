@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".click_attractions"
-    android:padding="16dp">
+    >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="3dp">
+        android:background="@color/hotelbgc">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,20 +20,19 @@
 
             <ImageView
                 android:id="@+id/attrction_imageView"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="30dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/main_foot" />
 
             <Button
                 android:id="@+id/att_location_btn"
-                android:layout_width="69dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_below="@id/attrction_detail_name"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/ic_location" />
 
             <TextView
@@ -40,36 +40,35 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/attrction_imageView"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:text="景點"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/attrction_detail_address"
+                android:id="@+id/attrction_detail_phone"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/attrction_detail_name"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="60dp"
                 android:gravity="center"
                 android:text="地址"
-                android:textColor="@color/lightGrayColor"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/attrction_detail_phone"
+                android:id="@+id/attrction_detail_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/attrction_detail_address"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="電話"
-                android:textColor="@color/lightGrayColor"
+                android:text="地址"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
@@ -77,11 +76,11 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/attrction_detail_phone"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:gravity="start|center|end"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="介紹"
-                android:textColor="@color/lightGrayColor"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
 

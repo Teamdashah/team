@@ -44,11 +44,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/choose_name"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:text="Description"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/choose_introduction"
@@ -84,7 +84,7 @@
                 android:textStyle="bold"
                 android:text="附近餐廳"
                 android:textSize="18dp"
-                android:textColor="@color/white"
+                android:textColor="@color/darkwhite"
                 android:background="@color/btn"/>
 
             <Button
@@ -98,7 +98,7 @@
                 android:textStyle="bold"
                 android:text="附近景點"
                 android:textSize="18dp"
-                android:textColor="@color/white"
+                android:textColor="@color/darkwhite"
                 android:background="@color/btn"/>
 
         </RelativeLayout>

@@ -53,9 +53,13 @@
         <activity android:name=".register" />
         <activity android:name=".login" />
         <activity android:name=".hotel_main" />
-        <activity android:name=".mySchedule" />
+        <activity
+            android:name=".mySchedule" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:logo="@drawable/logo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

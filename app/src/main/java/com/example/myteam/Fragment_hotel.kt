@@ -9,12 +9,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_hotel.view.*
 import com.example.myteam.model.hotelFirstData
 import com.google.firebase.database.*
+import android.app.Activity
+
+
+
 
 
 class Fragment_hotel() : Fragment() {
 
     private lateinit var dbref : DatabaseReference
     private lateinit var hotelFirstList: ArrayList<hotelFirstData>
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +38,6 @@ class Fragment_hotel() : Fragment() {
 
 
     }
-
 
     private fun getFitstHotelData(){
         dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")

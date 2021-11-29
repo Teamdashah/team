@@ -38,7 +38,7 @@ class click_res : AppCompatActivity() {
 
 //        actionBar.setTitle(aTitle)
         restaurant_title.text = aTitle
-        restaurant_description01.text = rDescription01
+//        restaurant_description01.text = rDescription01
         restaurant_description02.text = rDescription02
         restaurant_description03.text = rDescription03
         restaurant_opentime.text = Monday+"\n"+Tuesday+"\n"+Wednesday+"\n"+Thurday+"\n"+Friday+"\n"+Saturday+"\n"+Sunday
