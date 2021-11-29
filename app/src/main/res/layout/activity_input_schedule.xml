@@ -196,7 +196,8 @@
             android:background="@drawable/login_textstyle"
             android:backgroundTint="@color/inputbtn"
             android:text="建立行程"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            />
 
 
     </LinearLayout>
