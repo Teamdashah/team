@@ -26,6 +26,7 @@ class mySchedule : AppCompatActivity() {
         setContentView(R.layout.activity_my_schedule)
 
         myRecyclerView = findViewById(R.id.recyclerview_myschedule)
+
         myRecyclerView.layoutManager = LinearLayoutManager(this)
         myRecyclerView.setHasFixedSize(true)
         myList = arrayListOf<myscheduleData>()
