@@ -30,7 +30,7 @@ class hotel_main : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hotel_main)
 
-        //有改
+        //有改//2.0
         val destination = intent.getStringExtra("destination")
         val begin_date = intent.getStringExtra("begin_date")
         val end_date = intent.getStringExtra("end_date")
