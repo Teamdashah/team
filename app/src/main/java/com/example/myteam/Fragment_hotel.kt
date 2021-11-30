@@ -9,7 +9,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_hotel.view.*
 import com.example.myteam.model.hotelFirstData
 import com.google.firebase.database.*
+
 import android.app.Activity
+import android.content.Intent
+import android.content.Intent.getIntent
+import androidx.navigation.fragment.FragmentNavigator
+import kotlinx.android.synthetic.main.fragment_hotel.*
+import org.jetbrains.anko.support.v4.intentFor
+import android.content.Intent.getIntent
 
 
 
@@ -25,8 +32,25 @@ class Fragment_hotel() : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
 
+
+
     ): View? {
-        // Inflate the layout for this fragment
+
+        //有改
+        val intent = activity?.getIntent()
+        val sss= intent?.getStringExtra("begin_date")
+        val eee= intent?.getStringExtra("end_date")
+        val ddd= intent?.getStringExtra("destination")
+        val nnn= intent?.getStringExtra("number_of_people")
+
+        val begin_date = sss
+        val end_date = eee
+        val destination =ddd
+        val number_of_people =nnn
+        //有改
+
+
+
         val view = inflater.inflate(R.layout.fragment_hotel, container, false)
         view.recyclerview_hotel.layoutManager = LinearLayoutManager(activity)
         view.setHasFixedSize(true)
@@ -38,6 +62,14 @@ class Fragment_hotel() : Fragment() {
 
 
     }
+//  測試
+//    fun getInstance(example: String?): Fragment_hotel? {
+//        val fragment = Fragment_hotel()
+//        val bundle = Bundle()
+//        bundle.putString("key", example)
+//        fragment.setArguments(bundle)
+//        return fragment
+//    }
 
     private fun getFitstHotelData(){
         dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")

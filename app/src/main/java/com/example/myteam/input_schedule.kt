@@ -49,7 +49,7 @@ class input_schedule : AppCompatActivity() {
 
         }
 
-        //handle click, logout user
+        //handle click, logout usertent
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
@@ -127,9 +127,18 @@ class input_schedule : AppCompatActivity() {
             write_into_firebase(destination, number_of_people, begin_date ,end_date)
 
             //在 activities 間傳輸資料
+
+            //有改
             val intent = Intent(this@input_schedule,hotel_main::class.java)
-            val temp = begin_date + destination
-            intent.putExtra("day_and_place",temp)
+            val begin_date = begin_date
+            val end_date = end_date
+            val destination = destination
+            val  number_of_people =  number_of_people
+            intent.putExtra("begin_date",begin_date)
+            intent.putExtra("end_date",end_date)
+            intent.putExtra("destination",destination)
+            intent.putExtra("number_of_people",number_of_people)
+            //有改
 
             //intent to start NewActivity
             startActivity(intent)
