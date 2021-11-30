@@ -25,21 +25,6 @@
             app:layout_constraintVertical_bias="0.027" />
 
         <CheckBox
-            android:id="@+id/sky"
-            android:layout_width="105dp"
-            android:layout_height="50dp"
-            android:drawableLeft="@drawable/ic_moon"
-            android:drawablePadding="5dp"
-            android:text="星空"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.376" />
-
-        <CheckBox
             android:id="@+id/environment"
             android:layout_width="105dp"
             android:layout_height="50dp"
@@ -82,22 +67,7 @@
             app:layout_constraintHorizontal_bias="0.864"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.184" />
-
-        <CheckBox
-            android:id="@+id/bussiness"
-            android:layout_width="105dp"
-            android:layout_height="50dp"
-            android:drawableLeft="@drawable/ic_suitcase"
-            android:drawablePadding="5dp"
-            android:text="商務"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.421"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.184" />
+            app:layout_constraintVertical_bias="0.191" />
 
         <CheckBox
             android:id="@+id/child"
@@ -112,37 +82,22 @@
             app:layout_constraintHorizontal_bias="0.045"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.184" />
+            app:layout_constraintVertical_bias="0.191" />
 
         <CheckBox
-            android:id="@+id/hotspring"
+            android:id="@+id/bussiness"
             android:layout_width="105dp"
             android:layout_height="50dp"
-            android:drawableLeft="@drawable/ic_hot"
+            android:drawableLeft="@drawable/ic_suitcase"
             android:drawablePadding="5dp"
-            android:text="溫泉"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.045"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.274" />
-
-        <CheckBox
-            android:id="@+id/camp"
-            android:layout_width="105dp"
-            android:layout_height="50dp"
-            android:drawableLeft="@drawable/ic_camp"
-            android:drawablePadding="5dp"
-            android:text="露營"
+            android:text="商務"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.421"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.274" />
+            app:layout_constraintVertical_bias="0.191" />
 
         <CheckBox
             android:id="@+id/five_star"
@@ -157,7 +112,37 @@
             app:layout_constraintHorizontal_bias="0.864"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.274" />
+            app:layout_constraintVertical_bias="0.294" />
+
+        <CheckBox
+            android:id="@+id/hotspring"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_hot"
+            android:drawablePadding="5dp"
+            android:text="溫泉"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.294" />
+
+        <CheckBox
+            android:id="@+id/camp"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_camp"
+            android:drawablePadding="5dp"
+            android:text="露營"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.294" />
 
         <CheckBox
             android:id="@+id/traffic"
@@ -172,7 +157,22 @@
             app:layout_constraintHorizontal_bias="0.931"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.376" />
+            app:layout_constraintVertical_bias="0.397" />
+
+        <CheckBox
+            android:id="@+id/sky"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_moon"
+            android:drawablePadding="5dp"
+            android:text="星空"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.397" />
 
         <CheckBox
             android:id="@+id/young_people"
@@ -187,7 +187,7 @@
             app:layout_constraintHorizontal_bias="0.421"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.376" />
+            app:layout_constraintVertical_bias="0.397" />
 
         <CheckBox
             android:id="@+id/smart"
@@ -208,6 +208,66 @@
         <!--預算篩選-->
 
 
+        <CheckBox
+            android:id="@+id/fourthousand_fivethousand"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_nt"
+            android:drawablePadding="5dp"
+            android:text="4000~5000元"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.776"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.735" />
+
+        <CheckBox
+            android:id="@+id/twothousand_threethousand"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_nt"
+            android:drawablePadding="5dp"
+            android:text="2000~3000元"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.776"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.623" />
+
+        <CheckBox
+            android:id="@+id/onethousand_twothousand"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_nt"
+            android:drawablePadding="5dp"
+            android:text="1000~2000元"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.625" />
+
+        <CheckBox
+            android:id="@+id/threethousand_fourthousand"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_nt"
+            android:drawablePadding="5dp"
+            android:text="3000~4000元"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.735" />
+
         <TextView
             android:id="@+id/money_select"
             android:layout_width="wrap_content"
@@ -219,64 +279,7 @@
             app:layout_constraintHorizontal_bias="0.048"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.475" />
-
-        <CheckBox
-            android:id="@+id/onethousand_twothousand"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:text="1000~2000元"
-            android:drawableLeft="@drawable/ic_nt"
-            android:drawablePadding="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.055"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.564" />
-
-
-        <CheckBox
-            android:id="@+id/twothousand_threethousand"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:drawableLeft="@drawable/ic_nt"
-            android:drawablePadding="5dp"
-            android:text="2000~3000元"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.628"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.564" />
-
-        <CheckBox
-            android:id="@+id/threethousand_fourthousand"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:text="3000~4000元"
-            android:drawableLeft="@drawable/ic_nt"
-            android:drawablePadding="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.055"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.69" />
-
-        <CheckBox
-            android:id="@+id/fourthousand_fivethousand"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:drawableLeft="@drawable/ic_nt"
-            android:drawablePadding="5dp"
-            android:text="4000~5000元"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.628"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.69" />
+            app:layout_constraintVertical_bias="0.536" />
 
         <Button
             android:id="@+id/hotel_result_btn"
