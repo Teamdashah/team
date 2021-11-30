@@ -101,9 +101,9 @@ class input_schedule : AppCompatActivity() {
         //handle onClick
         Pickbegin_Button.setOnClickListener {
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, mYear: Int, mMonth: Int, mDay: Int ->
-                //val textView = findViewById<TextView>(R.id.showBeginDate)
-                Pickbegin_Button.setText("" + mYear + "/" + mMonth + "/" + mDay)
-                begin_date = mYear.toString() +","+ mMonth.toString() +","+ mDay.toString()
+                val mm = mMonth+1
+                Pickbegin_Button.setText("" + mYear + "/" + mm + "/" + mDay)
+                begin_date = mYear.toString() +","+ mm.toString() +","+ mDay.toString()
             },year,month,day)
 
             dpd.show()
@@ -112,9 +112,9 @@ class input_schedule : AppCompatActivity() {
         val Pickend_Button = findViewById<Button>(R.id.pickEndDateBtn)
         Pickend_Button.setOnClickListener {
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, mYear: Int, mMonth: Int, mDay: Int ->
-                //val textView = findViewById<TextView>(R.id.showEndDate)
-                Pickend_Button.setText("" + mYear + "/" + mMonth + "/" + mDay)
-                end_date = mYear.toString() +","+ mMonth.toString() +","+ mDay.toString()
+                val mmm = mMonth+1
+                Pickend_Button.setText("" + mYear + "/" + mmm + "/" + mDay)
+                end_date = mYear.toString() +","+ mmm.toString() +","+ mDay.toString()
             },year,month,day)
 
             dpd.show()
@@ -128,8 +128,11 @@ class input_schedule : AppCompatActivity() {
 
             //在 activities 間傳輸資料
             val intent = Intent(this@input_schedule,hotel_main::class.java)
-            val temp = begin_date + destination
-            intent.putExtra("day_and_place",temp)
+            //val temp = begin_date + destination
+            var bundle_inputsche = Bundle()
+            intent.putExtra("destination", destination)
+            intent.putExtra("begin_date", begin_date)
+            intent.putExtra("end_date",end_date)
 
             //intent to start NewActivity
             startActivity(intent)
