@@ -43,11 +43,24 @@
             android:text="Description"
             android:textColor="@color/lightGrayColor"
             android:textSize="18sp" />
+
         <TextView
             android:id="@+id/my_enddate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/my_begindate"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/image_mytrip"
+            android:layout_toRightOf="@+id/image_mytrip"
+            android:text="Description"
+            android:textColor="@color/lightGrayColor"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_enddate"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_toEndOf="@+id/image_mytrip"

@@ -62,14 +62,6 @@ class Fragment_hotel() : Fragment() {
 
 
     }
-//  測試
-//    fun getInstance(example: String?): Fragment_hotel? {
-//        val fragment = Fragment_hotel()
-//        val bundle = Bundle()
-//        bundle.putString("key", example)
-//        fragment.setArguments(bundle)
-//        return fragment
-//    }
 
     private fun getFitstHotelData(){
         dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")

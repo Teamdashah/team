@@ -45,7 +45,7 @@ class hotel_main : AppCompatActivity() {
         var intent = Intent(this, Fragment_hotel::class.java)
         intent.putExtra("bundle", bundle)
         startActivity(intent)
-        //有改
+        //有改//
 
 
         bottomNav = findViewById(R.id.bottomNav)
