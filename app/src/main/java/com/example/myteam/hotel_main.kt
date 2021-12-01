@@ -42,10 +42,10 @@ class hotel_main : AppCompatActivity() {
         bundle.putString("test3", end_date)
         bundle.putString("test4", number_of_people)
 
-        var intent = Intent(this, Fragment_hotel::class.java)
-        intent.putExtra("bundle", bundle)
-        startActivity(intent)
-        //有改//
+//        var intent = Intent(this, Fragment_hotel::class.java)
+//        intent.putExtra("bundle", bundle)
+//        startActivity(intent)
+        //有改
 
 
         bottomNav = findViewById(R.id.bottomNav)

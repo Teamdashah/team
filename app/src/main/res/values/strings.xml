@@ -56,6 +56,8 @@
         <item>澎湖縣</item>
         <item>金門縣</item>
         <item>連江縣(馬祖)</item>
+        <item>小琉球</item>
+        <item>綠島</item>
     </string-array>
 
     <string-array name="Spinner_item02">
