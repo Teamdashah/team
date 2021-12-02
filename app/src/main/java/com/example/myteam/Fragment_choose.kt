@@ -28,20 +28,53 @@ class Fragment_choose : Fragment() {
         val sweepButton: Button = requireActivity().findViewById<View>(R.id.hotel_result_btn) as Button
         sweepButton.setOnClickListener(View.OnClickListener {
             var bundle = Bundle()
+            val  three_star = three_star.isChecked
+            if(three_star)
+                bundle.putString("three_star",""+three_star)
+
             val  four_star = four_star.isChecked
             if(four_star)
                 bundle.putString("four_star",""+four_star)
-            val  traffic = traffic.isChecked
+
             val  five_star = five_star.isChecked
+            if(five_star)
+                bundle.putString("five_star",""+five_star)
+
             val  hotspring = hotspring.isChecked
+            if(hotspring)
+                bundle.putString("hotspring",""+hotspring)
+
+            val  traffic = traffic.isChecked
+            if(traffic)
+                bundle.putString("traffic",""+traffic)
+
             val  child = child.isChecked
+            if(child)
+                bundle.putString("child",""+child)
+
             val  smart = smart.isChecked
+            if(smart)
+                bundle.putString("smart",""+smart)
+
             val  environment = environment.isChecked
+            if(environment)
+                bundle.putString("environment",""+environment)
+
             val  bussiness = bussiness.isChecked
+            if(bussiness)
+                bundle.putString("bussiness",""+bussiness)
+
             val  camp = camp.isChecked
-            val  three_star = three_star.isChecked
+            if(camp)
+                bundle.putString("camp",""+camp)
+
             val  young_people = young_people.isChecked
+            if(young_people)
+                bundle.putString("young_people",""+young_people)
+
             val  sky = sky.isChecked
+            if(sky)
+                bundle.putString("sky",""+sky)
 
 
             val  onethousand_twothousand = onethousand_twothousand.isChecked
@@ -49,7 +82,18 @@ class Fragment_choose : Fragment() {
             val  threethousand_fourthousand = threethousand_fourthousand.isChecked
             val  fourthousand_fivethousand = fourthousand_fivethousand.isChecked
 
-            var intent = Intent(activity, Hotelchoose_list::class.java)
+            var intent = activity?.getIntent()
+
+            val sss= intent?.getStringExtra("begin_date")
+            val eee= intent?.getStringExtra("end_date")
+            val ddd= intent?.getStringExtra("destination")
+            val nnn= intent?.getStringExtra("number_of_people")
+            val begin_date = sss
+            val end_date = eee
+            val destination =ddd
+            val number_of_people =nnn
+            bundle.putString("destination",""+destination)
+            intent = Intent(activity, Hotelchoose_list::class.java)
             intent.putExtra("bundle",bundle)
             startActivity(intent)
 

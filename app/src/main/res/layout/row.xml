@@ -138,6 +138,17 @@
             </LinearLayout>
         </LinearLayout>
 
+
+        <ImageButton
+            android:id="@+id/res_addtomylove"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="90dp"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/ic_heart_outlined"
+            />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

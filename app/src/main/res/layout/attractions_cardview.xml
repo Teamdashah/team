@@ -7,7 +7,8 @@
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true"
     android:padding="3dp"
-    android:layout_margin="2dp">
+    android:layout_margin="2dp"
+    app:cardBackgroundColor="@color/resbgc">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,8 +28,6 @@
         <LinearLayout
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -38,23 +37,22 @@
                 android:layout_gravity="center_vertical"
                 android:orientation="horizontal">
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="景點："-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                    android:textStyle="bold"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="景點："
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
         <!--景點名-->
                 <TextView
                     android:id="@+id/attraction_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:text="景點的名字"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="15dp"
-                    android:textColor="@color/black"
-                    android:textSize="23sp" />
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -69,10 +67,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:drawableRight="@drawable/ic_map"
+                android:text="地址："
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -81,8 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Description"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -97,20 +94,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:drawableRight="@drawable/ic_telephone"
-                android:textSize="16sp"
+                android:text="電話："
+                android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
-
             <TextView
                 android:id="@+id/attraction_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Description"
-                android:layout_marginBottom="5dp"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
         </LinearLayout>
         <!--介紹-->
 <!--    <TextView-->
@@ -127,22 +122,33 @@
 <!--        android:textSize="20sp"-->
 <!--        android:textStyle="bold" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/attraction_introduction"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@+id/attraction_phone"-->
-<!--            android:layout_marginStart="74dp"-->
-<!--            android:layout_marginLeft="74dp"-->
-<!--            android:layout_marginTop="2dp"-->
-<!--            android:layout_toEndOf="@+id/image_attraction"-->
-<!--            android:layout_toRightOf="@+id/image_attraction"-->
-<!--            android:text=""-->
-<!--            android:textColor="@color/lightGrayColor"-->
-<!--            android:textSize="20sp"-->
-<!--            />-->
+        <TextView
+            android:id="@+id/attraction_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attraction_phone"
+            android:layout_marginStart="74dp"
+            android:layout_marginLeft="74dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/image_attraction"
+            android:layout_toRightOf="@+id/image_attraction"
+            android:text=""
+            android:textColor="@color/lightGrayColor"
+            android:textSize="20sp"
+            />
 
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/attractions_addtomylove"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="83dp"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/ic_heart_outlined"
+            />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
