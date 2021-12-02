@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -140,7 +140,14 @@
                 android:textColor="@color/darkgray"
                 android:textSize="16sp" />
         </LinearLayout>
-
+        <ImageButton
+            android:id="@+id/hotel_addtomylove"
+            android:layout_width="30dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="350dp"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/ic_heart_outlined"
+            />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

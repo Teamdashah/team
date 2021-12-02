@@ -18,5 +18,6 @@
     <color name="inputfront">#C7BEA2</color>
     <color name="inputback">#E5DCC3</color>
     <color name="inputbtn">#E7DEC8</color>
+    <color name="red">#F90716</color>
 
 </resources>

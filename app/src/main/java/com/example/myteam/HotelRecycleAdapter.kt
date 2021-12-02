@@ -6,21 +6,27 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.hotelFirstData
 import com.google.android.material.internal.ContextUtils.getActivity
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 
 
 class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val context: Context) :
     RecyclerView.Adapter<HotelRecycleAdapter.ViewHolder>() {
 
+    val database = Firebase.database
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val room_name : TextView = itemView.findViewById(R.id.hotel_name)
         val room_address : TextView = itemView.findViewById(R.id.hotel_address)
         val room_photo : ImageView = itemView.findViewById(R.id.hotel_Image)
+        val hoteladdtomylove : ImageButton = itemView.findViewById(R.id.hotel_addtomylove)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -59,6 +65,16 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
 
 
         }
+        //我的最愛按鈕
+        holder.hoteladdtomylove.setOnClickListener {
+            val pushitem = hotelFirstList.get(position)
+            val hotelName : String? = pushitem.room_name
+            val hotelAddress : String? = pushitem.room_address
+            val hotelPictureUrl : String? = pushitem.room_photo
+            val hotelIntroduction : String? = pushitem.room_detail
+
+            write_into_firebase(hotelName.toString(), hotelAddress.toString(),hotelPictureUrl.toString(), hotelIntroduction.toString())
+        }
 
     }
 
@@ -66,4 +82,16 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
         return hotelFirstList.size
     }
 
+    //我的最愛
+    private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String, hoteldetail:String){
+        val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl,"detail" to hoteldetail)
+        val title = hotelname
+        database.getReference("mylove").child(title).setValue(mylove)
+
+    }
+
 }
+
+
+
+
