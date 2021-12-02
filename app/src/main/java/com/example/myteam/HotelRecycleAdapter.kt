@@ -17,7 +17,7 @@ import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 
 
-class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val context: Context, val node: String) :
+class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val context: Context, val node: String, val place:String) :
     RecyclerView.Adapter<HotelRecycleAdapter.ViewHolder>() {
 
     val database = Firebase.database
@@ -59,6 +59,7 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
             intent.putExtra("room_address",hotelAddress)
             intent.putExtra("room_photo",hotelPictureUrl)
             intent.putExtra("room_detail",hotelIntroduction)
+            intent.putExtra("place",place)
 
             context.startActivity(intent)
 
@@ -84,7 +85,7 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
     private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String){
         val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl)
         val title = hotelname
-        database.getReference("journey").child(node).child("favorite").setValue(mylove)
+        database.getReference("journey").child(node).child("favorite").child(hotelname).setValue(mylove)
 
     }
 

@@ -55,7 +55,6 @@ class mySchedule : AppCompatActivity() {
                         val myschedule = userSnapshot.getValue(myscheduleData::class.java)
                         myList.add(myschedule!!)
 
-                        Log.d(TAG,"test*****************")
                     }
 
                     myRecyclerView.adapter = myscheduleAdapter(myList,this@mySchedule)

@@ -33,7 +33,11 @@ class Fragment_mylove : Fragment() {
     }
     private fun getmyloveData(){
 
-        dbref = FirebaseDatabase.getInstance().getReference("mylove")
+        val intent = activity?.getIntent()
+        val node = intent?.getStringExtra("begin_date") + intent?.getStringExtra("destination")
+
+
+        dbref = FirebaseDatabase.getInstance().getReference("journey").child(node).child("favorite")
         dbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists())

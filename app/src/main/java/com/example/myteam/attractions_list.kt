@@ -13,10 +13,13 @@ class attractions_list : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var attRecyclerView: RecyclerView
     private lateinit var attractionList: ArrayList<attractionData>
+    private lateinit var place:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_attractions_list)
+
+        place = intent.getStringExtra("place").toString()
 
         attRecyclerView = findViewById(R.id.attraction_recyclerview)
         attRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -31,7 +34,7 @@ class attractions_list : AppCompatActivity() {
     //拿資料庫資料
     private fun getAttractionData()
     {
-        dbref = FirebaseDatabase.getInstance().getReference("attractions_new/Central")
+        dbref = FirebaseDatabase.getInstance().getReference("attractions_v3").child(place)
 
         dbref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -41,8 +44,6 @@ class attractions_list : AppCompatActivity() {
                     {
                         val attraction = userSnapshot.getValue(attractionData::class.java)
                         attractionList.add(attraction!!)
-
-                        Log.d(TAG,"test*****************")
                     }
 
                     attRecyclerView.adapter = AttractionsRecycleAdapter(attractionList,this@attractions_list)

@@ -15,11 +15,14 @@ class restaurant_list : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var restaurantList: ArrayList<restaurantData>
+    private lateinit var place:String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant_list)
+
+        place = intent.getStringExtra("place").toString()
 
         userRecyclerView = findViewById(R.id.recyclerview)
         userRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -33,7 +36,7 @@ class restaurant_list : AppCompatActivity() {
 
     private fun getRestaurantData()
     {
-        dbref = FirebaseDatabase.getInstance().getReference("food/Taipei City")
+        dbref = FirebaseDatabase.getInstance().getReference("food").child(place)
 
 
         dbref.addValueEventListener(object : ValueEventListener{

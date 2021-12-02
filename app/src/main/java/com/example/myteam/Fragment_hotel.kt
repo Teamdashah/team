@@ -17,15 +17,16 @@ import androidx.navigation.fragment.FragmentNavigator
 import kotlinx.android.synthetic.main.fragment_hotel.*
 import org.jetbrains.anko.support.v4.intentFor
 import android.content.Intent.getIntent
-
-
-
+import android.util.Log
 
 
 class Fragment_hotel() : Fragment() {
 
     private lateinit var dbref : DatabaseReference
     private lateinit var hotelFirstList: ArrayList<hotelFirstData>
+    private lateinit var place: String
+    private lateinit var node: String
+    private lateinit var place_list: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,10 +49,9 @@ class Fragment_hotel() : Fragment() {
         getFitstHotelData()
         hotelFirstList = arrayListOf<hotelFirstData>()
 //        view.recyclerview_hotel.adapter = HotelRecycleAdapter(getFitstHotelData(), activity!!)
+
+
         return view
-
-
-
     }
 
 
@@ -63,9 +63,37 @@ class Fragment_hotel() : Fragment() {
         val ddd= intent?.getStringExtra("destination")
         val nnn= intent?.getStringExtra("number_of_people")
 
+        when(ddd) {
+            "台北市" -> place_list = "Taipei City"
+            "新北市" -> place_list = "New Taipei City"
+            "基隆市" -> place_list = "Keelung City"
+            "宜蘭市" -> place_list = "Yilan City"
+            "桃園市" -> place_list = "Taoyuan City"
+            "新竹縣" -> place_list = "Hsinchu County"
+            "新竹市" -> place_list = "Hsinchu City"
+            "苗栗縣" -> place_list = "Miaoli City"
+            "台中市" -> place_list = "Taichung City"
+            "彰化縣" -> place_list = "Changhua County"
+            "南投縣" -> place_list = "Nantou County"
+            "雲林縣" -> place_list = "Yunlin County"
+            "嘉義市" -> place_list = "Chiayi City"
+            "嘉義縣" -> place_list = "Chiayi County"
+            "台南市" -> place_list = "Tainan City"
+            "高雄市" -> place_list = "Kaohsiung City"
+            "屏東市" -> place_list = "Pingtung City"
+            "花蓮縣" -> place_list = "Hualien County"
+            "台東縣" -> place_list = "Taitung County"
+            "澎湖縣" -> place_list = "Penghu County"
+            "金門縣" -> place_list = "Kinmen County"
+
+
+            else -> place_list = "Taipei City"
+        }
+
         val begin_date = sss
         val end_date = eee
         val destination =ddd
+        node = sss.toString()+ddd.toString()
         val number_of_people =nnn
         //有改
         when(destination) {
@@ -74,15 +102,15 @@ class Fragment_hotel() : Fragment() {
             "基隆市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Keelung")
             "宜蘭市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Yilan")
             "桃園市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Taoyuan")
-            "新竹縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Hsinchu")
-            "新竹市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Hsinchu")
+            "新竹縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Hsinchu County")
+            "新竹市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Hsinchu City")
             "苗栗縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Miaoli")
             "台中市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Taichung")
             "彰化縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Changhua")
             "南投縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Nantou")
             "雲林縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Yunlin")
-            "嘉義市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
-            "嘉義縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
+            "嘉義市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi City")
+            "嘉義縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi County")
             "台南市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Tainan")
             "高雄市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Kaohsiung")
             "屏東市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Pingtung")
@@ -90,19 +118,10 @@ class Fragment_hotel() : Fragment() {
             "台東縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Taitung")
             "澎湖縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Penghu")
             "金門縣" -> dbref = FirebaseDatabase.getInstance().getReference("room/Kinmen")
-            "小琉球" -> dbref = FirebaseDatabase.getInstance().getReference("room/Liuqiu")
-            "綠島" -> dbref = FirebaseDatabase.getInstance().getReference("room/Lyudao")
-            "連江縣(馬祖)" -> dbref = FirebaseDatabase.getInstance().getReference("room/Mazu")
 
 
             else -> dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
         }
-//        if(destination == "台北市"){
-//            dbref = FirebaseDatabase.getInstance().getReference("room/Taipei")
-//        }
-//        else{
-//            dbref = FirebaseDatabase.getInstance().getReference("room/Chiayi")
-//        }
 
 
         dbref.addValueEventListener(object : ValueEventListener {
@@ -116,7 +135,7 @@ class Fragment_hotel() : Fragment() {
 
                 }
 
-                    view?.recyclerview_hotel?.adapter = HotelRecycleAdapter(hotelFirstList,activity!!)
+                view?.recyclerview_hotel?.adapter = HotelRecycleAdapter(hotelFirstList, activity!!, node, place_list)
 
             }
         }
