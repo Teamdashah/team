@@ -67,6 +67,11 @@ class Hotelchoose_list : AppCompatActivity() {
         val getcamp = intent.getBundleExtra("bundle")?.getString("camp").toString()
         val getyoung_people = intent.getBundleExtra("bundle")?.getString("young_people").toString()
         val getsky = intent.getBundleExtra("bundle")?.getString("sky").toString()
+        val getonethousand_twothousand = intent.getBundleExtra("bundle")?.getString("onethousand_twothousand").toString()
+        val gettwothousand_threethousand = intent.getBundleExtra("bundle")?.getString("twothousand_threethousand").toString()
+        val getthreethousand_fourthousand = intent.getBundleExtra("bundle")?.getString("threethousand_fourthousand").toString()
+        val getfourthousand_fivethousand = intent.getBundleExtra("bundle")?.getString("fourthousand_fivethousand").toString()
+
 
         val destination = intent.getBundleExtra("bundle")?.getString("destination").toString()
 
@@ -110,6 +115,18 @@ class Hotelchoose_list : AppCompatActivity() {
         }
         else if(getsky == "true"){
             dbref = FirebaseDatabase.getInstance().getReference("category/天文/"+destination)
+        }
+        else if(getonethousand_twothousand == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千/"+destination)
+        }
+        else if(gettwothousand_threethousand == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千/"+destination)
+        }
+        else if(getthreethousand_fourthousand == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/三千四千/"+destination)
+        }
+        else if(getfourthousand_fivethousand == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/四千五千/"+destination)
         }
         else
             dbref = FirebaseDatabase.getInstance().getReference("room/Kaohsiung")

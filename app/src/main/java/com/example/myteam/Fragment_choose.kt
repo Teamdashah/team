@@ -80,9 +80,21 @@ class Fragment_choose : Fragment() {
 
 
             val  onethousand_twothousand = onethousand_twothousand.isChecked
+            if(onethousand_twothousand)
+                bundle.putString("onethousand_twothousand",""+onethousand_twothousand)
+
             val  twothousand_threethousand = twothousand_threethousand.isChecked
+            if(twothousand_threethousand)
+                bundle.putString("twothousand_threethousand",""+twothousand_threethousand)
+
             val  threethousand_fourthousand = threethousand_fourthousand.isChecked
+            if(threethousand_fourthousand)
+                bundle.putString("threethousand_fourthousand",""+threethousand_fourthousand)
+
             val  fourthousand_fivethousand = fourthousand_fivethousand.isChecked
+            if(fourthousand_fivethousand)
+                bundle.putString("fourthousand_fivethousand",""+fourthousand_fivethousand)
+
 
             var intent = activity?.getIntent()
 
