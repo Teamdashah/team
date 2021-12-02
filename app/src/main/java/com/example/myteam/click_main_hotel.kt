@@ -30,6 +30,7 @@ class click_main_hotel : AppCompatActivity() {
         val gethotelurl = intent.getStringExtra("room_photo")
         val gethotelurl_new = gethotelurl?.replaceFirst("/","https:/")
         val place = intent.getStringExtra("place")
+        val node = intent.getStringExtra("node")
 
         //標題傳過去//
 //        actionBar.setTitle(main_hotelTitle)
@@ -45,6 +46,7 @@ class click_main_hotel : AppCompatActivity() {
             //intent to start NewActivity
             val intent = Intent(this@click_main_hotel,restaurant_list::class.java)
             intent.putExtra("place",place)
+            intent.putExtra("node",node)
             intent.putExtra("main_hotelName",main_hotelName)
             startActivity(intent)
         }
@@ -55,6 +57,7 @@ class click_main_hotel : AppCompatActivity() {
             //intent to start NewActivity
             val intent = Intent(this@click_main_hotel,attractions_list::class.java)
             intent.putExtra("place",place)
+            intent.putExtra("node",node)
             intent.putExtra("main_hotelName",main_hotelName)
             startActivity(intent)
         }

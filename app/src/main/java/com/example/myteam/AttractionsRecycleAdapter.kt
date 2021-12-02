@@ -5,15 +5,20 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.attractionData
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 
 
-class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,val main_hotelName: String,val context:Context):
+class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,val main_hotelName: String,val context:Context,val node:String):
     RecyclerView.Adapter<AttractionsRecycleAdapter.ViewHolder>() {
+
+    val database = Firebase.database
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val name : TextView = itemView.findViewById(R.id.attraction_title)
@@ -21,6 +26,7 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
         val phone : TextView = itemView.findViewById(R.id.attraction_phone)
 //        val introduction : TextView = itemView.findViewById(R.id.attraction_introduction)
         val imageView : ImageView = itemView.findViewById(R.id.image_attraction)
+        val attaddtomylove : ImageButton = itemView.findViewById(R.id.attractions_addtomylove)
 
     }
 
@@ -61,10 +67,28 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
 
         }
 
+        //我的最愛按鈕
+        holder.attaddtomylove.setOnClickListener {
+            val pushitem = attractionList.get(position)
+            val Name : String? = pushitem.name
+            val Address : String? = pushitem.address
+            val PictureUrl : String? = pushitem.pictureUrl
+            val Pictureurl_new = PictureUrl?.replaceFirst("https:/","/")
+
+            write_into_firebase(Name.toString(), Address.toString(),Pictureurl_new.toString())
+        }
+
     }
 
     override fun getItemCount(): Int {
         return attractionList.size
+    }
+
+    private fun write_into_firebase( name:String, address:String, url:String){
+        val mylove = mutableMapOf("name" to name,"address" to address,"url" to url)
+
+        database.getReference("journey").child(node).child("favorite").child(name).setValue(mylove)
+
     }
 }
 

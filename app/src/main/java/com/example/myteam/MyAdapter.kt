@@ -5,14 +5,19 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.restaurantData
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 
-class MyAdapter(val restaurantList: ArrayList<restaurantData>,val main_hotelName: String, val context:Context) :
+class MyAdapter(val restaurantList: ArrayList<restaurantData>,val main_hotelName: String, val context:Context,val node :String) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+
+    val database = Firebase.database
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
@@ -55,6 +60,17 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>,val main_hotelName
             context.startActivity(intent)
 
         }
+
+        //我的最愛按鈕
+        holder.resaddtomylove.setOnClickListener {
+            val pushitem = restaurantList.get(position)
+            val Name : String? = pushitem.name
+            val Address : String? = pushitem.address
+            val PictureUrl : String? = pushitem.coverUrl
+            val Pictureurl_new = PictureUrl?.replaceFirst("https:/","/")
+
+            write_into_firebase(Name.toString(), Address.toString(),Pictureurl_new.toString())
+        }
     }
 
     override fun getItemCount(): Int {
@@ -68,5 +84,13 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>,val main_hotelName
         val avgPrice : TextView = itemView.findViewById(R.id.description_restaurant01)
         val phone : TextView = itemView.findViewById(R.id.description_restaurant02)
         val address : TextView = itemView.findViewById(R.id.description_restaurant03)
+        val resaddtomylove : ImageButton = itemView.findViewById(R.id.res_addtomylove)
+    }
+
+    private fun write_into_firebase(name:String, address:String, url:String){
+        val mylove = mutableMapOf("name" to name,"address" to address,"url" to url)
+
+        database.getReference("journey").child(node).child("favorite").child(name).setValue(mylove)
+
     }
 }

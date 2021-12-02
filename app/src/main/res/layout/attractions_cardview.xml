@@ -7,8 +7,7 @@
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true"
     android:padding="3dp"
-    android:layout_margin="2dp"
-    app:cardBackgroundColor="@color/resbgc">
+    android:layout_margin="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="景點："
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
         <!--景點名-->
@@ -51,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="景點的名字"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
         </LinearLayout>
@@ -68,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="地址："
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -78,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Description"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -95,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="電話："
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -104,50 +103,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Description"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
         </LinearLayout>
-        <!--介紹-->
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/attraction_phone"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:layout_marginTop="0dp"-->
-<!--        android:layout_toEndOf="@+id/image_attraction"-->
-<!--        android:layout_toRightOf="@+id/image_attraction"-->
-<!--        android:text="介紹:"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="20sp"-->
-<!--        android:textStyle="bold" />-->
 
-        <TextView
-            android:id="@+id/attraction_introduction"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/attraction_phone"
-            android:layout_marginStart="74dp"
-            android:layout_marginLeft="74dp"
-            android:layout_marginTop="2dp"
-            android:layout_toEndOf="@+id/image_attraction"
-            android:layout_toRightOf="@+id/image_attraction"
-            android:text=""
-            android:textColor="@color/lightGrayColor"
-            android:textSize="20sp"
-            />
+            <ImageButton
+                android:id="@+id/attractions_addtomylove"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/fui_transparent"
+                android:src="@drawable/ic_heart_outlined" />
 
         </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/attractions_addtomylove"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="83dp"
-            android:background="@color/fui_transparent"
-            android:src="@drawable/ic_heart_outlined"
-            />
 
     </LinearLayout>
 

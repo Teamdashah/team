@@ -18,12 +18,10 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
 
     private lateinit var dbref : DatabaseReference
 
-
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val destination : TextView = itemView.findViewById(R.id.tripname)
         val begin_date : TextView = itemView.findViewById(R.id.my_begindate)
         val end_date : TextView = itemView.findViewById(R.id.my_enddate)
-
         val trashCan : ImageButton = itemView.findViewById(R.id.delete_mylove)
     }
 
@@ -64,7 +62,6 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
     override fun getItemCount(): Int {
         return myscheduleList.size
     }
-
 
 }
 

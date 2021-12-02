@@ -5,6 +5,7 @@ import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.Toast
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         //configure the Google SignIn
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -62,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, RC_SIGN_IN)
         }
 
-        val lButton = findViewById<Button>(R.id.login_btn)
+        /*val lButton = findViewById<Button>(R.id.login_btn)
         //handle onClick
         lButton.setOnClickListener {
             //intent to start NewActivity
@@ -74,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         rButton.setOnClickListener {
             //intent to start NewActivity
             startActivity(Intent(this@MainActivity,mySchedule::class.java))
-        }
+        }*/
 
     }
 

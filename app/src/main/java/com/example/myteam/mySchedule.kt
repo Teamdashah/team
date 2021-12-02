@@ -3,8 +3,11 @@ package com.example.myteam
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,6 +27,9 @@ class mySchedule : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_schedule)
+//BenKhiSng圖
+//        getSupportActionBar()?.setDisplayShowHomeEnabled(true)
+//        getSupportActionBar()?.setIcon(R.drawable.app_logo)
 
         myRecyclerView = findViewById(R.id.recyclerview_myschedule)
         myRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -40,8 +46,19 @@ class mySchedule : AppCompatActivity() {
 
 
     }
-
-
+    //menu
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        menuInflater.inflate(R.menu.appbar_menu, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        val id = item.getItemId()
+//        if (id == R.id.logout_menu) {
+//            startActivity(Intent(this@mySchedule, MainActivity::class.java))
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
     private fun getmyscheduleData()
     {
         dbref = FirebaseDatabase.getInstance().getReference("journey")

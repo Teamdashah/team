@@ -56,26 +56,27 @@
             android:text="Description"
             android:textColor="@color/lightGrayColor"
             android:textSize="18sp" />
-        <TextView
-            android:id="@+id/people"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/my_enddate"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_toEndOf="@+id/image_mytrip"
-            android:layout_toRightOf="@+id/image_mytrip"
-            android:text="Description"
-            android:textColor="@color/lightGrayColor"
-            android:textSize="18sp" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/people"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/my_enddate"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toEndOf="@+id/image_mytrip"-->
+<!--            android:layout_toRightOf="@+id/image_mytrip"-->
+<!--            android:text="Description"-->
+<!--            android:textColor="@color/lightGrayColor"-->
+<!--            android:textSize="18sp" />-->
 
 
         <ImageButton
             android:id="@+id/delete_mylove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="270dp"
-            android:layout_marginRight="50dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="320dp"
             android:background="@drawable/ic_delete" />
 
 

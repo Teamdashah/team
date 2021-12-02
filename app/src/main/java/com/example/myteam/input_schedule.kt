@@ -137,7 +137,7 @@ class input_schedule : AppCompatActivity() {
             intent.putExtra("begin_date",begin_date)
             intent.putExtra("end_date",end_date)
             intent.putExtra("destination",destination)
-            intent.putExtra("number_of_people",number_of_people)
+//            intent.putExtra("number_of_people",number_of_people)
             //有改
 
             //intent to start NewActivity
@@ -169,7 +169,7 @@ class input_schedule : AppCompatActivity() {
 
     private fun write_into_firebase(desti:String, people:String, begin_date:String, end_date:String)
     {
-        val journey = mutableMapOf("destination" to desti, "number of people" to people, "begin_date" to begin_date, "end_date" to end_date)
+        val journey = mutableMapOf("destination" to desti, "number_of_people" to people, "begin_date" to begin_date, "end_date" to end_date)
         val title = begin_date + desti
         database.getReference("journey").child(title).setValue(journey).addOnSuccessListener {
             Toast.makeText(this, "Sucessfully saved",Toast.LENGTH_SHORT).show()

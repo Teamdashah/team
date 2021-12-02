@@ -17,6 +17,7 @@ class restaurant_list : AppCompatActivity() {
     private lateinit var restaurantList: ArrayList<restaurantData>
     private lateinit var place:String
     private lateinit var main_hotelName:String
+    private lateinit var node:String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,7 @@ class restaurant_list : AppCompatActivity() {
         setContentView(R.layout.activity_restaurant_list)
 
         place = intent.getStringExtra("place").toString()
+        node = intent.getStringExtra("node").toString()
         main_hotelName = intent.getStringExtra("main_hotelName").toString()
 
         userRecyclerView = findViewById(R.id.recyclerview)
@@ -52,7 +54,7 @@ class restaurant_list : AppCompatActivity() {
 
                     }
 
-                    userRecyclerView.adapter = MyAdapter(restaurantList,main_hotelName,this@restaurant_list)
+                    userRecyclerView.adapter = MyAdapter(restaurantList,main_hotelName,this@restaurant_list,node)
 
                 }
             }
