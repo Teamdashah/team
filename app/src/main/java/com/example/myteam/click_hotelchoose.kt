@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.ActionBar
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_click_hotelchoose.*
 import kotlinx.android.synthetic.main.activity_click_main_hotel.*
@@ -13,9 +15,13 @@ import kotlinx.android.synthetic.main.click_hotel.*
 import kotlinx.android.synthetic.main.click_hotel.hotel_title
 
 class click_hotelchoose : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_click_hotelchoose)
+
 
         val actionBar : ActionBar? = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)

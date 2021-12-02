@@ -74,6 +74,8 @@ class Hotelchoose_list : AppCompatActivity() {
 
 
         val destination = intent.getBundleExtra("bundle")?.getString("destination").toString()
+        val begin_date = intent.getBundleExtra("bundle")?.getString("begin_date").toString()
+        val node = begin_date + destination
 
         val place = intent.getBundleExtra("bundle")?.getString("place_list").toString()//NEW
 
@@ -143,7 +145,7 @@ class Hotelchoose_list : AppCompatActivity() {
                         Log.d(TAG,"test*****************")
                     }
 
-                    hcRecyclerView.adapter = HotelchooseAdapter(hotelchoose_list,this@Hotelchoose_list,place)
+                    hcRecyclerView.adapter = HotelchooseAdapter(hotelchoose_list,this@Hotelchoose_list,node ,place)
 
                 }
 
