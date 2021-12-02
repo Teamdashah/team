@@ -71,9 +71,10 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
             val pushitem = attractionList.get(position)
             val Name : String? = pushitem.name
             val Address : String? = pushitem.address
-            val PictureUrl : String? = pushitem.pictureUrl
+            val pictureUrl : String? = pushitem.pictureUrl
+            val pictureurl_new = pictureUrl?.replaceFirst("https:/","/")
 
-            write_into_firebase(Name.toString(), Address.toString(),PictureUrl.toString())
+            write_into_firebase(Name.toString(), Address.toString(),pictureurl_new.toString())
         }
 
     }

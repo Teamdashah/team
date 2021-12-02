@@ -63,8 +63,9 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Conte
             val resName : String? = pushitem.name
             val resAddress : String? = pushitem.address
             val resPictureUrl : String? = pushitem.coverUrl
+            val pictureurl_new = resPictureUrl?.replaceFirst("https:/","/")
 
-            write_into_firebase(resName.toString(), resAddress.toString(),resPictureUrl.toString())
+            write_into_firebase(resName.toString(), resAddress.toString(),pictureurl_new.toString())
         }
     }
 
