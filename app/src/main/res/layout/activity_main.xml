@@ -7,47 +7,48 @@
     android:background="#f5f5f5"
     tools:context=".MainActivity">
 
-    <!--Google signIn Button-->
+    <!--登入-->
 
-    <Button
-        android:id="@+id/login_btn"
-        android:layout_width="200dp"
-        android:layout_height="63dp"
-        android:backgroundTint="@color/teal_200"
-        android:text="@string/main_login"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+<!--    <Button-->
+<!--        android:id="@+id/login_btn"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:backgroundTint="@color/teal_200"-->
+<!--        android:text="@string/main_login"-->
+<!--        android:textSize="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.507"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.679" />-->
 
-    <Button
-        android:id="@+id/register_btn"
-        android:layout_width="200dp"
-        android:layout_height="63dp"
-        android:backgroundTint="@color/teal_200"
-        android:text="@string/main_rigester"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825"
-        tools:ignore="InvalidId" />
+<!--    註冊-->
+<!--    <Button-->
+<!--        android:id="@+id/register_btn"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:backgroundTint="@color/teal_200"-->
+<!--        android:text="@string/main_rigester"-->
+<!--        android:textSize="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.507"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.825"-->
+<!--        tools:ignore="InvalidId" />-->
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="250dp"
-        android:layout_height="240dp"
+        android:layout_width="284dp"
+        android:layout_height="351dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256"
+        app:layout_constraintVertical_bias="0.431"
         app:srcCompat="@drawable/main_foot" />
 
     <ImageView
@@ -56,10 +57,10 @@
         android:layout_height="83dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048"
+        app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/main_benkhisng" />
 
     <ImageView
@@ -68,24 +69,23 @@
         android:layout_height="75dp"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/login_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.722"
         app:srcCompat="@drawable/main_littleword" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleSignInBtn"
-        android:layout_width="200dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.737"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952" />
+        app:layout_constraintVertical_bias="0.821" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
