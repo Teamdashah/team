@@ -13,6 +13,8 @@ import kotlinx.android.synthetic.main.fragment_choose.*
 
 
 class Fragment_choose : Fragment() {
+    private lateinit var place_list: String
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -92,6 +94,34 @@ class Fragment_choose : Fragment() {
             val end_date = eee
             val destination =ddd
             val number_of_people =nnn
+
+            when(ddd) {
+                "台北市" -> place_list = "Taipei City"
+                "新北市" -> place_list = "New Taipei City"
+                "基隆市" -> place_list = "Keelung City"
+                "宜蘭市" -> place_list = "Yilan City"
+                "桃園市" -> place_list = "Taoyuan City"
+                "新竹縣" -> place_list = "Hsinchu County"
+                "新竹市" -> place_list = "Hsinchu City"
+                "苗栗縣" -> place_list = "Miaoli City"
+                "台中市" -> place_list = "Taichung City"
+                "彰化縣" -> place_list = "Changhua County"
+                "南投縣" -> place_list = "Nantou County"
+                "雲林縣" -> place_list = "Yunlin County"
+                "嘉義市" -> place_list = "Chiayi City"
+                "嘉義縣" -> place_list = "Chiayi County"
+                "台南市" -> place_list = "Tainan City"
+                "高雄市" -> place_list = "Kaohsiung City"
+                "屏東市" -> place_list = "Pingtung City"
+                "花蓮縣" -> place_list = "Hualien County"
+                "台東縣" -> place_list = "Taitung County"
+                "澎湖縣" -> place_list = "Penghu County"
+                "金門縣" -> place_list = "Kinmen County"
+
+
+                else -> place_list = "Taipei City"
+            }
+            bundle.putString("place_list",place_list)
             bundle.putString("destination",""+destination)
             intent = Intent(activity, Hotelchoose_list::class.java)
             intent.putExtra("bundle",bundle)

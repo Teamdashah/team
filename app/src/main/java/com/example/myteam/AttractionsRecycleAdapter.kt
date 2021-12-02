@@ -12,7 +12,7 @@ import com.example.myteam.model.attractionData
 import com.squareup.picasso.Picasso
 
 
-class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,val context:Context):
+class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,val main_hotelName: String,val context:Context):
     RecyclerView.Adapter<AttractionsRecycleAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -51,6 +51,7 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
             val attIntroduction : String? = pushitem.introduction
             val attpictureUrl : String? = pushitem.pictureUrl
             val intent = Intent(context,click_attractions::class.java)
+            intent.putExtra("main_hotelName",main_hotelName)
             intent.putExtra("name",attName)
             intent.putExtra("address",attAddress)
             intent.putExtra("phone",attPhone)

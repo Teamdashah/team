@@ -21,6 +21,8 @@ class click_hotelchoose : AppCompatActivity() {
         actionBar!!.setDisplayShowHomeEnabled(true)
 
         val intent: Intent = intent
+        val main_hotelName = intent.getStringExtra("room_name")
+        val place = intent.getStringExtra("place")
         val c_hotelName = intent.getStringExtra("room_name")
         val c_hotelAddress = intent.getStringExtra("room_address")?.replace("住址：","")
         val c_hoteldetail = intent.getStringExtra("room_detail")
@@ -38,7 +40,10 @@ class click_hotelchoose : AppCompatActivity() {
         //handle onClick
         ToresButton.setOnClickListener {
             //intent to start NewActivity
-            startActivity(Intent(this@click_hotelchoose, restaurant_list::class.java))
+            val intent = Intent(this@click_hotelchoose,restaurant_list::class.java)
+            intent.putExtra("place",place)
+            intent.putExtra("main_hotelName",main_hotelName)
+            startActivity(intent)
         }
 
 
@@ -46,7 +51,10 @@ class click_hotelchoose : AppCompatActivity() {
         //handle onClick
         ToattButton.setOnClickListener {
             //intent to start NewActivity
-            startActivity(Intent(this@click_hotelchoose, attractions_list::class.java))
+            val intent = Intent(this@click_hotelchoose,attractions_list::class.java)
+            intent.putExtra("place",place)
+            intent.putExtra("main_hotelName",main_hotelName)
+            startActivity(intent)
         }
     }
 

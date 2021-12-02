@@ -43,6 +43,7 @@ class click_main_hotel : AppCompatActivity() {
             //intent to start NewActivity
             val intent = Intent(this@click_main_hotel,restaurant_list::class.java)
             intent.putExtra("place",place)
+            intent.putExtra("main_hotelName",main_hotelName)
             startActivity(intent)
         }
 
@@ -52,6 +53,7 @@ class click_main_hotel : AppCompatActivity() {
             //intent to start NewActivity
             val intent = Intent(this@click_main_hotel,attractions_list::class.java)
             intent.putExtra("place",place)
+            intent.putExtra("main_hotelName",main_hotelName)
             startActivity(intent)
         }
 

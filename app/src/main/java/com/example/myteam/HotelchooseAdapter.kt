@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.hotelchoose_cardview.view.*
 
 
-class HotelchooseAdapter (val hotelchoose_arrayList: ArrayList<hotelchooseData>, val context: Context):
+class HotelchooseAdapter (val hotelchoose_arrayList: ArrayList<hotelchooseData>, val context: Context,val place:String):
     RecyclerView.Adapter<HotelchooseAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -54,6 +54,7 @@ class HotelchooseAdapter (val hotelchoose_arrayList: ArrayList<hotelchooseData>,
             intent.putExtra("room_address",chooseAddress)
             intent.putExtra("room_photo",choosePictureUrl)
             intent.putExtra("room_detail",chooseIntroduction)
+            intent.putExtra("place",place)
 
             context.startActivity(intent)
 

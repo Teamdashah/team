@@ -21,6 +21,7 @@ class click_res : AppCompatActivity() {
         actionBar!!.setDisplayShowHomeEnabled(true)
 
         var intent = intent
+        val main_hotelName = intent.getStringExtra("main_hotelName").toString()
         val aTitle = intent.getStringExtra("name")
         val rDescription01 = intent.getStringExtra("avgPrice")
         val rDescription02 = intent.getStringExtra("phone")
@@ -46,7 +47,7 @@ class click_res : AppCompatActivity() {
 
         val locationBtn = findViewById<Button>(R.id.res_location_btn)
         locationBtn.setOnClickListener{
-            val orgin = "高雄大學"
+            val orgin = main_hotelName
             val destination = aTitle.toString()
             DisplayTrack(orgin,destination)
         }

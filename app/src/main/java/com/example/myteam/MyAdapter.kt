@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.restaurantData
 import com.squareup.picasso.Picasso
 
-class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Context) :
+class MyAdapter(val restaurantList: ArrayList<restaurantData>,val main_hotelName: String, val context:Context) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -44,6 +44,7 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Conte
             var rescoverUrl : String? = pushresitem.coverUrl
             val resopeningHoursList :ArrayList<String>? = pushresitem.openingHoursList
             val intent = Intent(context,click_res::class.java)
+            intent.putExtra("main_hotelName",main_hotelName)
             intent.putExtra("name",resName)
             intent.putExtra("avgPrice",resavgPrice)
             intent.putExtra("address",resAddress)
