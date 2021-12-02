@@ -145,7 +145,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="350dp"
-            android:background="@color/fui_transparent"
+            android:background="@drawable/imageprss"
             android:src="@drawable/ic_heart_outlined"
             />
 <!--        <CheckBox-->
