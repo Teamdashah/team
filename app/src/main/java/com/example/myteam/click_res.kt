@@ -47,7 +47,7 @@ class click_res : AppCompatActivity() {
 
         val locationBtn = findViewById<Button>(R.id.res_location_btn)
         locationBtn.setOnClickListener{
-            val orgin = main_hotelName
+            val orgin = main_hotelName//new
             val destination = aTitle.toString()
             DisplayTrack(orgin,destination)
         }
