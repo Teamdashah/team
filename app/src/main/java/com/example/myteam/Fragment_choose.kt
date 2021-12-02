@@ -135,6 +135,7 @@ class Fragment_choose : Fragment() {
             }
             bundle.putString("place_list",place_list)
             bundle.putString("destination",""+destination)
+            bundle.putString("begin_date",""+begin_date)
             intent = Intent(activity, Hotelchoose_list::class.java)
             intent.putExtra("bundle",bundle)
             startActivity(intent)
