@@ -101,7 +101,7 @@ class input_schedule : AppCompatActivity() {
         //handle onClick
         Pickbegin_Button.setOnClickListener {
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, mYear: Int, mMonth: Int, mDay: Int ->
-                //val textView = findViewById<TextView>(R.id.showBeginDate)
+                val mm = mMonth+1
                 Pickbegin_Button.setText("" + mYear + "/" + mMonth + "/" + mDay)
                 begin_date = mYear.toString() +","+ mMonth.toString() +","+ mDay.toString()
             },year,month,day)
@@ -112,8 +112,8 @@ class input_schedule : AppCompatActivity() {
         val Pickend_Button = findViewById<Button>(R.id.pickEndDateBtn)
         Pickend_Button.setOnClickListener {
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, mYear: Int, mMonth: Int, mDay: Int ->
-                //val textView = findViewById<TextView>(R.id.showEndDate)
-                Pickend_Button.setText("" + mYear + "/" + mMonth + "/" + mDay)
+                val mmm = mMonth+1
+                Pickend_Button.setText("" + mYear + "/" + mmm + "/" + mDay)
                 end_date = mYear.toString() +","+ mMonth.toString() +","+ mDay.toString()
             },year,month,day)
 
