@@ -44,7 +44,8 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>,val main_hotelName
             var rescoverUrl : String? = pushresitem.coverUrl
             val resopeningHoursList :ArrayList<String>? = pushresitem.openingHoursList
             val intent = Intent(context,click_res::class.java)
-            intent.putExtra("main_hotelName",main_hotelName)
+
+            intent.putExtra("main_hotelName",main_hotelName)//new
             intent.putExtra("name",resName)
             intent.putExtra("avgPrice",resavgPrice)
             intent.putExtra("address",resAddress)
