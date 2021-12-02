@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_hotel.view.*
 import com.example.myteam.model.hotelFirstData
+import com.example.myteam.model.emptyroomData
+
 import com.google.firebase.database.*
 
 import android.app.Activity
@@ -23,7 +25,9 @@ import android.util.Log
 class Fragment_hotel() : Fragment() {
 
     private lateinit var dbref : DatabaseReference
+    private lateinit var emptydbref : DatabaseReference
     private lateinit var hotelFirstList: ArrayList<hotelFirstData>
+    private lateinit var emptyroomList: ArrayList<emptyroomData>
     private lateinit var place: String
     private lateinit var node: String
     private lateinit var place_list: String
@@ -48,6 +52,7 @@ class Fragment_hotel() : Fragment() {
 //        }
         getFitstHotelData()
         hotelFirstList = arrayListOf<hotelFirstData>()
+        emptyroomList = arrayListOf<emptyroomData>()
 //        view.recyclerview_hotel.adapter = HotelRecycleAdapter(getFitstHotelData(), activity!!)
 
 
@@ -124,26 +129,51 @@ class Fragment_hotel() : Fragment() {
         }
 
 
-        dbref.addValueEventListener(object : ValueEventListener {
-        override fun onDataChange(snapshot: DataSnapshot) {
-            if(snapshot.exists())
-            {
-                for (userSnapshot in snapshot.children)
+        emptydbref = FirebaseDatabase.getInstance().getReference("emptyroom/"+begin_date+"/"+destination)
+
+        emptydbref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(emptysnapshot: DataSnapshot) {
+                if(emptysnapshot.exists())
                 {
-                    val hotelFirst = userSnapshot.getValue(hotelFirstData::class.java)
-                    hotelFirstList.add(hotelFirst!!)
+                    for (emptySnapshot in emptysnapshot.children)
+                    {
+                        val emptyFirst = emptySnapshot.getValue(emptyroomData::class.java)
+                        emptyroomList.add(emptyFirst!!)
+
+
+                    }
 
                 }
-
-                view?.recyclerview_hotel?.adapter = HotelRecycleAdapter(hotelFirstList, activity!!, node, place_list)
+            }
+            override fun onCancelled(error: DatabaseError) {
 
             }
-        }
+        })
 
-        override fun onCancelled(error: DatabaseError) {
+        dbref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if(snapshot.exists())
+                {
+                    for (userSnapshot in snapshot.children)
+                    {
 
-        }
-    })
+                        val hotelFirst = userSnapshot.getValue(hotelFirstData::class.java)
+                        for (i in 0..(emptyroomList.size-1) ){
+                            if (hotelFirst?.room_name.toString() == (emptyroomList[i]?.room_name.toString()))
+                                hotelFirstList.add(hotelFirst!!)
+                        }
+
+                    }
+
+                    view?.recyclerview_hotel?.adapter = HotelRecycleAdapter(hotelFirstList,activity!!,node,place_list)
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+        })
 
     }
 
