@@ -69,7 +69,9 @@ class Hotelchoose_list : AppCompatActivity() {
         val getsky = intent.getBundleExtra("bundle")?.getString("sky").toString()
 
         val destination = intent.getBundleExtra("bundle")?.getString("destination").toString()
-        val place = intent.getBundleExtra("bundle")?.getString("place_list").toString()
+
+        val place = intent.getBundleExtra("bundle")?.getString("place_list").toString()//NEW
+
 
 
 
