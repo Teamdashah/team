@@ -14,12 +14,14 @@ class attractions_list : AppCompatActivity() {
     private lateinit var attRecyclerView: RecyclerView
     private lateinit var attractionList: ArrayList<attractionData>
     private lateinit var place:String
+    private lateinit var node:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_attractions_list)
 
         place = intent.getStringExtra("place").toString()
+        node = intent.getStringExtra("node").toString()
 
         attRecyclerView = findViewById(R.id.attraction_recyclerview)
         attRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -46,7 +48,7 @@ class attractions_list : AppCompatActivity() {
                         attractionList.add(attraction!!)
                     }
 
-                    attRecyclerView.adapter = AttractionsRecycleAdapter(attractionList,this@attractions_list)
+                    attRecyclerView.adapter = AttractionsRecycleAdapter(attractionList,this@attractions_list, node)
 
                 }
 

@@ -60,6 +60,7 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
             intent.putExtra("room_photo",hotelPictureUrl)
             intent.putExtra("room_detail",hotelIntroduction)
             intent.putExtra("place",place)
+            intent.putExtra("node",node)
 
             context.startActivity(intent)
 
@@ -81,10 +82,10 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
         return hotelFirstList.size
     }
 
-    //我的最愛
+
     private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String){
         val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl)
-        val title = hotelname
+
         database.getReference("journey").child(node).child("favorite").child(hotelname).setValue(mylove)
 
     }

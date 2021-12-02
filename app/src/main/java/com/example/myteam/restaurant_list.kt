@@ -16,13 +16,14 @@ class restaurant_list : AppCompatActivity() {
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var restaurantList: ArrayList<restaurantData>
     private lateinit var place:String
-
+    private lateinit var node:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant_list)
 
         place = intent.getStringExtra("place").toString()
+        node = intent.getStringExtra("node").toString()
 
         userRecyclerView = findViewById(R.id.recyclerview)
         userRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -50,7 +51,7 @@ class restaurant_list : AppCompatActivity() {
 
                     }
 
-                    userRecyclerView.adapter = MyAdapter(restaurantList,this@restaurant_list)
+                    userRecyclerView.adapter = MyAdapter(restaurantList,this@restaurant_list,node)
 
                 }
             }

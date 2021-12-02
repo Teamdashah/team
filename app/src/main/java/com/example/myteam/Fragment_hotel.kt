@@ -24,8 +24,8 @@ import android.util.Log
 
 class Fragment_hotel() : Fragment() {
 
-    private lateinit var dbref : DatabaseReference
-    private lateinit var emptydbref : DatabaseReference
+    private lateinit var dbref: DatabaseReference
+    private lateinit var emptydbref: DatabaseReference
     private lateinit var hotelFirstList: ArrayList<hotelFirstData>
     private lateinit var emptyroomList: ArrayList<emptyroomData>
     private lateinit var place: String
@@ -35,7 +35,6 @@ class Fragment_hotel() : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-
 
 
     ): View? {
@@ -60,15 +59,15 @@ class Fragment_hotel() : Fragment() {
     }
 
 
-    private fun getFitstHotelData(){
+    private fun getFitstHotelData() {
         //有改
         val intent = activity?.getIntent()
-        val sss= intent?.getStringExtra("begin_date")
-        val eee= intent?.getStringExtra("end_date")
-        val ddd= intent?.getStringExtra("destination")
-        val nnn= intent?.getStringExtra("number_of_people")
+        val sss = intent?.getStringExtra("begin_date")
+        val eee = intent?.getStringExtra("end_date")
+        val ddd = intent?.getStringExtra("destination")
+        val nnn = intent?.getStringExtra("number_of_people")
 
-        when(ddd) {
+        when (ddd) {
             "台北市" -> place_list = "Taipei City"
             "新北市" -> place_list = "New Taipei City"
             "基隆市" -> place_list = "Keelung City"
@@ -97,11 +96,11 @@ class Fragment_hotel() : Fragment() {
 
         val begin_date = sss
         val end_date = eee
-        val destination =ddd
-        node = sss.toString()+ddd.toString()
-        val number_of_people =nnn
+        val destination = ddd
+        node = sss.toString() + ddd.toString()
+        val number_of_people = nnn
         //有改
-        when(destination) {
+        when (destination) {
             "台北市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Taipei")
             "新北市" -> dbref = FirebaseDatabase.getInstance().getReference("room/New Taipei")
             "基隆市" -> dbref = FirebaseDatabase.getInstance().getReference("room/Keelung")
@@ -129,14 +128,13 @@ class Fragment_hotel() : Fragment() {
         }
 
 
-        emptydbref = FirebaseDatabase.getInstance().getReference("emptyroom/"+begin_date+"/"+destination)
+        emptydbref = FirebaseDatabase.getInstance()
+            .getReference("emptyroom/" + begin_date + "/" + destination)
 
         emptydbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(emptysnapshot: DataSnapshot) {
-                if(emptysnapshot.exists())
-                {
-                    for (emptySnapshot in emptysnapshot.children)
-                    {
+                if (emptysnapshot.exists()) {
+                    for (emptySnapshot in emptysnapshot.children) {
                         val emptyFirst = emptySnapshot.getValue(emptyroomData::class.java)
                         emptyroomList.add(emptyFirst!!)
 
@@ -145,6 +143,7 @@ class Fragment_hotel() : Fragment() {
 
                 }
             }
+
             override fun onCancelled(error: DatabaseError) {
 
             }
@@ -152,20 +151,19 @@ class Fragment_hotel() : Fragment() {
 
         dbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists())
-                {
-                    for (userSnapshot in snapshot.children)
-                    {
+                if (snapshot.exists()) {
+                    for (userSnapshot in snapshot.children) {
 
                         val hotelFirst = userSnapshot.getValue(hotelFirstData::class.java)
-                        for (i in 0..(emptyroomList.size-1) ){
+                        for (i in 0..(emptyroomList.size - 1)) {
                             if (hotelFirst?.room_name.toString() == (emptyroomList[i]?.room_name.toString()))
                                 hotelFirstList.add(hotelFirst!!)
                         }
 
                     }
 
-                    view?.recyclerview_hotel?.adapter = HotelRecycleAdapter(hotelFirstList,activity!!,node,place_list)
+                    view?.recyclerview_hotel?.adapter =
+                        HotelRecycleAdapter(hotelFirstList, activity!!, node, place_list)
 
                 }
             }
@@ -174,36 +172,11 @@ class Fragment_hotel() : Fragment() {
 
             }
         })
-
     }
 
 
-//    private fun getbegindate(){
-//        dbref = FirebaseDatabase.getInstance().getReference("journey")
-//
-//        dbref.addValueEventListener(object : ValueEventListener {
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                if(snapshot.exists())
-//                {
-//                    for (userSnapshot in snapshot.children)
-//                    {
-//                        val tripList = userSnapshot.getValue(getscheduleData::class.java)
-//                        tripDetailList.add(tripList!!)
-//
-//                    }
-//
-//
-//                }
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//
-//            }
-//        })
-//
-//    }
-
 }
+
 
 
 

@@ -5,14 +5,18 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.restaurantData
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 
-class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Context) :
+class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Context, val node:String) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+    val database = Firebase.database
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
@@ -53,6 +57,15 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Conte
             context.startActivity(intent)
 
         }
+
+        holder.resaddtomylove.setOnClickListener {
+            val pushitem = restaurantList.get(position)
+            val resName : String? = pushitem.name
+            val resAddress : String? = pushitem.address
+            val resPictureUrl : String? = pushitem.coverUrl
+
+            write_into_firebase(resName.toString(), resAddress.toString(),resPictureUrl.toString())
+        }
     }
 
     override fun getItemCount(): Int {
@@ -66,5 +79,13 @@ class MyAdapter(val restaurantList: ArrayList<restaurantData>, val context:Conte
         val avgPrice : TextView = itemView.findViewById(R.id.description_restaurant01)
         val phone : TextView = itemView.findViewById(R.id.description_restaurant02)
         val address : TextView = itemView.findViewById(R.id.description_restaurant03)
+        val resaddtomylove : ImageButton = itemView.findViewById(R.id.res_addtomylove)
+    }
+
+    private fun write_into_firebase(name:String, address:String, url:String){
+        val mylove = mutableMapOf("name" to name,"address" to address,"url" to url)
+
+        database.getReference("journey").child(node).child("favorite").child(name).setValue(mylove)
+
     }
 }
