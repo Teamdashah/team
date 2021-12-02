@@ -27,8 +27,9 @@ class Hotelchoose_list : AppCompatActivity() {
 
 
         hotelchoose_list = arrayListOf<hotelchooseData>()
-        val getfour_star = intent.getBundleExtra("bundle")?.getString("four_star").toString()
-        getchooseData(getfour_star)
+
+        getchooseData()
+
 
 
 
@@ -51,10 +52,61 @@ class Hotelchoose_list : AppCompatActivity() {
 //        hotelchoose_recycleview.adapter = hotelchooseadapter
     }
 
-    private fun getchooseData(getfour_star:String)
+    private fun getchooseData()
     {
-        if(getfour_star == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("room/Taipei")
+        val getthree_star = intent.getBundleExtra("bundle")?.getString("three_star").toString()
+        val getfour_star = intent.getBundleExtra("bundle")?.getString("four_star").toString()
+        val getfive_star = intent.getBundleExtra("bundle")?.getString("five_star").toString()
+        val gethotspring = intent.getBundleExtra("bundle")?.getString("hotspring").toString()
+
+        val gettraffic = intent.getBundleExtra("bundle")?.getString("traffic").toString()
+        val getsmart = intent.getBundleExtra("bundle")?.getString("smart").toString()
+        val getchild = intent.getBundleExtra("bundle")?.getString("child").toString()
+        val getenvironment = intent.getBundleExtra("bundle")?.getString("environment").toString()
+        val getbussiness = intent.getBundleExtra("bundle")?.getString("bussiness").toString()
+        val getcamp = intent.getBundleExtra("bundle")?.getString("camp").toString()
+        val getyoung_people = intent.getBundleExtra("bundle")?.getString("young_people").toString()
+        val getsky = intent.getBundleExtra("bundle")?.getString("sky").toString()
+
+        val destination = intent.getBundleExtra("bundle")?.getString("destination").toString()
+
+
+
+        if(getthree_star == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/3星級/"+destination)
+        }
+        else if(getfour_star == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/4星級/"+destination)
+        }
+        else if(getfive_star == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/5星級/"+destination)
+        }
+        else if(gethotspring == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/溫泉/"+destination)
+        }
+        else if(gettraffic == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/交通便利/"+destination)
+        }
+        else if(getsmart == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/智能/"+destination)
+        }
+        else if(getchild == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/親子/"+destination)
+        }
+        else if(getenvironment == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/環保/"+destination)
+        }
+        else if(getbussiness == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/商務/"+destination)
+        }
+        else if(getcamp == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/露營/"+destination)
+        }
+        else if(getyoung_people == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/青旅/"+destination)
+        }
+        else if(getsky == "true"){
+            dbref = FirebaseDatabase.getInstance().getReference("category/天文/"+destination)
         }
         else
             dbref = FirebaseDatabase.getInstance().getReference("room/Kaohsiung")
