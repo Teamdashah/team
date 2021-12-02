@@ -17,7 +17,7 @@ import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 
 
-class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val context: Context) :
+class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val context: Context, val node: String) :
     RecyclerView.Adapter<HotelRecycleAdapter.ViewHolder>() {
 
     val database = Firebase.database
@@ -32,7 +32,6 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.hotel_cardview, parent, false)
         return ViewHolder(v)
-
 
     }
 
@@ -71,9 +70,8 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
             val hotelName : String? = pushitem.room_name
             val hotelAddress : String? = pushitem.room_address
             val hotelPictureUrl : String? = pushitem.room_photo
-            val hotelIntroduction : String? = pushitem.room_detail
 
-            write_into_firebase(hotelName.toString(), hotelAddress.toString(),hotelPictureUrl.toString(), hotelIntroduction.toString())
+            write_into_firebase(hotelName.toString(), hotelAddress.toString(),hotelPictureUrl.toString())
         }
 
     }
@@ -83,10 +81,10 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
     }
 
     //我的最愛
-    private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String, hoteldetail:String){
-        val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl,"detail" to hoteldetail)
+    private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String){
+        val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl)
         val title = hotelname
-        database.getReference("mylove").child(title).setValue(mylove)
+        database.getReference("journey").child(node).child("favorite").setValue(mylove)
 
     }
 
