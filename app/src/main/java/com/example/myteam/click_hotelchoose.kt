@@ -1,6 +1,7 @@
 package com.example.myteam
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -21,7 +22,7 @@ class click_hotelchoose : AppCompatActivity() {
         actionBar!!.setDisplayShowHomeEnabled(true)
 
         val intent: Intent = intent
-        val main_hotelName = intent.getStringExtra("room_name")
+        val main_hotelName = intent.getStringExtra("room_name").toString()
         val place = intent.getStringExtra("place")
         val c_hotelName = intent.getStringExtra("room_name")
         val c_hotelAddress = intent.getStringExtra("room_address")?.replace("住址：","")
@@ -56,8 +57,29 @@ class click_hotelchoose : AppCompatActivity() {
             intent.putExtra("main_hotelName",main_hotelName)
             startActivity(intent)
         }
+        val locationBtn = findViewById<Button>(R.id.choose_googlemap_btn)
+        locationBtn.setOnClickListener{
+            val orgin = c_hotelName.toString()
+            val destination = orgin
+            DisplayTrack(orgin,destination)
+        }
+
     }
 
-
+    private fun DisplayTrack(origin:String, destination:String)
+    {
+        try{
+            val uri = Uri.parse("https://www.google.co.in/maps/search/" + origin + "/")
+            val intent = Intent(Intent.ACTION_VIEW,uri)
+            intent.setPackage("com.google.android.apps.maps")
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }catch (ex: android.content.ActivityNotFoundException){
+            val uri = Uri.parse("http://play.google.com/store/apps/details?id=com.google.android.apps.maps")
+            val intent = Intent(Intent.ACTION_VIEW,uri)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
+    }
 }
 
