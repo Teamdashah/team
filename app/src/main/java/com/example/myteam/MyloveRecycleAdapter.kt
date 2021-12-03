@@ -48,8 +48,9 @@ class MyloveRecycleAdapter(val myloveList: ArrayList<myloveData>, val context: C
 
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(getActivity(context), click_mylove::class.java)
-            context.startActivity(intent)
+
+//            val intent = Intent(getActivity(context), click_mylove_new::class.java)
+//            context.startActivity(intent)
         }
 
     }

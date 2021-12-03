@@ -6,7 +6,6 @@ import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.attractionData
-import com.example.myteam.model.emptyroomData
 import com.example.myteam.model.hotelchooseData
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_hotelchoose_list.*
@@ -15,10 +14,8 @@ import kotlinx.android.synthetic.main.activity_hotelchoose_list.*
 class Hotelchoose_list : AppCompatActivity() {
 
     private lateinit var dbref : DatabaseReference
-    private lateinit var emptydbref: DatabaseReference
     private lateinit var hcRecyclerView: RecyclerView
     private lateinit var hotelchoose_list: ArrayList<hotelchooseData>
-    private lateinit var emptyroomList: ArrayList<emptyroomData>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +27,6 @@ class Hotelchoose_list : AppCompatActivity() {
 
 
         hotelchoose_list = arrayListOf<hotelchooseData>()
-        emptyroomList = arrayListOf<emptyroomData>()
 
         getchooseData()
 
@@ -79,6 +75,8 @@ class Hotelchoose_list : AppCompatActivity() {
 
         val destination = intent.getBundleExtra("bundle")?.getString("destination").toString()
         val begin_date = intent.getBundleExtra("bundle")?.getString("begin_date").toString()
+        val node = begin_date + destination
+
         val place = intent.getBundleExtra("bundle")?.getString("place_list").toString()//NEW
 
 
@@ -135,26 +133,6 @@ class Hotelchoose_list : AppCompatActivity() {
         else
             dbref = FirebaseDatabase.getInstance().getReference("room/Kaohsiung")
 
-        emptydbref = FirebaseDatabase.getInstance()
-            .getReference("emptyroom/" + begin_date + "/" + destination)
-
-        emptydbref.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(emptysnapshot: DataSnapshot) {
-                if (emptysnapshot.exists()) {
-                    for (emptySnapshot in emptysnapshot.children) {
-                        val emptyFirst = emptySnapshot.getValue(emptyroomData::class.java)
-                        emptyroomList.add(emptyFirst!!)
-
-
-                    }
-
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-        })
         dbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists())
@@ -162,16 +140,12 @@ class Hotelchoose_list : AppCompatActivity() {
                     for (userSnapshot in snapshot.children)
                     {
                         val hotelchoose = userSnapshot.getValue(hotelchooseData::class.java)
-                        for (i in 0..(emptyroomList.size - 1)) {
-                            if (hotelchoose?.room_name.toString() == (emptyroomList[i]?.room_name.toString()))
-                                hotelchoose_list.add(hotelchoose!!)
-                        }
-
+                        hotelchoose_list.add(hotelchoose!!)
 
                         Log.d(TAG,"test*****************")
                     }
 
-                    hcRecyclerView.adapter = HotelchooseAdapter(hotelchoose_list,this@Hotelchoose_list,place)
+                    hcRecyclerView.adapter = HotelchooseAdapter(hotelchoose_list,this@Hotelchoose_list,node ,place)
 
                 }
 

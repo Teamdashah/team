@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,34 +15,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myteam">
+        <activity
+            android:name=".click_mylove_new"
+            android:exported="false" />
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_GEO_API"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_GEO_API" />
 
         <activity
-            android:name=".click_main_hotel"
-            android:parentActivityName=".hotel_main" />
+            android:name=".click_main_hotel" />
         <activity
-            android:name=".click_attractions"
-            android:parentActivityName=".attractions_list" />
+            android:name=".click_attractions" />
         <activity
-            android:name=".click_hotelchoose"
-            android:parentActivityName=".Hotelchoose_list" />
+            android:name=".click_hotelchoose" />
         <activity
             android:name=".Hotelchoose_list"
             android:exported="false" />
         <activity
-            android:name=".click_res"
-            android:parentActivityName=".restaurant_list" />
+            android:name=".click_res" />
         <activity
-            android:name=".attractions_list"
-            android:parentActivityName=".Hotelchoose_list" />
+            android:name=".attractions_list" />
         <activity
-            android:name=".restaurant_list"
-            android:parentActivityName=".Hotelchoose_list" />
+            android:name=".restaurant_list" />
         <activity
-            android:name=".hotel_list"
-            android:parentActivityName=".input_schedule" />
+            android:name=".hotel_list" />
         <activity android:name=".input_schedule" />
         <activity
             android:name=".googleSignIn"
@@ -54,11 +50,10 @@
         <activity android:name=".login" />
         <activity android:name=".hotel_main" />
         <activity android:name=".mySchedule" />
-
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:logo="@drawable/logo">
+            android:logo="@drawable/logo"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

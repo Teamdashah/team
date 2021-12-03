@@ -142,13 +142,13 @@
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/choosedhotel"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="350dp"
             android:background="@drawable/imageprss"
-            android:src="@drawable/ic_heart_outlined"
-            />
-<!--        <CheckBox-->
+            android:src="@drawable/ic_heart_outlined" />
+        <!--        <CheckBox-->
 <!--            android:layout_width="30dp"-->
 <!--            android:layout_height="37dp"-->
 <!--            android:layout_marginLeft="350dp"-->

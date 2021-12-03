@@ -147,7 +147,7 @@ class input_schedule : AppCompatActivity() {
         val checkButton = findViewById<Button>(R.id.checkmytrip)
         checkButton.setOnClickListener {
 
-            startActivity(Intent(this@input_schedule, GoogleMapsActivity::class.java))
+            startActivity(Intent(this@input_schedule, mySchedule::class.java))
         }
     }
 
