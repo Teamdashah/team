@@ -140,14 +140,18 @@
                 android:textColor="@color/darkgray"
                 android:textSize="16sp" />
         </LinearLayout>
+<!--        <CheckBox-->
+<!--            android:id="@+id/hotel_addtomylove"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginLeft="344dp"-->
+<!--                    android:button="@drawable/ic_heart_outlined" />-->
         <ImageButton
             android:id="@+id/hotel_addtomylove"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="344dp"
-            android:background="@drawable/imageprss"
-            android:button="@drawable/ic_heart_outlined"
-            />
+            android:background="@drawable/imagebuttonbcg" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
