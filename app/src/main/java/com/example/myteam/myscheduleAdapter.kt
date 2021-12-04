@@ -23,6 +23,7 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
         val begin_date : TextView = itemView.findViewById(R.id.my_begindate)
         val end_date : TextView = itemView.findViewById(R.id.my_enddate)
         val trashCan : ImageButton = itemView.findViewById(R.id.delete_mylove)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -55,6 +56,7 @@ RecyclerView.Adapter<myscheduleAdapter.ViewHolder>(){
             //dbref = FirebaseDatabase.getInstance().getReference("journey").child(leaf)
             //dbref.removeValue()
             notifyDataSetChanged()
+            //holder.cyclerview.setAdapter(myscheduleAdapter(myscheduleList,context))
         }
 
     }

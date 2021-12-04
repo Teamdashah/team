@@ -95,5 +95,8 @@ dependencies {
 
     //GIF IMAGE
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+    //google sign in button
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
 }
 

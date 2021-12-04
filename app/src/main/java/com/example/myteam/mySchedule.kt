@@ -44,7 +44,6 @@ class mySchedule : AppCompatActivity() {
             }
         })
 
-
     }
     //menu
 //    override fun onCreateOptionsMenu(menu: Menu): Boolean {

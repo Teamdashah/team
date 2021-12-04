@@ -76,16 +76,18 @@
         app:layout_constraintVertical_bias="0.756"
         app:srcCompat="@drawable/main_littleword" />
 
-    <com.google.android.gms.common.SignInButton
+    <com.shobhitpuri.custombuttons.GoogleSignInButton
         android:id="@+id/googleSignInBtn"
-        android:layout_width="350dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
+        android:text="@string/google_sign_in"
+        app:isDarkTheme="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.908" />
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="284dp"

@@ -64,19 +64,6 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, RC_SIGN_IN)
         }
 
-        /*val lButton = findViewById<Button>(R.id.login_btn)
-        //handle onClick
-        lButton.setOnClickListener {
-            //intent to start NewActivity
-            startActivity(Intent(this@MainActivity,hotel_main::class.java))
-        }
-
-        val rButton = findViewById<Button>(R.id.register_btn)
-        //handle onClick
-        rButton.setOnClickListener {
-            //intent to start NewActivity
-            startActivity(Intent(this@MainActivity,mySchedule::class.java))
-        }*/
 
     }
 
