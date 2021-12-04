@@ -69,13 +69,22 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
 
         //我的最愛按鈕
         holder.attaddtomylove.setOnClickListener {
+
+            //點下我的最愛會填滿
+            if(holder.attaddtomylove.getTag() == R.drawable.ic_heart_outlined)
+                holder.attaddtomylove.setImageResource(R.drawable.ic_heart_filled);
+            else
+                holder.attaddtomylove.setImageResource(R.drawable.ic_heart_filled);
+            //點下我的最愛會填滿
+
             val pushitem = attractionList.get(position)
             val Name : String? = pushitem.name
             val Address : String? = pushitem.address
             val PictureUrl : String? = pushitem.pictureUrl
             val Pictureurl_new = PictureUrl?.replaceFirst("https:/","/")
+            val  attdetail : String? = pushitem.introduction
 
-            write_into_firebase(Name.toString(), Address.toString(),Pictureurl_new.toString())
+            write_into_firebase(Name.toString(), Address.toString(),Pictureurl_new.toString(),attdetail.toString())
         }
 
     }
@@ -84,8 +93,8 @@ class AttractionsRecycleAdapter (val attractionList: ArrayList<attractionData>,v
         return attractionList.size
     }
 
-    private fun write_into_firebase( name:String, address:String, url:String){
-        val mylove = mutableMapOf("name" to name,"address" to address,"url" to url)
+    private fun write_into_firebase( name:String, address:String, url:String, detail:String){
+        val mylove = mutableMapOf("name" to name,"address" to address,"url" to url, "detail" to detail)
 
         database.getReference("journey").child(node).child("favorite").child(name).setValue(mylove)
 

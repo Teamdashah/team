@@ -69,12 +69,22 @@ class HotelchooseAdapter (val hotelchoose_arrayList: ArrayList<hotelchooseData>,
         }
         //我的最愛按鈕
         holder.choosedhoteladdtomylove.setOnClickListener {
+
+            //點下我的最愛會填滿
+            if(holder.choosedhoteladdtomylove.getTag() == R.drawable.ic_heart_outlined)
+                holder.choosedhoteladdtomylove.setImageResource(R.drawable.ic_heart_filled);
+            else
+                holder.choosedhoteladdtomylove.setImageResource(R.drawable.ic_heart_filled);
+            //點下我的最愛會填滿
+
+
             val pushitem = hotelchoose_arrayList.get(position)
             val hotelName : String? = pushitem.room_name
             val hotelAddress : String? = pushitem.room_address
             val hotelPictureUrl : String? = pushitem.room_photo
+            val hoteldetail : String? = pushitem.room_detail
 
-            write_into_firebase(hotelName.toString(), hotelAddress.toString(),hotelPictureUrl.toString())
+            write_into_firebase(hotelName.toString(), hotelAddress.toString(),hotelPictureUrl.toString(),hoteldetail.toString())
         }
 
     }
@@ -83,8 +93,8 @@ class HotelchooseAdapter (val hotelchoose_arrayList: ArrayList<hotelchooseData>,
         return hotelchoose_arrayList.size
     }
 
-    private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String){
-        val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl)
+    private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String, hoteldetail:String){
+        val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl,"detail" to hoteldetail)
 
         database.getReference("journey").child(node).child("favorite").child(hotelname).setValue(mylove)
 

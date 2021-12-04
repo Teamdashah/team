@@ -27,6 +27,7 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
         val room_address : TextView = itemView.findViewById(R.id.hotel_address)
         val room_photo : ImageView = itemView.findViewById(R.id.hotel_Image)
         val hoteladdtomylove : ImageButton = itemView.findViewById(R.id.hotel_addtomylove)
+
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -65,6 +66,7 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
             context.startActivity(intent)
 
         }
+
         //我的最愛按鈕
         holder.hoteladdtomylove.setOnClickListener {
 
@@ -73,14 +75,15 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
                 holder.hoteladdtomylove.setImageResource(R.drawable.ic_heart_filled);
             else
                 holder.hoteladdtomylove.setImageResource(R.drawable.ic_heart_filled);
-
+            //點下我的最愛會填滿
 
             val pushitem = hotelFirstList.get(position)
             val hotelName : String? = pushitem.room_name
             val hotelAddress : String? = pushitem.room_address
             val hotelPictureUrl : String? = pushitem.room_photo
+            val hoteldetail : String? = pushitem.room_detail
 
-            write_into_firebase(hotelName.toString(), hotelAddress.toString(),hotelPictureUrl.toString())
+            write_into_firebase(hotelName.toString(), hotelAddress.toString(),hotelPictureUrl.toString(),hoteldetail.toString())
         }
 
     }
@@ -90,8 +93,8 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
     }
 
 
-    private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String){
-        val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl)
+    private fun write_into_firebase( hotelname:String, hoteladdress:String, hotelurl:String, hoteldetail:String){
+        val mylove = mutableMapOf("name" to hotelname,"address" to hoteladdress,"url" to hotelurl, "detail" to hoteldetail)
 
         database.getReference("journey").child(node).child("favorite").child(hotelname).setValue(mylove)
 

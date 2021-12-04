@@ -40,7 +40,7 @@ class MyloveRecycleAdapter(val myloveList: ArrayList<myloveData>, val context: C
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val pushitem = myloveList[position]
         holder.mylovename.text = pushitem.name
-        holder.myloveaddress.text = pushitem.address
+        holder.myloveaddress.text = pushitem.address?.replace("住址：","")
         val pictureurl = pushitem.url
         val pictureurl_new = pictureurl?.replaceFirst("/","https:/")
         Picasso.get().load(pictureurl_new).into(holder.myloveurl)
@@ -48,9 +48,17 @@ class MyloveRecycleAdapter(val myloveList: ArrayList<myloveData>, val context: C
 
 
         holder.itemView.setOnClickListener {
-
-//            val intent = Intent(getActivity(context), click_mylove_new::class.java)
-//            context.startActivity(intent)
+            val pushitem = myloveList.get(position)
+            val mylovename = pushitem.name
+            val myloveaddress = pushitem.address
+            val mylovedetail = pushitem.detail
+            val mylovephoto = pushitem.url
+            val intent = Intent(getActivity(context), click_mylove_new::class.java)
+            intent.putExtra("name",mylovename)
+            intent.putExtra("address",myloveaddress)
+            intent.putExtra("detail",mylovedetail)
+            intent.putExtra("url",mylovephoto)
+            context.startActivity(intent)
         }
 
     }
