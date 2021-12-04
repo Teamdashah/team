@@ -15,9 +15,12 @@
     <color name="attbgc">#FBD46D</color>
     <color name="btn">#889EAF</color>
     <color name="darkwhite">#F6F6F6</color>
-    <color name="inputfront">#C7BEA2</color>
-    <color name="inputback">#E5DCC3</color>
-    <color name="inputbtn">#E7DEC8</color>
+    <color name="inputfront">#AAAAAA</color>
+    <color name="inputbtn">#BBBBBB</color>
+<!--    <color name="inputfront">#C7BEA2</color>-->
+<!--    <color name="inputback">#E5DCC3</color>-->
+<!--    <color name="inputbtn">#E7DEC8</color>-->
     <color name="red">#F90716</color>
+
 
 </resources>
