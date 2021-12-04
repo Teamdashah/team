@@ -64,10 +64,17 @@ class HotelRecycleAdapter(val hotelFirstList: ArrayList<hotelFirstData>, val con
 
             context.startActivity(intent)
 
-
         }
         //我的最愛按鈕
         holder.hoteladdtomylove.setOnClickListener {
+
+            //點下我的最愛會填滿
+            if(holder.hoteladdtomylove.getTag() == R.drawable.ic_heart_outlined)
+                holder.hoteladdtomylove.setImageResource(R.drawable.ic_heart_filled);
+            else
+                holder.hoteladdtomylove.setImageResource(R.drawable.ic_heart_filled);
+
+
             val pushitem = hotelFirstList.get(position)
             val hotelName : String? = pushitem.room_name
             val hotelAddress : String? = pushitem.room_address
