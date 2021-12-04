@@ -7,7 +7,8 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     tools:context=".input_schedule"
-    android:background="@color/inputback">
+    android:background="@drawable/light">
+<!--    @color/inputback-->
 
     <!--建立行程-->
     <LinearLayout
