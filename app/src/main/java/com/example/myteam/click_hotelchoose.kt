@@ -33,12 +33,14 @@ class click_hotelchoose : AppCompatActivity() {
         val c_hotelName = intent.getStringExtra("room_name")
         val c_hotelAddress = intent.getStringExtra("room_address")?.replace("住址：","")
         val c_hoteldetail = intent.getStringExtra("room_detail")
+        val c_hotelmoney = intent.getStringExtra("room_money")?.replace("元","元起")
         val gethotelurl = intent.getStringExtra("room_photo")
         val gethotelurl_new = gethotelurl?.replaceFirst("/","https:/")
 
         choose_name.text = c_hotelName
         choose_address.text = c_hotelAddress
         choose_introduction.text = c_hoteldetail
+        choose_money.text = c_hotelmoney
         Picasso.get().load(gethotelurl_new).into(choose_image)
 
 

@@ -28,11 +28,11 @@
 
             <TextView
                 android:id="@+id/mylove_title"
-                android:layout_width="250dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/mylove_Images"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Title"
                 android:textColor="@color/black"

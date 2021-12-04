@@ -56,11 +56,13 @@ class HotelchooseAdapter (val hotelchoose_arrayList: ArrayList<hotelchooseData>,
             val chooseAddress : String? = pushitem.room_address
             val choosePictureUrl : String? = pushitem.room_photo
             val chooseIntroduction : String? = pushitem.room_detail
+            val choosemoney : String? = pushitem.room_money
             val intent = Intent(getActivity(context), click_main_hotel::class.java)
             intent.putExtra("room_name",chooseName)
             intent.putExtra("room_address",chooseAddress)
             intent.putExtra("room_photo",choosePictureUrl)
             intent.putExtra("room_detail",chooseIntroduction)
+            intent.putExtra("room_money",choosemoney)
             intent.putExtra("place",place)
             intent.putExtra("node",node)
 

@@ -27,6 +27,7 @@ class click_main_hotel : AppCompatActivity() {
         val main_hotelName1 = main_hotelName
         val main_hotelAddress = intent.getStringExtra("room_address")?.replace("住址：","")
         val main_hoteldetail = intent.getStringExtra("room_detail")
+        val main_hotelmoney = intent.getStringExtra("room_money")?.replace("元","元起")
         val gethotelurl = intent.getStringExtra("room_photo")
         val gethotelurl_new = gethotelurl?.replaceFirst("/","https:/")
         val place = intent.getStringExtra("place")
@@ -37,6 +38,7 @@ class click_main_hotel : AppCompatActivity() {
         hotel_title.text = main_hotelName
         hotel_address.text = main_hotelAddress
         hotel_introduction.text = main_hoteldetail
+        hotel_money.text = main_hotelmoney
         Picasso.get().load(gethotelurl_new).into(hotel_Images)
 
         //button
