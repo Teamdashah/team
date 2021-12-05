@@ -78,7 +78,9 @@ class Fragment_choose : Fragment() {
             if(sky)
                 bundle.putString("sky",""+sky)
 
-
+            val  onethousand_down = onethousand_down.isChecked
+            if(onethousand_down)
+                bundle.putString("onethousand_down",""+onethousand_down)
             val  onethousand_twothousand = onethousand_twothousand.isChecked
             if(onethousand_twothousand)
                 bundle.putString("onethousand_twothousand",""+onethousand_twothousand)
@@ -94,6 +96,9 @@ class Fragment_choose : Fragment() {
             val  fourthousand_fivethousand = fourthousand_fivethousand.isChecked
             if(fourthousand_fivethousand)
                 bundle.putString("fourthousand_fivethousand",""+fourthousand_fivethousand)
+            val  fivethousand_up = fivethousand_up.isChecked
+            if(fivethousand_up)
+                bundle.putString("fivethousand_up",""+fivethousand_up)
 
 
             var intent = activity?.getIntent()
@@ -133,12 +138,16 @@ class Fragment_choose : Fragment() {
 
                 else -> place_list = "Taipei City"
             }
+
+
             bundle.putString("place_list",place_list)
             bundle.putString("begin_date",begin_date)
             bundle.putString("destination",destination)
             intent = Intent(activity, Hotelchoose_list::class.java)
             intent.putExtra("bundle",bundle)
             startActivity(intent)
+
+
 
             Toast.makeText(activity, "您的篩選結果"
                     + (if(three_star) "\n三星級" else "")

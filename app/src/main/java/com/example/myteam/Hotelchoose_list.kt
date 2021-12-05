@@ -74,6 +74,9 @@ class Hotelchoose_list : AppCompatActivity() {
         val gettwothousand_threethousand = intent.getBundleExtra("bundle")?.getString("twothousand_threethousand").toString()
         val getthreethousand_fourthousand = intent.getBundleExtra("bundle")?.getString("threethousand_fourthousand").toString()
         val getfourthousand_fivethousand = intent.getBundleExtra("bundle")?.getString("fourthousand_fivethousand").toString()
+        val getonethousand_down = intent.getBundleExtra("bundle")?.getString("onethousand_down").toString()
+        val getfivethousand_up = intent.getBundleExtra("bundle")?.getString("fivethousand_up").toString()
+
 
 
         val destination = intent.getBundleExtra("bundle")?.getString("destination").toString()
@@ -86,8 +89,15 @@ class Hotelchoose_list : AppCompatActivity() {
 
 
         if(getthree_star == "true"){
+
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_3星級/"+destination)
+            }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_3星級/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_3星級/"+destination)
             }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_3星級/"+destination)
@@ -105,6 +115,12 @@ class Hotelchoose_list : AppCompatActivity() {
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_4星級/"+destination)
             }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_4星級/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_4星級/"+destination)
+            }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_4星級/"+destination)
             }
@@ -120,6 +136,12 @@ class Hotelchoose_list : AppCompatActivity() {
         else if(getfive_star == "true"){
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_5星級/"+destination)
+            }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_5星級/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_5星級/"+destination)
             }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_5星級/"+destination)
@@ -137,6 +159,12 @@ class Hotelchoose_list : AppCompatActivity() {
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_溫泉/"+destination)
             }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_溫泉/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_溫泉/"+destination)
+            }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_溫泉/"+destination)
             }
@@ -152,6 +180,12 @@ class Hotelchoose_list : AppCompatActivity() {
         else if(gettraffic == "true"){
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_交通便利/"+destination)
+            }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_交通便利/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_交通便利/"+destination)
             }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_交通便利/"+destination)
@@ -169,6 +203,12 @@ class Hotelchoose_list : AppCompatActivity() {
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_智能/"+destination)
             }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_智能/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_智能/"+destination)
+            }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_智能/"+destination)
             }
@@ -184,6 +224,12 @@ class Hotelchoose_list : AppCompatActivity() {
         else if(getchild == "true"){
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_親子/"+destination)
+            }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_親子/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_親子/"+destination)
             }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_親子/"+destination)
@@ -201,6 +247,12 @@ class Hotelchoose_list : AppCompatActivity() {
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_環保/"+destination)
             }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_環保/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_環保/"+destination)
+            }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_環保/"+destination)
             }
@@ -216,6 +268,12 @@ class Hotelchoose_list : AppCompatActivity() {
         else if(getbussiness == "true"){
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_商務/"+destination)
+            }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_商務/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_商務/"+destination)
             }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_商務/"+destination)
@@ -233,6 +291,12 @@ class Hotelchoose_list : AppCompatActivity() {
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_露營/"+destination)
             }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_露營/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_露營/"+destination)
+            }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_露營/"+destination)
             }
@@ -249,6 +313,12 @@ class Hotelchoose_list : AppCompatActivity() {
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_青旅/"+destination)
             }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_青旅/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_青旅/"+destination)
+            }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_青旅/"+destination)
             }
@@ -264,6 +334,12 @@ class Hotelchoose_list : AppCompatActivity() {
         else if(getsky == "true"){
             if(getonethousand_twothousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_天文/"+destination)
+            }
+            else if(getonethousand_down == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千以下_天文/"+destination)
+            }
+            else if(getfivethousand_up == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/五千以上_天文/"+destination)
             }
             else if(gettwothousand_threethousand == "true"){
                 dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_天文/"+destination)
@@ -320,7 +396,11 @@ class Hotelchoose_list : AppCompatActivity() {
                     for (userSnapshot in snapshot.children)
                     {
                         val hotelchoose = userSnapshot.getValue(hotelchooseData::class.java)
-                        hotelchoose_list.add(hotelchoose!!)
+                        for (i in 0..(emptyroomList.size - 1)) {
+                            if (hotelchoose?.room_name.toString() == (emptyroomList[i]?.room_name.toString()))
+                                hotelchoose_list.add(hotelchoose!!)
+                        }
+
 
 
                         Log.d(TAG,"test*****************")
