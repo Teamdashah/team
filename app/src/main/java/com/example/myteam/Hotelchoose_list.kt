@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myteam.model.attractionData
+import com.example.myteam.model.emptyroomData
 import com.example.myteam.model.hotelchooseData
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_hotelchoose_list.*
@@ -14,8 +15,10 @@ import kotlinx.android.synthetic.main.activity_hotelchoose_list.*
 class Hotelchoose_list : AppCompatActivity() {
 
     private lateinit var dbref : DatabaseReference
+    private lateinit var emptydbref: DatabaseReference
     private lateinit var hcRecyclerView: RecyclerView
     private lateinit var hotelchoose_list: ArrayList<hotelchooseData>
+    private lateinit var emptyroomList: ArrayList<emptyroomData>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +30,7 @@ class Hotelchoose_list : AppCompatActivity() {
 
 
         hotelchoose_list = arrayListOf<hotelchooseData>()
-
+        emptyroomList = arrayListOf<emptyroomData>()
         getchooseData()
 
 
@@ -83,40 +86,196 @@ class Hotelchoose_list : AppCompatActivity() {
 
 
         if(getthree_star == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/3星級/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_3星級/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_3星級/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_3星級/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_3星級/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/3星級/"+destination)
         }
         else if(getfour_star == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/4星級/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_4星級/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_4星級/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_4星級/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_4星級/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/4星級/"+destination)
         }
         else if(getfive_star == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/5星級/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_5星級/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_5星級/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_5星級/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_5星級/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/5星級/"+destination)
         }
         else if(gethotspring == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/溫泉/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_溫泉/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_溫泉/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_溫泉/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_溫泉/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/溫泉/"+destination)
         }
         else if(gettraffic == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/交通便利/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_交通便利/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_交通便利/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_交通便利/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_交通便利/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/交通便利/"+destination)
         }
         else if(getsmart == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/智能/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_智能/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_智能/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_智能/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_智能/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/智能/"+destination)
         }
         else if(getchild == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/親子/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_親子/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_親子/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_親子/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_親子/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/親子/"+destination)
         }
         else if(getenvironment == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/環保/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_環保/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_環保/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_環保/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_環保/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/環保/"+destination)
         }
         else if(getbussiness == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/商務/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_商務/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_商務/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_商務/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_商務/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/商務/"+destination)
         }
         else if(getcamp == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/露營/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_露營/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_露營/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_露營/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_露營/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/露營/"+destination)
         }
         else if(getyoung_people == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/青旅/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_青旅/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_青旅/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_青旅/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_青旅/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/青旅/"+destination)
         }
         else if(getsky == "true"){
-            dbref = FirebaseDatabase.getInstance().getReference("category/天文/"+destination)
+            if(getonethousand_twothousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千_天文/"+destination)
+            }
+            else if(gettwothousand_threethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/兩千三千_天文/"+destination)
+            }
+            else if(getthreethousand_fourthousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/三千四千_天文/"+destination)
+            }
+            else if(getfourthousand_fivethousand == "true"){
+                dbref = FirebaseDatabase.getInstance().getReference("category/四千五千_天文/"+destination)
+            }
+            else
+                dbref = FirebaseDatabase.getInstance().getReference("category/天文/"+destination)
         }
         else if(getonethousand_twothousand == "true"){
             dbref = FirebaseDatabase.getInstance().getReference("category/一千兩千/"+destination)
@@ -133,6 +292,27 @@ class Hotelchoose_list : AppCompatActivity() {
         else
             dbref = FirebaseDatabase.getInstance().getReference("room/Kaohsiung")
 
+
+        emptydbref = FirebaseDatabase.getInstance()
+            .getReference("emptyroom/" + begin_date + "/" + destination)
+
+        emptydbref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(emptysnapshot: DataSnapshot) {
+                if (emptysnapshot.exists()) {
+                    for (emptySnapshot in emptysnapshot.children) {
+                        val emptyFirst = emptySnapshot.getValue(emptyroomData::class.java)
+                        emptyroomList.add(emptyFirst!!)
+
+
+                    }
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+        })
         dbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists())
@@ -141,6 +321,7 @@ class Hotelchoose_list : AppCompatActivity() {
                     {
                         val hotelchoose = userSnapshot.getValue(hotelchooseData::class.java)
                         hotelchoose_list.add(hotelchoose!!)
+
 
                         Log.d(TAG,"test*****************")
                     }
