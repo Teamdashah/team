@@ -97,6 +97,7 @@ class Fragment_hotel() : Fragment() {
         val begin_date = sss
         val end_date = eee
         val destination = ddd
+        val new_begin_date = begin_date?.replace(oldValue = ",", newValue = "")?.substring(startIndex = 0, endIndex = 5)?.toInt()
         node = sss.toString() + ddd.toString()
         val number_of_people = nnn
         //有改
@@ -155,9 +156,13 @@ class Fragment_hotel() : Fragment() {
                     for (userSnapshot in snapshot.children) {
 
                         val hotelFirst = userSnapshot.getValue(hotelFirstData::class.java)
-                        for (i in 0..(emptyroomList.size - 1)) {
-                            if (hotelFirst?.room_name.toString() == (emptyroomList[i]?.room_name.toString()))
-                                hotelFirstList.add(hotelFirst!!)
+                        if(new_begin_date!! > 20221)
+                            hotelFirstList.add(hotelFirst!!)
+                        else {
+                            for (i in 0..(emptyroomList.size - 1)) {
+                                if (hotelFirst?.room_name.toString() == (emptyroomList[i]?.room_name.toString()))
+                                    hotelFirstList.add(hotelFirst!!)
+                            }
                         }
 
                     }

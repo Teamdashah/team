@@ -14,9 +14,10 @@ class click_mylove_new : AppCompatActivity() {
         setContentView(R.layout.activity_click_mylove_new)
 
 
-        val actionBar : ActionBar? = supportActionBar
-        actionBar!!.setDisplayHomeAsUpEnabled(true)
-        actionBar!!.setDisplayShowHomeEnabled(true)
+//        val actionBar : ActionBar? = supportActionBar
+//        actionBar!!.setDisplayHomeAsUpEnabled(true)
+//        actionBar!!.setDisplayShowHomeEnabled(true)
+
         val intent: Intent = intent
         val name = intent.getStringExtra("name").toString()
         val address = intent.getStringExtra("address")?.replace("住址：","")

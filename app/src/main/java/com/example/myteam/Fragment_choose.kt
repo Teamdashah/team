@@ -166,6 +166,8 @@ class Fragment_choose : Fragment() {
                     + (if(twothousand_threethousand) "\n2000-3000" else "")
                     + (if(threethousand_fourthousand) "\n3000-4000" else "")
                     + (if(fourthousand_fivethousand) "\n4000-5000" else "")
+                    + (if(fivethousand_up) "\n5000以上" else "")
+                    + (if(onethousand_down) "\n1000以下" else "")
                 , Toast.LENGTH_SHORT).show()
 
             //從fragment跳轉到activity中

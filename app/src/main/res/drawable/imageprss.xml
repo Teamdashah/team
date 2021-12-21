@@ -8,7 +8,8 @@
         android:drawable="@drawable/ic_heart_filled"
         android:state_pressed="true" />
     <item
+        android:state_focused="true"
+        android:drawable="@drawable/ic_heart_filled"/>
 
-        android:drawable="@drawable/ic_heart_outlined"/>
 
 </selector>

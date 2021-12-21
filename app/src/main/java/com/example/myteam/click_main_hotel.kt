@@ -19,9 +19,9 @@ class click_main_hotel : AppCompatActivity() {
         setContentView(R.layout.activity_click_main_hotel)
         super.onCreate(savedInstanceState)
 
-        val actionBar : ActionBar? = supportActionBar
-        actionBar!!.setDisplayHomeAsUpEnabled(true)
-        actionBar!!.setDisplayShowHomeEnabled(true)
+//        val actionBar : ActionBar? = supportActionBar
+//        actionBar!!.setDisplayHomeAsUpEnabled(true)
+//        actionBar!!.setDisplayShowHomeEnabled(true)
         val intent: Intent = intent
         val main_hotelName = intent.getStringExtra("room_name").toString()
         val main_hotelName1 = main_hotelName
@@ -30,7 +30,7 @@ class click_main_hotel : AppCompatActivity() {
         val main_hotelmoney = intent.getStringExtra("room_money")?.replace("元","元起")
         val gethotelurl = intent.getStringExtra("room_photo")
         val gethotelurl_new = gethotelurl?.replaceFirst("/","https:/")
-        val place = intent.getStringExtra("place")
+        var place = intent.getStringExtra("place")
         val node = intent.getStringExtra("node")
 
         //標題傳過去//
@@ -47,6 +47,18 @@ class click_main_hotel : AppCompatActivity() {
         grbButton.setOnClickListener {
             //intent to start NewActivity
             val intent = Intent(this@click_main_hotel,restaurant_list::class.java)
+            if(place=="Hualien County")
+                place="Hualien  City"
+            if(place == "Taitung County")
+                place ="Taitung City"
+            if(place == "Changhua County")
+                place ="Changhua City"
+            if(place == "Nantou County")
+                place ="Nantou City"
+            if(place == "Yunlin County")
+                place ="Yunlin City"
+            if(place == "Yilan County")
+                place ="Yilan City"
             intent.putExtra("place",place)
             intent.putExtra("node",node)
             intent.putExtra("main_hotelName",main_hotelName)

@@ -218,11 +218,10 @@
             android:textSize="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintHorizontal_bias="0.052"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.855" />
-
+            app:layout_constraintVertical_bias="0.835" />
 
         <CheckBox
             android:id="@+id/fivethousand_up"
@@ -237,7 +236,7 @@
             app:layout_constraintHorizontal_bias="0.776"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.855" />
+            app:layout_constraintVertical_bias="0.833" />
 
         <CheckBox
             android:id="@+id/twothousand_threethousand"
@@ -297,7 +296,7 @@
             app:layout_constraintHorizontal_bias="0.776"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.745" />
+            app:layout_constraintVertical_bias="0.73" />
 
         <TextView
             android:id="@+id/money_select"

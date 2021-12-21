@@ -16,9 +16,9 @@ class click_res : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_click_res)
 
-        val actionBar : ActionBar? = supportActionBar
-        actionBar!!.setDisplayHomeAsUpEnabled(true)
-        actionBar!!.setDisplayShowHomeEnabled(true)
+//        val actionBar : ActionBar? = supportActionBar
+//        actionBar!!.setDisplayHomeAsUpEnabled(true)
+//        actionBar!!.setDisplayShowHomeEnabled(true)
 
         var intent = intent
         val main_hotelName = intent.getStringExtra("main_hotelName").toString()

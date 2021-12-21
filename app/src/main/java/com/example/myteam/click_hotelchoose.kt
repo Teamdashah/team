@@ -23,9 +23,9 @@ class click_hotelchoose : AppCompatActivity() {
         setContentView(R.layout.activity_click_hotelchoose)
 
 
-        val actionBar : ActionBar? = supportActionBar
-        actionBar!!.setDisplayHomeAsUpEnabled(true)
-        actionBar!!.setDisplayShowHomeEnabled(true)
+//        val actionBar : ActionBar? = supportActionBar
+//        actionBar!!.setDisplayHomeAsUpEnabled(true)
+//        actionBar!!.setDisplayShowHomeEnabled(true)
 
         val intent: Intent = intent
         val main_hotelName = intent.getStringExtra("room_name").toString()
